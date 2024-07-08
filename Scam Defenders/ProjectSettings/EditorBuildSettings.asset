@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Messages.unity
+    guid: a23cd7cd47a5e28469fac4392e88df48
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 72ab5c0461787a948b205d8d5e596823
+  - enabled: 1
+    path: Assets/Scenes/Chat.unity
+    guid: bd667e7860724d346a07bb540cc24660
   m_configObjects: {}
