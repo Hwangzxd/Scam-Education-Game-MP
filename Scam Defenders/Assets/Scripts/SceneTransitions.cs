@@ -48,4 +48,9 @@ public class SceneTransitions : MonoBehaviour
     {
         SceneManager.LoadScene("Chats");
     }
+
+    public void GoToStart()
+    {
+        SceneManager.LoadScene("Start");
+    }
 }
