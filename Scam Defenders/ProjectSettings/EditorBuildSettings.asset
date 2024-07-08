@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Home.unity
     guid: 72ab5c0461787a948b205d8d5e596823
   - enabled: 1
-    path: Assets/Scenes/NotificationsScreen.unity
+    path: Assets/Scenes/Notifications.unity
     guid: eb8046194488d9d46bf55c86030180a2
   - enabled: 1
     path: Assets/Scenes/Chats.unity
