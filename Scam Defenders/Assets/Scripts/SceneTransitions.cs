@@ -37,5 +37,10 @@ public class SceneTransitions : MonoBehaviour
         {
             Debug.LogWarning("No more scenes in the build settings.");
         }
+    } 
+     
+    public void GoToChats()
+    {
+        SceneManager.LoadScene("Chats");
     }
 }
