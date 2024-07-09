@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Messages.unity
     guid: a23cd7cd47a5e28469fac4392e88df48
+  - enabled: 1
+    path: Assets/Scenes/LoveScamChat.unity
+    guid: 8e09ed8e8433b5a41bb404166e05acaf
+  - enabled: 1
+    path: Assets/Scenes/ChatterNetMessages.unity
+    guid: ca6af3c2c75051c48947a86c4203cd5e
+  - enabled: 1
+    path: Assets/Scenes/ChatterNet.unity
+    guid: cbf699716eb96984aaebfbf7092c4763
   m_configObjects: {}

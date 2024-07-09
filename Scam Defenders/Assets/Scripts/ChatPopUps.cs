@@ -12,14 +12,18 @@ public class ChatPopUps : MonoBehaviour
 
     public void Report()
     {
+        Debug.Log("Report clicked");
+
         if (!losePop.activeSelf && !winPop.activeSelf)
         {
-            winPop.SetActive(true);
+            winPop.SetActive(true); 
         }
     }
 
     public void Apply()
     {
+        Debug.Log("Reply clicked");
+
         if (!winPop.activeSelf && !losePop.activeSelf)
         {
             losePop.SetActive(true);
