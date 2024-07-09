@@ -37,6 +37,11 @@ public class SceneTransitions : MonoBehaviour
         {
             Debug.LogWarning("No more scenes in the build settings.");
         }
+    } 
+     
+    public void GoToHome()
+    {
+        SceneManager.LoadScene("Home");
     }
 
     public void GoToMessages()
@@ -47,6 +52,21 @@ public class SceneTransitions : MonoBehaviour
     public void GoToChats()
     {
         SceneManager.LoadScene("Chats");
+    } 
+     
+    public void GoToChatterNet()
+    {
+        SceneManager.LoadScene("ChatterNet");
+    } 
+     
+    public void GoToChatterNetMessages()
+    {
+        SceneManager.LoadScene("ChatterNetMessages");
+    } 
+     
+    public void GoToLoveScamChat()
+    {
+        SceneManager.LoadScene("LoveScamChat");
     }
 
     public void GoToStart()
