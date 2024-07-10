@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HomePopUps : MonoBehaviour
 {
-    public GameObject timeStart; 
+    public GameObject timeStart;
      
     public void GameStart()
     {
