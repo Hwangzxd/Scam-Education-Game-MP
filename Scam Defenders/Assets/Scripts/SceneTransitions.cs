@@ -73,4 +73,9 @@ public class SceneTransitions : MonoBehaviour
     {
         SceneManager.LoadScene("Start");
     }
+
+    public void GoToSettings()
+    {
+        SceneManager.LoadScene("Settings");
+    }
 }

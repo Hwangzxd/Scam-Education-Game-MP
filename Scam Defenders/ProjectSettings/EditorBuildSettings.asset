@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Chats.unity
     guid: 77a53a2329eb3964ea55a4f5a012af89
   - enabled: 1
-    path: Assets/Scenes/Messages.unity
+    path: Assets/Scenes/Quick Chats.unity
     guid: a23cd7cd47a5e28469fac4392e88df48
   - enabled: 1
     path: Assets/Scenes/LoveScamChat.unity
@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChatterNet.unity
     guid: cbf699716eb96984aaebfbf7092c4763
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: e7c6daf3efd330b4e805d523d25b6b68
   m_configObjects: {}
