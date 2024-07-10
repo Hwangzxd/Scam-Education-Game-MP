@@ -37,15 +37,50 @@ public class SceneTransitions : MonoBehaviour
         {
             Debug.LogWarning("No more scenes in the build settings.");
         }
+    } 
+     
+    public void GoToHome()
+    {
+        SceneManager.LoadScene("Home");
     }
 
-    public void GoToMessages()
+    public void GoToHome2()
     {
-        SceneManager.LoadScene("Messages");
+        SceneManager.LoadScene("Home2");
+    }
+
+    public void GoToQuickChats()
+    {
+        SceneManager.LoadScene("QuickChats");
     }
 
     public void GoToChats()
     {
         SceneManager.LoadScene("Chats");
+    } 
+     
+    public void GoToChatterNet()
+    {
+        SceneManager.LoadScene("ChatterNet");
+    } 
+     
+    public void GoToChatterNetMessages()
+    {
+        SceneManager.LoadScene("ChatterNetMessages");
+    } 
+     
+    public void GoToLoveScamChat()
+    {
+        SceneManager.LoadScene("LoveScamChat");
+    }
+
+    public void GoToStart()
+    {
+        SceneManager.LoadScene("Start");
+    } 
+     
+    public void GoToGeeMail()
+    {
+        SceneManager.LoadScene("Geemail");
     }
 }
