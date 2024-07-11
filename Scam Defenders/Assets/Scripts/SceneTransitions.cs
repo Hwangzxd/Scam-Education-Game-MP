@@ -51,7 +51,11 @@ public class SceneTransitions : MonoBehaviour
 
     public void GoToQuickChats()
     {
+<<<<<<< Updated upstream
         SceneManager.LoadScene("QuickChats");
+=======
+        SceneManager.LoadScene("Quick Chats");
+>>>>>>> Stashed changes
     }
 
     public void GoToChats()
