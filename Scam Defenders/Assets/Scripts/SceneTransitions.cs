@@ -44,9 +44,14 @@ public class SceneTransitions : MonoBehaviour
         SceneManager.LoadScene("Home");
     }
 
-    public void GoToMessages()
+    public void GoToHome2()
     {
-        SceneManager.LoadScene("Messages");
+        SceneManager.LoadScene("Home2");
+    }
+
+    public void GoToQuickChats()
+    {
+        SceneManager.LoadScene("Quick Chats");
     }
 
     public void GoToChats()
@@ -72,10 +77,10 @@ public class SceneTransitions : MonoBehaviour
     public void GoToStart()
     {
         SceneManager.LoadScene("Start");
-    }
-
-    public void GoToSettings()
+    } 
+     
+    public void GoToGeeMail()
     {
-        SceneManager.LoadScene("Settings");
-    }
+        SceneManager.LoadScene("Geemail");
+    } 
 }
