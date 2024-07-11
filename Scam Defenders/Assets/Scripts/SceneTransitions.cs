@@ -51,7 +51,7 @@ public class SceneTransitions : MonoBehaviour
 
     public void GoToQuickChats()
     {
-        SceneManager.LoadScene("Quick Chats");
+        SceneManager.LoadScene("QuickChats");
     }
 
     public void GoToChats()
