@@ -88,4 +88,14 @@ public class SceneTransitions : MonoBehaviour
     {
         SceneManager.LoadScene("Notifications");
     }
+
+    public void GoToShopEaseSearch()
+    {
+        SceneManager.LoadScene("ShopEaseSearch");
+    }
+
+    public void GoToShopEaseChat()
+    {
+        SceneManager.LoadScene("ShopEaseChat");
+    }
 }
