@@ -10,5 +10,19 @@ public class NotificationPopUp : MonoBehaviour
     {
         notification.localPosition = new Vector2(0, Screen.height);
         notification.LeanMoveLocalY(0, 0.5f).setEaseOutExpo().delay = 0.1f;
+
+        // Start coroutine to close the notification after 5 seconds
+        StartCoroutine(CloseAfterDelay(5f));
+    }
+
+    public void Close()
+    {
+        notification.LeanMoveLocalY(Screen.height, 0.5f).setEaseInExpo().delay = 0.1f;
+    }
+
+    private IEnumerator CloseAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Close();
     }
 }

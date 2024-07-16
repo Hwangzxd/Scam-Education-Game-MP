@@ -83,4 +83,9 @@ public class SceneTransitions : MonoBehaviour
     {
         SceneManager.LoadScene("Geemail");
     } 
+
+    public void GoToNotifications()
+    {
+        SceneManager.LoadScene("Notifications");
+    }
 }
