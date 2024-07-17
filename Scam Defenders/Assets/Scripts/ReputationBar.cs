@@ -56,6 +56,11 @@ public class ReputationBar : MonoBehaviour
         slider.value += value;
     }
 
+    private void OnReputationDrained()
+    {
+        Debug.Log("Reputation is completely drained.");
+    }
+
     //to get the value of reputation
     public float GetReputation()
     {
