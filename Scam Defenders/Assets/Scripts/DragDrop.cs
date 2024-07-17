@@ -5,24 +5,30 @@ public class DragDrop : MonoBehaviour
     Vector3 offset;
     Collider2D collider2d;
     public string destinationTag = "DropArea";
-    public float snapDistance = 1.0f; 
-    public float releaseDistance = 2.0f;
+    public float snapDistance = 1.0f; // Adjust this distance as needed
+    public float releaseDistance = 2.0f; // Distance to release from drop area
+
+    public Color defaultColor = Color.white;
+    public Color snapColor = Color.red; // Color when item is snapped
 
     private Camera mainCamera;
-    private Transform snapTransform; 
-    private bool isSnapped = false; 
+    private Transform snapTransform; // Store the transform of the closest drop area
+    private bool isSnapped = false; // Flag to track if the item is snapped to an area
+    public SpriteRenderer spriteRenderer; // To change the color of the sprite
 
     void Awake()
     {
         collider2d = GetComponent<Collider2D>();
         mainCamera = Camera.main;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        //spriteRenderer.color = defaultColor; // Set the initial color
     }
 
     void OnMouseDown()
     {
         offset = transform.position - MouseWorldPosition();
-        snapTransform = null; 
-        isSnapped = false; 
+        snapTransform = null; // Reset snap transform on mouse down
+        isSnapped = false; // Reset snapped flag
     }
 
     void OnMouseDrag()
@@ -31,40 +37,51 @@ public class DragDrop : MonoBehaviour
         newPos = ClampToViewport(newPos);
         transform.position = newPos;
 
-        //Check for nearby drop areas within snap distance
+        // Check for nearby drop areas within snapDistance
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, snapDistance);
+        bool nearDropArea = false; // Flag to track proximity to a drop area
+
         foreach (Collider2D col in colliders)
         {
             if (col.CompareTag(destinationTag))
             {
-                //Calculates distance between center points of item and drop area
+                // Calculate distance between center points of item and drop area
                 float distance = Vector3.Distance(transform.position, col.transform.position);
-                float distanceThreshold = 1.0f; 
 
-                //Snaps only if within distance threshold
-                if (distance <= distanceThreshold)
+                // Snap only if close enough (within snapDistance)
+                if (distance <= snapDistance)
                 {
                     snapTransform = col.transform;
-                    isSnapped = true; 
+                    isSnapped = true; // Set snapped flag
+                    nearDropArea = true; // Indicate proximity to drop area
                     break;
                 }
                 else
                 {
                     snapTransform = null;
-                    isSnapped = false; 
+                    isSnapped = false; // Reset snapped flag if too far
                 }
             }
         }
 
-        //Release snap if dragged too far from any drop area 
-        //This allows free movement of the flags
+        // Change color if isSnapped is true
+        if (isSnapped)
+        {
+            spriteRenderer.color = snapColor;
+        }
+        else
+        {
+            spriteRenderer.color = defaultColor;
+        }
+
+        // Release snap if dragged too far from any drop area
         if (snapTransform != null)
         {
             float distanceToSnap = Vector3.Distance(transform.position, snapTransform.position);
             if (distanceToSnap > releaseDistance)
             {
                 snapTransform = null;
-                isSnapped = false; 
+                isSnapped = false; // Reset snapped flag if dragged too far
             }
         }
     }
@@ -73,13 +90,19 @@ public class DragDrop : MonoBehaviour
     {
         collider2d.enabled = false;
 
-        //Snaps to nearest drop area if still snapped
+        // Snap to nearest drop area if still snapped
         if (isSnapped && snapTransform != null)
         {
             transform.position = snapTransform.position + new Vector3(0, 0, -0.01f);
         }
 
         collider2d.enabled = true;
+
+        // Reset color after releasing the item if not snapped
+        if (!isSnapped)
+        {
+            spriteRenderer.color = defaultColor;
+        }
     }
 
     Vector3 MouseWorldPosition()
