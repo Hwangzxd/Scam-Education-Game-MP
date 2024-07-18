@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class MessagingSystem : MonoBehaviour
 {
-    public List<GameObject> sellerMessages; // The object you want to activate
+    public List<GameObject> npcMessages; // The object you want to activate
     public GameObject dialogueOptions;
     public Button optionButton; // The button that triggers the activation
     public float delay = 2f; // Delay in seconds
+    public float animationDuration = 0.5f; // Duration of the size-in animation
+    public Vector3 initialScale = Vector3.zero; // Initial scale for the size-in animation
 
     void Start()
     {
@@ -16,6 +18,11 @@ public class MessagingSystem : MonoBehaviour
         {
             optionButton.onClick.AddListener(StartActivationProcess);
         }
+
+        //foreach (GameObject obj in npcMessages) 
+        //{
+        //    transform.localScale = Vector2.zero;
+        //}
     }
 
     void StartActivationProcess()
@@ -25,12 +32,16 @@ public class MessagingSystem : MonoBehaviour
 
     IEnumerator ActivateAfterDelay()
     {
-        foreach (GameObject obj in sellerMessages)
+        foreach (GameObject obj in npcMessages)
         {
             yield return new WaitForSeconds(delay);
             if (obj != null)
             {
-                obj.SetActive(true);
+                //transform.LeanScale(Vector2.one, 0.8f);
+
+                //obj.SetActive(true);
+
+                ActivateAndAnimate(obj);
             }
         }
 
@@ -39,5 +50,12 @@ public class MessagingSystem : MonoBehaviour
         {
             dialogueOptions.SetActive(true);
         }
+    }
+
+    void ActivateAndAnimate(GameObject obj)
+    {
+        obj.SetActive(true);
+        obj.transform.localScale = initialScale; // Set initial scale
+        LeanTween.scale(obj, Vector3.one, animationDuration).setEase(LeanTweenType.easeOutBounce);
     }
 }
