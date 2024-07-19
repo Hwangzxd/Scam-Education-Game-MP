@@ -10,6 +10,10 @@ public class CountdownTimer : MonoBehaviour
     public GameObject timesUp;
     public int time;
 
+    public float delay = 2f;
+
+    public LevelLoader levelLoader; // Reference to the LevelLoader script
+
     void Awake()
     {
         // Singleton pattern to ensure only one instance exists
@@ -32,9 +36,16 @@ public class CountdownTimer : MonoBehaviour
 
     public void Start()
     {
+        //AnimateBar();
+        //StartCoroutine(Countdown());
+    }
+
+    public void StartGame()
+    {
         AnimateBar();
         StartCoroutine(Countdown());
     }
+
     public void AnimateBar()
     {
         LeanTween.scaleX(bar, 0, time);
@@ -51,8 +62,15 @@ public class CountdownTimer : MonoBehaviour
         TimesUp();
     }
 
+    //private IEnumerator Delay()
+    //{
+    //    yield return new WaitForSeconds(delay);
+    //}
+
     public void TimesUp()
     {
-        timesUp.SetActive(true);
+        //timesUp.SetActive(true);
+        //StartCoroutine(Delay());
+        levelLoader.LoadNextLevel(); // Call LoadNextLevel when the timer ends
     }
 }

@@ -44,4 +44,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShopEaseChat.unity
     guid: 5c9faa84489f24e4bb55e2c0f09953bc
+  - enabled: 1
+    path: Assets/Scenes/ShopEaseProfile1.unity
+    guid: 245c03c485fb7af48a74abf0338ff1af
+  - enabled: 1
+    path: Assets/Scenes/ShopEaseProfile2.unity
+    guid: aae336c821fc4074591dc2f465109d57
+  - enabled: 1
+    path: Assets/Scenes/ShopEaseChoose.unity
+    guid: 6d95f5473ec00c74bb250128c177f84d
   m_configObjects: {}

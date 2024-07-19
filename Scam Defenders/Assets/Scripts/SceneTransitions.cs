@@ -98,4 +98,14 @@ public class SceneTransitions : MonoBehaviour
     {
         SceneManager.LoadScene("ShopEaseChat");
     }
+
+    public void GoToShopEaseProfile1()
+    {
+        SceneManager.LoadScene("ShopEaseProfile1");
+    }
+
+    public void GoToShopEaseProfile2()
+    {
+        SceneManager.LoadScene("ShopEaseProfile2");
+    }
 }
