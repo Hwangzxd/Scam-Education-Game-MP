@@ -1,8 +1,10 @@
 using UnityEngine;
+using TMPro;
 
 public class JobScamManager : MonoBehaviour
 {
-    public DropArea[] scamSigns; 
+    public DropArea[] scamSigns;
+    public TextMeshProUGUI statusText; // Reference to the TextMeshPro component
 
     void Start()
     {
@@ -10,18 +12,20 @@ public class JobScamManager : MonoBehaviour
         {
             scamSigns = FindObjectsOfType<DropArea>();
         }
+
+        UpdateStatusText(0); // Initialize the status text
     }
 
     void Update()
     {
-        //GameStatus();
+        GameStatus();
     }
 
     private void GameStatus()
     {
         int foundSignsCount = 0;
 
-        //Check each scam sign to see if it's occupied
+        // Check each scam sign to see if it's occupied
         foreach (DropArea dropArea in scamSigns)
         {
             if (dropArea.isOccupied)
@@ -30,20 +34,25 @@ public class JobScamManager : MonoBehaviour
             }
         }
 
-        //Provide feedback based on the number of signs found
+        // Provide feedback based on the number of signs found
+        UpdateStatusText(foundSignsCount);
+    }
+
+    private void UpdateStatusText(int foundSignsCount)
+    {
         switch (foundSignsCount)
         {
             case 0:
-                Debug.Log("All signs missed.");
+                statusText.text = "0/3 signs";
                 break;
             case 1:
-                Debug.Log("1 sign found, 2 signs missed.");
+                statusText.text = "1/3 signs";
                 break;
             case 2:
-                Debug.Log("2 signs found, 1 sign missed.");
+                statusText.text = "2/3 signs";
                 break;
             case 3:
-                Debug.Log("All signs found!");
+                statusText.text = "3/3 signs";
                 break;
         }
     }
