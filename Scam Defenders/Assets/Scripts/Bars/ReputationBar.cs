@@ -15,17 +15,7 @@ public class ReputationBar : MonoBehaviour
     void Update()
     {
         // debugging purposes
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            MinusReputation(10);
-            Debug.Log("minus");
-        }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            PlusReputation(10);
-            Debug.Log("plus");
-        }
+        //MinusReputation(10);
     }
 
     // sets the reputation bar value to desired value
