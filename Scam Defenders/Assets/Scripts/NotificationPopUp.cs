@@ -8,6 +8,7 @@ public class NotificationPopUp : MonoBehaviour
 
     public void OnEnable()
     {
+        Debug.Log("Notification OnEnable called: " + gameObject.name);
         notification.localPosition = new Vector2(0, Screen.height);
         notification.LeanMoveLocalY(0, 0.5f).setEaseOutExpo().delay = 0.1f;
 
@@ -17,6 +18,7 @@ public class NotificationPopUp : MonoBehaviour
 
     public void Close()
     {
+        Debug.Log("Closing notification: " + gameObject.name);
         notification.LeanMoveLocalY(Screen.height, 0.5f).setEaseInExpo().delay = 0.1f;
     }
 
