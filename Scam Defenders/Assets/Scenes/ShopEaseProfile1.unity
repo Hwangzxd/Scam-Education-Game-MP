@@ -2139,7 +2139,7 @@ GameObject:
   - component: {fileID: 997568305}
   - component: {fileID: 997568304}
   m_Layer: 5
-  m_Name: HomeUI
+  m_Name: ScamProfileCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

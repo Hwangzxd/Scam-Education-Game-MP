@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShopEaseChoose.unity
     guid: 6d95f5473ec00c74bb250128c177f84d
+  - enabled: 1
+    path: Assets/Scenes/GeemailEXP.unity
+    guid: 029acb4740298474993e3eacb350e56d
   m_configObjects: {}
