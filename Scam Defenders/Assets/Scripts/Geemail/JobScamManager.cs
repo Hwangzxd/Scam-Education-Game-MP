@@ -4,7 +4,7 @@ using TMPro;
 public class JobScamManager : MonoBehaviour
 {
     public DropArea[] scamSigns;
-    public TextMeshProUGUI statusText; // Reference to the TextMeshPro component
+    public TextMeshProUGUI statusText; 
 
     void Start()
     {
@@ -13,7 +13,7 @@ public class JobScamManager : MonoBehaviour
             scamSigns = FindObjectsOfType<DropArea>();
         }
 
-        UpdateStatusText(0); // Initialize the status text
+        UpdateStatusText(0); 
     }
 
     void Update()
@@ -25,7 +25,7 @@ public class JobScamManager : MonoBehaviour
     {
         int foundSignsCount = 0;
 
-        // Check each scam sign to see if it's occupied
+        //Check each scam sign to see if occupied
         foreach (DropArea dropArea in scamSigns)
         {
             if (dropArea.isOccupied)
@@ -34,7 +34,7 @@ public class JobScamManager : MonoBehaviour
             }
         }
 
-        // Provide feedback based on the number of signs found
+        //Provide feedback based on the number of signs found
         UpdateStatusText(foundSignsCount);
     }
 

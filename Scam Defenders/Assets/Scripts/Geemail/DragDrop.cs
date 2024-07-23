@@ -6,28 +6,28 @@ public class DragDrop : MonoBehaviour
     Collider2D collider2d;
 
     public string destinationTag = "DropArea";
-    public string hotbarTag = "Hotbar"; // Tag for the hotbar
+    public string hotbarTag = "Hotbar"; 
     public Color defaultColor = Color.white;
     public Color snapColor = Color.red;
-    public Color hoverColor = Color.yellow; // Color when hovering over drop areas
+    public Color hoverColor = Color.yellow;
 
     private Camera mainCamera;
     private Transform snapTransform;
     private DropArea snapDropArea;
-    private DropArea previousDropArea; // To track the previous drop area
+    private DropArea previousDropArea; 
 
     private bool isSnapped = false;
     private bool isInPlace = false;
 
-    public SpriteRenderer flagRenderer; // Changed from Image to SpriteRenderer
-    private Vector3 originalPosition; // Store the original position of the flag
+    public SpriteRenderer flagRenderer;
+    private Vector3 originalPosition; 
 
     void Awake()
     {
         collider2d = GetComponent<Collider2D>();
         mainCamera = Camera.main;
-        flagRenderer = GetComponent<SpriteRenderer>(); // Changed from Image to SpriteRenderer
-        originalPosition = transform.position; // Store the starting position of the flag
+        flagRenderer = GetComponent<SpriteRenderer>(); 
+        originalPosition = transform.position; //Store the starting position of the flag
     }
 
     void OnMouseDown()
@@ -39,7 +39,7 @@ public class DragDrop : MonoBehaviour
         isInPlace = false;
         flagRenderer.color = defaultColor;
 
-        // Store the previous drop area
+        //Store the previous drop area
         if (previousDropArea != null)
         {
             previousDropArea.isOccupied = false;
@@ -53,17 +53,17 @@ public class DragDrop : MonoBehaviour
         newPos = ClampToViewport(newPos);
         transform.position = newPos;
 
-        // Reset color while dragging
+        //Reset color while dragging
         flagRenderer.color = defaultColor;
 
-        // Perform raycast to check for hover over drop area
+        //Perform raycast to check for hover over drop area
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero);
         if (hit.collider != null && hit.collider.CompareTag(destinationTag))
         {
             DropArea hoverDropArea = hit.collider.GetComponent<DropArea>();
             if (!hit.collider.CompareTag(hotbarTag) && !hoverDropArea.isOccupied)
             {
-                flagRenderer.color = hoverColor; // Change color on hover
+                flagRenderer.color = hoverColor; //Change color on hover
             }
         }
     }
@@ -72,14 +72,13 @@ public class DragDrop : MonoBehaviour
     {
         collider2d.enabled = false;
 
-        // Release from previous drop area if snapped
+        //Release from previous drop area if snapped
         if (isSnapped && snapTransform != null)
         {
             snapDropArea.isOccupied = false;
             snapDropArea = null;
         }
 
-        // Perform raycast to find new drop area
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero);
 
         if (hit.collider != null && hit.collider.CompareTag(destinationTag) && !hit.collider.CompareTag(hotbarTag))
@@ -93,8 +92,8 @@ public class DragDrop : MonoBehaviour
 
                 transform.position = snapTransform.position + new Vector3(0, 0, -0.01f);
                 isInPlace = true;
-                snapDropArea.isOccupied = true; // Mark the drop area as occupied
-                previousDropArea = snapDropArea; // Update the previous drop area
+                snapDropArea.isOccupied = true; //Mark the drop area as occupied
+                previousDropArea = snapDropArea; //Update the previous drop area
             }
             else
             {
@@ -117,7 +116,7 @@ public class DragDrop : MonoBehaviour
         isSnapped = false;
         isInPlace = false;
 
-        // Reset to original position if not snapped to a new drop area
+        //Reset to original position if not snapped to a new drop area
         transform.position = originalPosition;
     }
 
