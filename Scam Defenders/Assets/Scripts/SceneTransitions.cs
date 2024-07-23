@@ -49,14 +49,14 @@ public class SceneTransitions : MonoBehaviour
         SceneManager.LoadScene("Home2");
     }
 
-    public void GoToQuickChats()
+    public void GoToYabberChatChat()
     {
-        SceneManager.LoadScene("QuickChats");
+        SceneManager.LoadScene("YabberChatChat");
     }
 
-    public void GoToChats()
+    public void GoToYabberChatHome()
     {
-        SceneManager.LoadScene("Chats");
+        SceneManager.LoadScene("YabberChatHome");
     } 
      
     public void GoToChatterNet()
