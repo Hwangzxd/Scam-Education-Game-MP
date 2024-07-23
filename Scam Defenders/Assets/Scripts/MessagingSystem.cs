@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MessagingSystem : MonoBehaviour
 {
     public List<GameObject> npcMessages; // The object you want to activate
-    public GameObject dialogueOptions;
+    //public GameObject dialogueOptions;
     public Button optionButton; // The button that triggers the activation
     public float delay = 2f; // Delay in seconds
     public float animationDuration = 0.5f; // Duration of the size-in animation
@@ -45,17 +45,22 @@ public class MessagingSystem : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(delay);
-        if (dialogueOptions != null)
-        {
-            dialogueOptions.SetActive(true);
-        }
+        //yield return new WaitForSeconds(delay);
+        //if (dialogueOptions != null)
+        //{
+        //    dialogueOptions.SetActive(true);
+        //}
     }
 
     void ActivateAndAnimate(GameObject obj)
     {
+        // Make sure the object is not set to zero scale initially
         obj.SetActive(true);
-        obj.transform.localScale = initialScale; // Set initial scale
-        LeanTween.scale(obj, Vector3.one, animationDuration).setEase(LeanTweenType.easeOutBounce);
+        obj.transform.localScale = Vector3.one * 0.1f; // Start from a small but non-zero scale
+
+        // Animate scaling to normal size
+        LeanTween.scale(obj, Vector3.one, animationDuration)
+            .setEase(LeanTweenType.easeOutBounce);
     }
+
 }
