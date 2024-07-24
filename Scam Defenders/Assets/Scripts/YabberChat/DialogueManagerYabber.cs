@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DialogueManagerYabber : MonoBehaviour
 {
+    public OptionsManagerYabber YabberOptionsManager;
 
     public RectTransform messageContainer; // The container for message images
     public ScrollRect scrollRect; // Reference to the ScrollRect component
@@ -22,7 +23,7 @@ public class DialogueManagerYabber : MonoBehaviour
 
     // Arrays to store the pre-existing message GameObjects for each scenario
     public GameObject[] originalMessages;
-    public GameObject[] scenario1Messages;
+    public GameObject[] originalMessagesAdvisor;
     public GameObject[] scenario2Messages;
     public GameObject[] scenario3Messages;
 
@@ -54,8 +55,34 @@ public class DialogueManagerYabber : MonoBehaviour
     {
         yield return StartCoroutine(ShowMessage(originalMessages[0])); // Scammer's first message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
-        yield return StartCoroutine(ShowMessage(originalMessages[1])); // User's first message
-        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the options
+
+    }
+
+    public IEnumerator RequestOfficialDocumentations()
+    {
+        if (!YabberOptionsManager.originalMessage.activeSelf)
+        {
+            YabberOptionsManager.originalMessage.SetActive(true);
+        }
+        yield return StartCoroutine(ShowMessage(originalMessages[1])); // Scammer's first message
+        yield return new WaitForSeconds(3f); // Wait for 3 second before showing the next message
+        yield return StartCoroutine(ShowMessage(originalMessages[2])); // Scammer's first message
+        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+        YabberOptionsManager.enableAllButtons();
+
+    }
+
+    public IEnumerator ContactIndependentFinancialAdvisor()
+    {
+        yield return StartCoroutine(ShowMessage(originalMessagesAdvisor[0])); // Scammer's first message
+        yield return new WaitForSeconds(1f); // Wait for 3 second before showing the next message
+        yield return StartCoroutine(ShowMessage(originalMessagesAdvisor[1])); // Scammer's first message
+        yield return new WaitForSeconds(3f); // Wait for 1 second before showing the next message
+        yield return StartCoroutine(ShowMessage(originalMessagesAdvisor[2])); // Scammer's first message
+        yield return new WaitForSeconds(2f); // Wait for 3 second before showing the next message
+        yield return StartCoroutine(ShowMessage(originalMessagesAdvisor[3])); // Scammer's first message
+        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+        YabberOptionsManager.enableAllButtons();
 
     }
     #region Chat Logic
@@ -90,6 +117,39 @@ public class DialogueManagerYabber : MonoBehaviour
         // Scroll to the bottom
         scrollRect.verticalNormalizedPosition = 0;
     }
+
+    public void HideAllOriginalMessages()
+    {
+        foreach (GameObject message in originalMessages)
+        {
+            message.SetActive(false);
+        }
+    }
+
+    public void ShowAllOriginalMessages()
+    {
+        foreach (GameObject message in originalMessages)
+        {
+            message.SetActive(true);
+        }
+    }
+
+    public void HideAllAdvisorMessages()
+    {
+        foreach (GameObject message in originalMessagesAdvisor)
+        {
+            message.SetActive(false);
+        }
+    }
+
+    public void ShowAllAdvisorMessages()
+    {
+        foreach (GameObject message in originalMessagesAdvisor)
+        {
+            message.SetActive(true);
+        }
+    }
+
 
     #endregion
 
