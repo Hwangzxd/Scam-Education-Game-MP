@@ -50,7 +50,7 @@ public class MGData : MonoBehaviour
             case "Geemail":
                 enteredScene3 = true;
                 break;
-            case "QuickChats":
+            case "YabberChatHome":
                 enteredScene4 = true;
                 break;
         }
