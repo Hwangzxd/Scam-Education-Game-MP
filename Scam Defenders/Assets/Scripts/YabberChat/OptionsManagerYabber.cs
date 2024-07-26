@@ -215,6 +215,7 @@ public class OptionsManagerYabber : MonoBehaviour
         loadIcon.SetActive(false);
         infoText.SetActive(false);
         searchBar.SetActive(false);
+        financialInstitutions.SetActive(false);
 
         if (topImage.TryGetComponent<Image>(out Image image))
         {
