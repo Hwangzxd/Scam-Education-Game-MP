@@ -16,6 +16,9 @@ public class OptionsManagerYabber : MonoBehaviour
     public Button backBtn;
     public Button searchBarBtn;
 
+    public Button block;
+    public Button reply;
+
     public TextMeshProUGUI textName;
     public TextMeshProUGUI searchText;
 
@@ -32,7 +35,6 @@ public class OptionsManagerYabber : MonoBehaviour
     public GameObject user;
     public GameObject chat;
     public GameObject topImage;
-
     public GameObject financialInstitutions;
 
     public Sprite btn4Sprite;
@@ -50,6 +52,8 @@ public class OptionsManagerYabber : MonoBehaviour
         button4.onClick.AddListener(OnButton4Click);
         backBtn.onClick.AddListener(OnBackBtnClick);
         searchBarBtn.onClick.AddListener(OnSearchBarClick);
+        block.onClick.AddListener(OnBlockButtonClick);
+        reply.onClick.AddListener(OnReplyButtonClick);
 
         InitialiseUI();
     }
@@ -161,7 +165,7 @@ public class OptionsManagerYabber : MonoBehaviour
     
     private IEnumerator ResearchCompany()
     {
-        yield return new WaitForSeconds(3f); // Wait for 3 second before showing the next message
+        yield return new WaitForSeconds(3f); // Wait for 3 second before showing the information
         infoText.SetActive(true);
         loadIcon.SetActive(false);
         backBtn.enabled = true;
@@ -221,6 +225,20 @@ public class OptionsManagerYabber : MonoBehaviour
         {
             image.sprite = originalSprite;
         }
+    }
+
+    public void OnBlockButtonClick()
+    {
+        disableAllButtons();
+        reply.enabled = false;
+        StartCoroutine(YabberDialogueManager.win1());
+    }
+
+    public void OnReplyButtonClick()
+    {
+        disableAllButtons();
+        block.enabled = false;
+        StartCoroutine(YabberDialogueManager.lose1());
     }
 }
 
