@@ -90,22 +90,19 @@ public class DialogueManagerGois : MonoBehaviour
     #endregion
 
     #region Scenario 2
-    public IEnumerator Scenario2()
-    {
-        yield return StartCoroutine(ShowMessage(scenario3Messages[0])); // User's message
-        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
-        yield return StartCoroutine(ShowMessage(scenario4Messages[1])); // Scammer's message
-        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
-    }
+    //public IEnumerator Scenario2()
+    //{
+
+    //}
 
     #endregion
 
     #region Scenario 3
     public IEnumerator Scenario3()
     {
-        yield return StartCoroutine(ShowMessage(scenario3Messages[0])); // User's message
+        yield return StartCoroutine(ShowMessagePrefab(scenario3Messages[0], messageContainer)); // User's message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
-        yield return StartCoroutine(ShowMessage(scenario4Messages[1])); // Scammer's message
+        yield return StartCoroutine(ShowMessagePrefab(scenario3Messages[1], messageContainer)); // Scammer's message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
     }
 
@@ -114,9 +111,9 @@ public class DialogueManagerGois : MonoBehaviour
     #region Scenario 4
     public IEnumerator Scenario4()
     {
-        yield return StartCoroutine(ShowMessage(scenario4Messages[0])); // User's message
+        yield return StartCoroutine(ShowMessagePrefab(scenario4Messages[0], messageContainer)); // User's message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
-        yield return StartCoroutine(ShowMessage(scenario4Messages[1])); // Scammer's message
+        yield return StartCoroutine(ShowMessagePrefab(scenario4Messages[1], messageContainer)); // Scammer's message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
     }
 
@@ -142,6 +139,26 @@ public class DialogueManagerGois : MonoBehaviour
         // Wait until scaling animation is done
         yield return new WaitForSeconds(scaleAnimationDuration);
     }
+
+    private IEnumerator ShowMessagePrefab(GameObject prefab, Transform parent)
+    {
+        // Instantiate the prefab
+        GameObject obj = Instantiate(prefab, parent);
+
+        // Set the initial scale for the animation
+        obj.transform.localScale = initialScale;
+
+        // Ensure the scroll rect is updated to the bottom
+        yield return StartCoroutine(UpdateScrollRect());
+
+        // Animate scaling from initialScale to 1
+        LeanTween.scale(obj, Vector3.one, scaleAnimationDuration)
+            .setEase(LeanTweenType.easeOutBounce);
+
+        // Wait until scaling animation is done
+        yield return new WaitForSeconds(scaleAnimationDuration);
+    }
+
 
     private IEnumerator UpdateScrollRect()
     {
