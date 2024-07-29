@@ -164,10 +164,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 10723810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac50f5c6f4ed0104f817a768d82b1acc, type: 3}
+  m_Script: {fileID: 11500000, guid: 39301b30c378cea478b847124eec0ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YabberDialogueManager: {fileID: 994236485}
+  DialogueManagerGois: {fileID: 994236485}
   button1: {fileID: 77998996}
   button2: {fileID: 1081710088}
   button3: {fileID: 231366807}
@@ -736,7 +736,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 10723813}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: OptionsManagerYabber, Assembly-CSharp
         m_MethodName: OnButton1Click
         m_Mode: 1
@@ -1566,7 +1566,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 10723813}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: OptionsManagerYabber, Assembly-CSharp
         m_MethodName: OnButton3Click
         m_Mode: 1
@@ -1698,7 +1698,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 10723813}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: OptionsManagerYabber, Assembly-CSharp
         m_MethodName: OnReplyButtonClick
         m_Mode: 1
@@ -2416,7 +2416,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 10723813}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: OptionsManagerYabber, Assembly-CSharp
         m_MethodName: OnSearchBarClick
         m_Mode: 1
@@ -2682,7 +2682,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 10723813}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: OptionsManagerYabber, Assembly-CSharp
         m_MethodName: OnBlockButtonClick
         m_Mode: 1
@@ -5012,10 +5012,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 994236482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e5cf6d5a8b25f84195798ef93f18fc1, type: 3}
+  m_Script: {fileID: 11500000, guid: c217764ea004acc449c00e3b60764aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YabberOptionsManager: {fileID: 10723813}
+  OptionsManagerGois: {fileID: 10723813}
   messageContainer: {fileID: 60048830}
   scrollRect: {fileID: 749597240}
   scaleAnimationDuration: 0.5
@@ -5027,10 +5027,10 @@ MonoBehaviour:
   - {fileID: 888372411}
   - {fileID: 980763693}
   originalMessagesAdvisor:
-  - {fileID: 121353867}
-  - {fileID: 181239651}
-  - {fileID: 2084022798}
-  - {fileID: 1951548951}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   scenario2Messages: []
   scenario3Messages: []
 --- !u!1 &1010340874
@@ -6371,7 +6371,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 10723813}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: OptionsManagerYabber, Assembly-CSharp
         m_MethodName: OnBackBtnClick
         m_Mode: 1
