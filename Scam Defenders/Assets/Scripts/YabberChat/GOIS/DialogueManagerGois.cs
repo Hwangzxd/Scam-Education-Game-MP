@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManagerGois : MonoBehaviour
 {
@@ -23,9 +24,13 @@ public class DialogueManagerGois : MonoBehaviour
 
     // Arrays to store the pre-existing message GameObjects for each scenario
     public GameObject[] originalMessages;
-    public GameObject[] scenario1Messages;
-    public GameObject[] scenario2Messages;
+    public GameObject[] scenario3Messages;
+    public GameObject[] scenario4Messages;
 
+    //others
+    public GameObject CallUI;
+    public TextMeshProUGUI CallText;
+    public float fadeDuration;
 
     private Dictionary<string, IEnumerator> scenarios;
 
@@ -37,15 +42,12 @@ public class DialogueManagerGois : MonoBehaviour
             { "StartScene", StartScene() },
         };
 
-        // Start the first scenario
+        // Start the original message
         StartCoroutine(scenarios["StartScene"]);
     }
 
-    private void Update()
-    {
-    }
 
-    #region Original
+    #region Original Message
     private IEnumerator StartScene()
     {
         yield return StartCoroutine(ShowMessage(originalMessages[0])); // Scammer's first message
@@ -55,22 +57,66 @@ public class DialogueManagerGois : MonoBehaviour
     #endregion
 
     #region Scenario 1
+
     public IEnumerator Scenario1()
     {
-        yield return StartCoroutine(ShowMessage(scenario1Messages[0])); // User's message
-        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
-        yield return StartCoroutine(ShowMessage(scenario1Messages[1])); // Scammer's message
-        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+        //fade in CallUI
+        CanvasGroup callCanvasGroup = CallUI.GetComponent<CanvasGroup>();
+        if (callCanvasGroup == null)
+        {
+            callCanvasGroup = CallUI.AddComponent<CanvasGroup>();
+        }
+        callCanvasGroup.alpha = 0;
+        CallUI.SetActive(true);
+        LeanTween.alphaCanvas(callCanvasGroup, 1, fadeDuration);
+
+        yield return new WaitForSeconds(3f); //wait for 3 seconds
+
+        CallText.text = "Is there an Officer Tan for tax filing?";
+        yield return new WaitForSeconds(2f); //wait for 2 seconds
+
+        CallText.text = "No.";
+        CallText.color = Color.green; //change text color to green
+        yield return new WaitForSeconds(2f); //wait for 2 seconds
+
+        //fade out CallUI
+        LeanTween.alphaCanvas(callCanvasGroup, 0, fadeDuration).setOnComplete(() => CallUI.SetActive(false));
+
+        CallText.color = Color.white; //set text color to white
+        CallText.text = "Ringing...";
     }
+
 
     #endregion
 
     #region Scenario 2
     public IEnumerator Scenario2()
     {
-        yield return StartCoroutine(ShowMessage(scenario2Messages[0])); // User's message
+        yield return StartCoroutine(ShowMessage(scenario3Messages[0])); // User's message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
-        yield return StartCoroutine(ShowMessage(scenario2Messages[1])); // Scammer's message
+        yield return StartCoroutine(ShowMessage(scenario4Messages[1])); // Scammer's message
+        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+    }
+
+    #endregion
+
+    #region Scenario 3
+    public IEnumerator Scenario3()
+    {
+        yield return StartCoroutine(ShowMessage(scenario3Messages[0])); // User's message
+        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+        yield return StartCoroutine(ShowMessage(scenario4Messages[1])); // Scammer's message
+        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+    }
+
+    #endregion
+
+    #region Scenario 4
+    public IEnumerator Scenario4()
+    {
+        yield return StartCoroutine(ShowMessage(scenario4Messages[0])); // User's message
+        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+        yield return StartCoroutine(ShowMessage(scenario4Messages[1])); // Scammer's message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
     }
 
@@ -121,22 +167,6 @@ public class DialogueManagerGois : MonoBehaviour
     public void ShowAllOriginalMessages()
     {
         foreach (GameObject message in originalMessages)
-        {
-            message.SetActive(true);
-        }
-    }
-
-    public void HideAllAdvisorMessages()
-    {
-        foreach (GameObject message in scenario1Messages)
-        {
-            message.SetActive(false);
-        }
-    }
-
-    public void ShowAllAdvisorMessages()
-    {
-        foreach (GameObject message in scenario1Messages)
         {
             message.SetActive(true);
         }

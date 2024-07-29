@@ -77,7 +77,7 @@ public class OptionsManagerGois : MonoBehaviour
 
     public void OnButton1Click()
     {
-
+        StartCoroutine(DialogueManagerGois.Scenario1());
     }
 
     public void OnButton2Click()
@@ -88,12 +88,12 @@ public class OptionsManagerGois : MonoBehaviour
 
     public void OnButton3Click()
     {
-        StartCoroutine(DialogueManagerGois.Scenario1());
+        StartCoroutine(DialogueManagerGois.Scenario3());
     }
 
     public void OnButton4Click()
     {
-        StartCoroutine(DialogueManagerGois.Scenario2());
+        StartCoroutine(DialogueManagerGois.Scenario4());
     }
 
 
@@ -103,33 +103,16 @@ public class OptionsManagerGois : MonoBehaviour
         {
             searchText.text = "SG Wealth Management";
             loadIcon.SetActive(true);
-            loadCoroutine = ResearchCompany();
+            //loadCoroutine = ResearchCompany();
             StartCoroutine(loadCoroutine);
         }
     }
 
-    private IEnumerator ResearchCompany()
-    {
-        yield return new WaitForSeconds(3f); // Wait for 3 second before showing the information
-        infoText.SetActive(true);
-        loadIcon.SetActive(false);
-        backBtn.enabled = true;
-    }
 
     public void OnBackBtnClick()
     {
         disableAllButtons();
-        textName.text = "+65 9343 3432";
-        ResetUI();
-        DialogueManagerGois.HideAllAdvisorMessages();
-        if (btn3Pressed)
-        {
-            DialogueManagerGois.ShowAllOriginalMessages();
-        }
-        else
-        {
-            originalMessage.SetActive(true);
-        }
+        //stuff
         enableAllButtons();
     }
 
