@@ -5,9 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 using static System.Net.WebRequestMethods;
 
-public class OptionsManagerYabber : MonoBehaviour
+public class OptionsManagerInvs : MonoBehaviour
 {
-    public DialogueManagerYabber YabberDialogueManager;
+    public DialogueManagerInvs DialogueManagerInvs;
 
     public Button button1;
     public Button button2;
@@ -80,8 +80,8 @@ public class OptionsManagerYabber : MonoBehaviour
     {
         disableAllButtons();
         textName.text = "Trusted Financial Advisor";
-        YabberDialogueManager.HideAllOriginalMessages(); 
-        StartCoroutine(YabberDialogueManager.ContactIndependentFinancialAdvisor());
+        DialogueManagerInvs.HideAllOriginalMessages(); 
+        StartCoroutine(DialogueManagerInvs.ContactIndependentFinancialAdvisor());
         Debug.Log("Button 1 clicked");
     }
 
@@ -118,8 +118,8 @@ public class OptionsManagerYabber : MonoBehaviour
         btn3Pressed = true;
         disableAllButtons();
         textName.text = "+65 9343 3432";
-        YabberDialogueManager.HideAllAdvisorMessages();
-        StartCoroutine(YabberDialogueManager.RequestOfficialDocumentations());
+        DialogueManagerInvs.HideAllAdvisorMessages();
+        StartCoroutine(DialogueManagerInvs.RequestOfficialDocumentations());
         Debug.Log("Button 3 clicked");
     }
 
@@ -177,10 +177,10 @@ public class OptionsManagerYabber : MonoBehaviour
         disableAllButtons();
         textName.text = "+65 9343 3432";
         ResetUI();
-        YabberDialogueManager.HideAllAdvisorMessages();
+        DialogueManagerInvs.HideAllAdvisorMessages();
         if (btn3Pressed)
         {
-            YabberDialogueManager.ShowAllOriginalMessages();   
+            DialogueManagerInvs.ShowAllOriginalMessages();   
         }
         else
         {
@@ -231,14 +231,14 @@ public class OptionsManagerYabber : MonoBehaviour
     {
         disableAllButtons();
         reply.enabled = false;
-        StartCoroutine(YabberDialogueManager.win1());
+        StartCoroutine(DialogueManagerInvs.win1());
     }
 
     public void OnReplyButtonClick()
     {
         disableAllButtons();
         block.enabled = false;
-        StartCoroutine(YabberDialogueManager.lose1());
+        StartCoroutine(DialogueManagerInvs.lose1());
     }
 }
 

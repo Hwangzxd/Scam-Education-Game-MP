@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac50f5c6f4ed0104f817a768d82b1acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YabberDialogueManager: {fileID: 994236485}
+  DialogueManagerInvs: {fileID: 994236485}
   button1: {fileID: 77998996}
   button2: {fileID: 1081710088}
   button3: {fileID: 231366807}
@@ -5015,7 +5015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e5cf6d5a8b25f84195798ef93f18fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YabberOptionsManager: {fileID: 10723813}
+  OptionsManagerInvs: {fileID: 10723813}
   messageContainer: {fileID: 60048830}
   scrollRect: {fileID: 749597240}
   scaleAnimationDuration: 0.5
