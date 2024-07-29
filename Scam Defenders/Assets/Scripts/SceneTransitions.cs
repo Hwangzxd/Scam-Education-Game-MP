@@ -82,7 +82,13 @@ public class SceneTransitions : MonoBehaviour
     public void GoToGeeMail()
     {
         SceneManager.LoadScene("Geemail");
-    } 
+    }
+
+    public void GoToGeeMailMG()
+    {
+        SceneManager.LoadScene("GeemailMG");
+    }
+
 
     public void GoToNotifications()
     {
@@ -107,5 +113,10 @@ public class SceneTransitions : MonoBehaviour
     public void GoToShopEaseProfile2()
     {
         SceneManager.LoadScene("ShopEaseProfile2");
+    }
+
+    public void GoToShopEase()
+    {
+        SceneManager.LoadScene("ShopEase");
     }
 }

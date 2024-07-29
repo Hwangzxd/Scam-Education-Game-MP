@@ -1189,7 +1189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 1460104013}
   m_Horizontal: 0
-  m_Vertical: 1
+  m_Vertical: 0
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
@@ -5146,7 +5146,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1993151932}
         m_TargetAssemblyTypeName: SceneTransitions, Assembly-CSharp
-        m_MethodName: GoToChats
+        m_MethodName: GoToGeeMailMG
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
