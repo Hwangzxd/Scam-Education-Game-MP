@@ -14,11 +14,11 @@ public class DialogueManagerYabber : MonoBehaviour
 
 
     // Lose screens
-    //public GameObject loseScreen1;
+    public GameObject loseScreen1;
     //etc.
 
     // Win screens
-    //public GameObject winScreen1;
+    public GameObject winScreen1;
     //etc.
 
     // Arrays to store the pre-existing message GameObjects for each scenario
@@ -83,7 +83,24 @@ public class DialogueManagerYabber : MonoBehaviour
         yield return StartCoroutine(ShowMessage(originalMessagesAdvisor[3])); // Scammer's first message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
         YabberOptionsManager.enableAllButtons();
+    }
 
+    public IEnumerator lose1()
+    {
+        // Wait for a few seconds before showing the lose screen
+        yield return new WaitForSeconds(1f); // Adjust the delay as needed
+
+        // Show the lose screen
+        loseScreen1.SetActive(true);
+    }
+
+    public IEnumerator win1()
+    {
+        // Wait for a few seconds before showing the win screen
+        yield return new WaitForSeconds(1f); // Adjust the delay as needed
+
+        // Show the lose screen
+        winScreen1.SetActive(true);
     }
     #region Chat Logic
 
