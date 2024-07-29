@@ -77,72 +77,25 @@ public class OptionsManagerGois : MonoBehaviour
 
     public void OnButton1Click()
     {
-        disableAllButtons();
-        textName.text = "Trusted Financial Advisor";
-        DialogueManagerGois.HideAllOriginalMessages();
-        // Add your specific scenario code here
-        Debug.Log("Button 1 clicked");
+
     }
 
     public void OnButton2Click()
     {
-        disableAllButtons();
-        btn2UI();
-        Debug.Log("Button 2 clicked");
+
     }
 
-    private void btn2UI()
-    {
-        user.SetActive(false);
-        chat.SetActive(false);
-
-        financialInstitutions.SetActive(true);
-        lockIcon.SetActive(true);
-
-        textName.text = "https://eservices.mas.gov.sg/fid/institution";
-
-        if (topImage.TryGetComponent<Image>(out Image image))
-        {
-            image.sprite = btn2Sprite;
-        }
-        backBtn.enabled = true;
-    }
 
     public void OnButton3Click()
     {
-        btn3Pressed = true;
-        disableAllButtons();
-        textName.text = "+65 9343 3432";
-        DialogueManagerGois.HideAllAdvisorMessages();
-        // Add your specific scenario code here
-        Debug.Log("Button 3 clicked");
+        StartCoroutine(DialogueManagerGois.Scenario1());
     }
 
     public void OnButton4Click()
     {
-        btn4Pressed = true;
-        disableAllButtons();
-        btn4UI();
-        Debug.Log("Button 4 clicked");
+
     }
 
-    private void btn4UI()
-    {
-        user.SetActive(false);
-        chat.SetActive(false);
-
-        lockIcon.SetActive(true);
-        research.SetActive(true);
-        searchBar.SetActive(true);
-        loadIcon.SetActive(false);
-        infoText.SetActive(false);
-        textName.text = "https://google.com";
-
-        if (topImage.TryGetComponent<Image>(out Image image))
-        {
-            image.sprite = btn4Sprite;
-        }
-    }
 
     public void OnSearchBarClick()
     {

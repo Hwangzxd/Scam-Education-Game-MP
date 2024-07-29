@@ -23,9 +23,9 @@ public class DialogueManagerGois : MonoBehaviour
 
     // Arrays to store the pre-existing message GameObjects for each scenario
     public GameObject[] originalMessages;
-    public GameObject[] originalMessagesAdvisor;
+    public GameObject[] scenario1Messages;
     public GameObject[] scenario2Messages;
-    public GameObject[] scenario3Messages;
+
 
     private Dictionary<string, IEnumerator> scenarios;
 
@@ -45,11 +45,31 @@ public class DialogueManagerGois : MonoBehaviour
     {
     }
 
+    #region Original
     private IEnumerator StartScene()
     {
         yield return StartCoroutine(ShowMessage(originalMessages[0])); // Scammer's first message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
     }
+
+    #endregion
+
+    #region Scenario 1
+    public IEnumerator Scenario1()
+    {
+        yield return StartCoroutine(ShowMessage(scenario1Messages[0])); // User's message
+        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+        yield return StartCoroutine(ShowMessage(scenario1Messages[1])); // Scammer's message
+        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+    }
+
+    #endregion
+
+    #region Scenario 2
+
+
+    #endregion
+
 
     #region Chat Logic
 
@@ -102,7 +122,7 @@ public class DialogueManagerGois : MonoBehaviour
 
     public void HideAllAdvisorMessages()
     {
-        foreach (GameObject message in originalMessagesAdvisor)
+        foreach (GameObject message in scenario1Messages)
         {
             message.SetActive(false);
         }
@@ -110,7 +130,7 @@ public class DialogueManagerGois : MonoBehaviour
 
     public void ShowAllAdvisorMessages()
     {
-        foreach (GameObject message in originalMessagesAdvisor)
+        foreach (GameObject message in scenario1Messages)
         {
             message.SetActive(true);
         }
