@@ -66,7 +66,13 @@ public class DialogueManagerGois : MonoBehaviour
     #endregion
 
     #region Scenario 2
-
+    public IEnumerator Scenario2()
+    {
+        yield return StartCoroutine(ShowMessage(scenario2Messages[0])); // User's message
+        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+        yield return StartCoroutine(ShowMessage(scenario2Messages[1])); // Scammer's message
+        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+    }
 
     #endregion
 

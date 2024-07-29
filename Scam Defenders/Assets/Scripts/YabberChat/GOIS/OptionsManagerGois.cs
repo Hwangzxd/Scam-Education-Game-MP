@@ -93,7 +93,7 @@ public class OptionsManagerGois : MonoBehaviour
 
     public void OnButton4Click()
     {
-
+        StartCoroutine(DialogueManagerGois.Scenario2());
     }
 
 
