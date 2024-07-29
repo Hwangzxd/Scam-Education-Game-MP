@@ -31,6 +31,9 @@ public class DialogueManagerGois : MonoBehaviour
     public GameObject CallUI;
     public TextMeshProUGUI CallText;
     public float fadeDuration;
+    public GameObject ChatScreen;
+    public GameObject BrowserScreen;
+    public GameObject OptionsPopUp;
 
     private Dictionary<string, IEnumerator> scenarios;
 
@@ -50,8 +53,12 @@ public class DialogueManagerGois : MonoBehaviour
     #region Original Message
     private IEnumerator StartScene()
     {
+        OptionsManagerGois.disableAllButtons();
+
         yield return StartCoroutine(ShowMessage(originalMessages[0])); // Scammer's first message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+
+        OptionsManagerGois.enableAllButtons();
     }
 
     #endregion
@@ -60,6 +67,8 @@ public class DialogueManagerGois : MonoBehaviour
 
     public IEnumerator Scenario1()
     {
+        OptionsManagerGois.disableAllButtons();
+
         //fade in CallUI
         CanvasGroup callCanvasGroup = CallUI.GetComponent<CanvasGroup>();
         if (callCanvasGroup == null)
@@ -82,28 +91,51 @@ public class DialogueManagerGois : MonoBehaviour
         //fade out CallUI
         LeanTween.alphaCanvas(callCanvasGroup, 0, fadeDuration).setOnComplete(() => CallUI.SetActive(false));
 
+        yield return new WaitForSeconds(2f); //wait for 2 seconds
         CallText.color = Color.white; //set text color to white
         CallText.text = "Ringing...";
+
+        OptionsManagerGois.enableAllButtons();
     }
 
 
     #endregion
 
     #region Scenario 2
-    //public IEnumerator Scenario2()
-    //{
 
-    //}
+    public void Scenario2()
+    {
+        // Ensure the CanvasGroup component is attached to the OptionsPopUp
+        CanvasGroup canvasGroup = OptionsPopUp.GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+        {
+            canvasGroup = OptionsPopUp.AddComponent<CanvasGroup>();
+        }
+
+        // Set the transparency of the OptionsPopUp to 0 (fully transparent)
+        canvasGroup.alpha = 0;
+
+        // Disable all buttons through OptionsManagerGois
+        OptionsManagerGois.disableAllButtons();
+
+        // Switch screens
+        ChatScreen.SetActive(false);
+        BrowserScreen.SetActive(true);
+    }
 
     #endregion
 
     #region Scenario 3
     public IEnumerator Scenario3()
     {
+        OptionsManagerGois.disableAllButtons();
+
         yield return StartCoroutine(ShowMessagePrefab(scenario3Messages[0], messageContainer)); // User's message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
         yield return StartCoroutine(ShowMessagePrefab(scenario3Messages[1], messageContainer)); // Scammer's message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+
+        OptionsManagerGois.enableAllButtons();
     }
 
     #endregion
@@ -111,10 +143,14 @@ public class DialogueManagerGois : MonoBehaviour
     #region Scenario 4
     public IEnumerator Scenario4()
     {
+        OptionsManagerGois.disableAllButtons();
+
         yield return StartCoroutine(ShowMessagePrefab(scenario4Messages[0], messageContainer)); // User's message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
         yield return StartCoroutine(ShowMessagePrefab(scenario4Messages[1], messageContainer)); // Scammer's message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+
+        OptionsManagerGois.enableAllButtons();
     }
 
     #endregion

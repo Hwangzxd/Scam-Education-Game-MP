@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using static System.Net.WebRequestMethods;
 
 public class OptionsManagerGois : MonoBehaviour
 {
@@ -39,9 +38,9 @@ public class OptionsManagerGois : MonoBehaviour
 
     public Sprite btn4Sprite;
     public Sprite btn2Sprite;
-    private Sprite originalSprite;
 
-    private IEnumerator loadCoroutine;
+    // Add a boolean to track the current state
+    private bool isChatActive = true;
 
     void Start()
     {
@@ -51,30 +50,30 @@ public class OptionsManagerGois : MonoBehaviour
         button3.onClick.AddListener(OnButton3Click);
         button4.onClick.AddListener(OnButton4Click);
         backBtn.onClick.AddListener(OnBackBtnClick);
-        searchBarBtn.onClick.AddListener(OnSearchBarClick);
         block.onClick.AddListener(OnBlockButtonClick);
         reply.onClick.AddListener(OnReplyButtonClick);
 
-        InitialiseUI();
+        //InitialiseUI();
     }
 
-    void InitialiseUI()
-    {
-        lockIcon.SetActive(false);
-        research.SetActive(false);
-        searchBar.SetActive(false);
-        financialInstitutions.SetActive(false);
+    //void InitialiseUI()
+    //{
+    //    lockIcon.SetActive(false);
+    //    research.SetActive(false);
+    //    searchBar.SetActive(false);
+    //    financialInstitutions.SetActive(false);
 
-        user.SetActive(true);
-        chat.SetActive(true);
+    //    user.SetActive(true);
+    //    chat.SetActive(true);
 
-        //set the sprite to be the scammer
-        if (topImage.TryGetComponent<Image>(out Image image))
-        {
-            originalSprite = image.sprite;
-        }
-    }
+    //    // Set the sprite to be the scammer
+    //    if (topImage.TryGetComponent<Image>(out Image image))
+    //    {
+    //        originalSprite = image.sprite;
+    //    }
+    //}
 
+    //main buttons
     public void OnButton1Click()
     {
         StartCoroutine(DialogueManagerGois.Scenario1());
@@ -82,9 +81,8 @@ public class OptionsManagerGois : MonoBehaviour
 
     public void OnButton2Click()
     {
-
+        DialogueManagerGois.Scenario2();
     }
-
 
     public void OnButton3Click()
     {
@@ -96,33 +94,36 @@ public class OptionsManagerGois : MonoBehaviour
         StartCoroutine(DialogueManagerGois.Scenario4());
     }
 
-
-    public void OnSearchBarClick()
+    public void OnBackBtnClick()
     {
-        if (btn4Pressed)
+        //Debug.Log("test");
+        if (DialogueManagerGois.BrowserScreen.activeSelf == true)
         {
-            searchText.text = "SG Wealth Management";
-            loadIcon.SetActive(true);
-            //loadCoroutine = ResearchCompany();
-            StartCoroutine(loadCoroutine);
+            //Debug.Log("test1");
+            // Switch back to the chat screen
+            DialogueManagerGois.ChatScreen.SetActive(true);
+            DialogueManagerGois.BrowserScreen.SetActive(false);
+
+            // Restore the transparency of OptionsPopUp to full
+            CanvasGroup optionsCanvasGroup = DialogueManagerGois.OptionsPopUp.GetComponent<CanvasGroup>();
+            if (optionsCanvasGroup == null)
+            {
+                optionsCanvasGroup = DialogueManagerGois.OptionsPopUp.AddComponent<CanvasGroup>();
+            }
+            optionsCanvasGroup.alpha = 1; // Set to full visibility
+
+            // Enable all buttons
+            enableAllButtons();
         }
     }
 
-
-    public void OnBackBtnClick()
-    {
-        disableAllButtons();
-        //stuff
-        enableAllButtons();
-    }
-
-    private void disableAllButtons()
+    //helper methods
+    public void disableAllButtons()
     {
         button1.enabled = false;
         button2.enabled = false;
         button3.enabled = false;
         button4.enabled = false;
-        backBtn.enabled = false;
     }
 
     public void enableAllButtons()
@@ -131,26 +132,9 @@ public class OptionsManagerGois : MonoBehaviour
         button2.enabled = true;
         button3.enabled = true;
         button4.enabled = true;
-        backBtn.enabled = true;
     }
 
-    private void ResetUI()
-    {
-        user.SetActive(true);
-        chat.SetActive(true);
-        lockIcon.SetActive(false);
-        research.SetActive(false);
-        loadIcon.SetActive(false);
-        infoText.SetActive(false);
-        searchBar.SetActive(false);
-        financialInstitutions.SetActive(false);
-
-        if (topImage.TryGetComponent<Image>(out Image image))
-        {
-            image.sprite = originalSprite;
-        }
-    }
-
+    //deciding buttons
     public void OnBlockButtonClick()
     {
         disableAllButtons();
