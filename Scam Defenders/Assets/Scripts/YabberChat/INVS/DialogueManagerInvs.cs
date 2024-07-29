@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueManagerYabber : MonoBehaviour
+public class DialogueManagerInvs : MonoBehaviour
 {
-    public OptionsManagerYabber YabberOptionsManager;
+    public OptionsManagerInvs OptionsManagerInvs;
 
     public RectTransform messageContainer; // The container for message images
     public ScrollRect scrollRect; // Reference to the ScrollRect component
@@ -14,11 +14,11 @@ public class DialogueManagerYabber : MonoBehaviour
 
 
     // Lose screens
-    //public GameObject loseScreen1;
+    public GameObject loseScreen1;
     //etc.
 
     // Win screens
-    //public GameObject winScreen1;
+    public GameObject winScreen1;
     //etc.
 
     // Arrays to store the pre-existing message GameObjects for each scenario
@@ -60,15 +60,15 @@ public class DialogueManagerYabber : MonoBehaviour
 
     public IEnumerator RequestOfficialDocumentations()
     {
-        if (!YabberOptionsManager.originalMessage.activeSelf)
+        if (!OptionsManagerInvs.originalMessage.activeSelf)
         {
-            YabberOptionsManager.originalMessage.SetActive(true);
+            OptionsManagerInvs.originalMessage.SetActive(true);
         }
         yield return StartCoroutine(ShowMessage(originalMessages[1])); // Scammer's first message
         yield return new WaitForSeconds(3f); // Wait for 3 second before showing the next message
         yield return StartCoroutine(ShowMessage(originalMessages[2])); // Scammer's first message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
-        YabberOptionsManager.enableAllButtons();
+        OptionsManagerInvs.enableAllButtons();
 
     }
 
@@ -82,8 +82,25 @@ public class DialogueManagerYabber : MonoBehaviour
         yield return new WaitForSeconds(2f); // Wait for 3 second before showing the next message
         yield return StartCoroutine(ShowMessage(originalMessagesAdvisor[3])); // Scammer's first message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
-        YabberOptionsManager.enableAllButtons();
+        OptionsManagerInvs.enableAllButtons();
+    }
 
+    public IEnumerator lose1()
+    {
+        // Wait for a few seconds before showing the lose screen
+        yield return new WaitForSeconds(1f); // Adjust the delay as needed
+
+        // Show the lose screen
+        loseScreen1.SetActive(true);
+    }
+
+    public IEnumerator win1()
+    {
+        // Wait for a few seconds before showing the win screen
+        yield return new WaitForSeconds(1f); // Adjust the delay as needed
+
+        // Show the lose screen
+        winScreen1.SetActive(true);
     }
     #region Chat Logic
 
