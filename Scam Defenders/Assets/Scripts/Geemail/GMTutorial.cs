@@ -8,24 +8,35 @@ public class GMTutorial : MonoBehaviour
 
     void Start()
     {
-        // Initialize the guides' active states
         for (int i = 0; i < guides.Length; i++)
         {
-            guides[i].SetActive(i == 0); // Activate the first guide, deactivate the rest
+            guides[i].SetActive(i == 0); //Activates the first guide, deactivates the rest
         }
     }
 
     public void EnableNextGuide()
     {
-        // Ensure current index is within bounds
-        if (currentGuideIndex < guides.Length - 1)
+        //Ensures current index is within array length
+        if (currentGuideIndex < guides.Length)
         {
-            // Deactivate current guide
+            //Deactivates the current guide
             guides[currentGuideIndex].SetActive(false);
 
-            // Increment the index and activate the next guide
+            //Increments the index and activates the next guide if available
             currentGuideIndex++;
-            guides[currentGuideIndex].SetActive(true);
+
+            if (currentGuideIndex < guides.Length)
+            {
+                guides[currentGuideIndex].SetActive(true);
+            }
+            else
+            {
+                //If no more guides, deactivate all
+                for (int i = 0; i < guides.Length; i++)
+                {
+                    guides[i].SetActive(false);
+                }
+            }
         }
     }
 }
