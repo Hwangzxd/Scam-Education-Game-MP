@@ -14,12 +14,10 @@ public class DialogueManagerYabber : MonoBehaviour
 
 
     // Lose screens
-    //public GameObject loseScreen1;
-    //etc.
+    public GameObject loseScreen1;
 
     // Win screens
-    //public GameObject winScreen1;
-    //etc.
+    public GameObject winScreen1;
 
     // Arrays to store the pre-existing message GameObjects for each scenario
     public GameObject[] originalMessages;
