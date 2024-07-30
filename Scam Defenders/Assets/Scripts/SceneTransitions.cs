@@ -95,7 +95,6 @@ public class SceneTransitions : MonoBehaviour
         audioManager.PlaySFX(audioManager.ButtonSFX);
     }
 
-
     public void GoToGeeMail()
     {
         SceneManager.LoadScene("Geemail");
