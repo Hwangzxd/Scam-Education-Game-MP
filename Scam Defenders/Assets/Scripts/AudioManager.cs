@@ -1,18 +1,15 @@
-// This script is for managing music and sound effects.
-
-using UnityEngine.Audio;
-using System;
 using UnityEngine;
-using Unity.VisualScripting;
 
 public class AudioManager : MonoBehaviour
 {
-    // Arrays to hold music and sound effect Sound objects
-    public Sound[] musicSounds, sfxSounds;
-    // Audio sources for music and sound effects
-    public AudioSource musicSource, sfxSource;
+    [Header("Audio Sources")]
+    [SerializeField] AudioSource musicSource;
+    [SerializeField] AudioSource SFXSource;
 
-    // Static instance of the AudioManager for singleton pattern
+    [Header("Audio Clips")]
+    public AudioClip BGM;
+    public AudioClip ButtonSFX;
+
     public static AudioManager instance;
 
     void Awake()
@@ -28,53 +25,17 @@ public class AudioManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-
-        foreach (Sound s in musicSounds)
-        {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
-
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
-        }
-
-        foreach (Sound s in sfxSounds)
-        {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
-
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
-        }
     }
 
-    void Start()
+    public void Start()
     {
-        PlayMusic("BGM");
+        musicSource.clip = BGM;
+        musicSource.Play();
     }
 
-    public void PlayMusic(string name)
+    public void PlaySFX(AudioClip clip)
     {
-        Sound s = Array.Find(musicSounds, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.LogWarning("Sound: " + name + " not found!");
-            return;
-        }
-        s.source.Play();
-    }
-
-    public void PlaySFX(string name)
-    {
-        Sound s = Array.Find(sfxSounds, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.LogWarning("Sound: " + name + " not found!");
-            return;
-        }
-        s.source.Play();
+        SFXSource.PlayOneShot(clip);
     }
 
 }

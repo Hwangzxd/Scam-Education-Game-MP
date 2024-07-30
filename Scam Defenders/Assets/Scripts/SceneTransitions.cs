@@ -1,8 +1,16 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneTransitions : MonoBehaviour
 {
+    AudioManager audioManager;
+
+    public void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     public void LoadNextScene()
     {
         //Gets the current active scene + Calculates next scene index
@@ -14,6 +22,7 @@ public class SceneTransitions : MonoBehaviour
         {
             //Loads the next scene
             SceneManager.LoadScene(nextSceneIndex);
+            audioManager.PlaySFX(audioManager.ButtonSFX);
         }
         else
         {
@@ -82,8 +91,15 @@ public class SceneTransitions : MonoBehaviour
     public void GoToStart()
     {
         SceneManager.LoadScene("Start");
-    } 
-     
+        audioManager.PlaySFX(audioManager.ButtonSFX);
+    }
+
+    public void GoToSettings()
+    {
+        SceneManager.LoadScene("Settings");
+        audioManager.PlaySFX(audioManager.ButtonSFX);
+    }
+
     public void GoToGeeMail()
     {
         SceneManager.LoadScene("Geemail");
@@ -124,4 +140,5 @@ public class SceneTransitions : MonoBehaviour
     {
         SceneManager.LoadScene("ShopEase");
     }
+
 }
