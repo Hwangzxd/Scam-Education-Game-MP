@@ -5,7 +5,27 @@ using TMPro;
 
 public class RealTimeClock : MonoBehaviour
 {
+    public static RealTimeClock instance;
     public TextMeshProUGUI timeText;
+
+    void Awake()
+    {
+        // Singleton pattern to ensure only one instance exists
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            if (timeText != null)
+            {
+                DontDestroyOnLoad(timeText.gameObject);
+            }
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Update()
     {
