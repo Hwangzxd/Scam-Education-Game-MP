@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ef21c67a9117244a1f92dd4621c5cb, type: 3}
+  m_Name: LoveScamScenario1
+  m_EditorClassIdentifier: 
+  scenarioName: Scenario1
+  messages:
+  - messageText: 'Hey... I see you liked one of my posts. I''ve been quite interested
+      in you ever since... Could we go on a date? '
+    isPlayerMessage: 0
+    responses:
+    - responseText: Sure, I'd love to! Where and when should we meet?
+      isCorrect: 0
+      nextMessageIndex: 0
+    - responseText: I'm not sure. Could you tell me more about yourself first?
+      isCorrect: 0
+      nextMessageIndex: 0
+    - responseText: This seems suspicious. How do I know you're real?
+      isCorrect: 1
+      nextMessageIndex: 0
+  - messageText: 
+    isPlayerMessage: 0
+    responses: []
