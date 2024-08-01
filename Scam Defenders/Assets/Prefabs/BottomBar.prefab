@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: 2306838261627662345}
   - component: {fileID: 7270030268182798506}
   - component: {fileID: 371859561318378521}
+  - component: {fileID: 8349826442629692716}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -419,9 +420,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 371859561318378521}
-        m_TargetAssemblyTypeName: SceneTransitions, Assembly-CSharp
-        m_MethodName: GoToHome
+      - m_Target: {fileID: 8349826442629692716}
+        m_TargetAssemblyTypeName: BackButton, Assembly-CSharp
+        m_MethodName: Start
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -441,5 +442,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8349826442629692716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6705910331146017855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 692af202d13ecd14f9b9167d10849c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
