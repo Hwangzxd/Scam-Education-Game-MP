@@ -62,15 +62,15 @@ public class CountdownTimer : MonoBehaviour
         TimesUp();
     }
 
-    //private IEnumerator Delay()
-    //{
-    //    yield return new WaitForSeconds(delay);
-    //}
-
     public void TimesUp()
     {
-        //timesUp.SetActive(true);
-        //StartCoroutine(Delay());
-        levelLoader.LoadNextLevel(); // Call LoadNextLevel when the timer ends
+        timesUp.SetActive(true);
+        StartCoroutine(LoadNextLevelAfterDelay());
+    }
+
+    private IEnumerator LoadNextLevelAfterDelay()
+    {
+        yield return new WaitForSeconds(delay);
+        levelLoader.LoadNextLevel();
     }
 }

@@ -4,11 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransitions : MonoBehaviour
 {
-    AudioManager audioManager;
+    private AudioManager audioManager;
 
     public void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        audioManager = AudioManager.instance;
     }
 
     public void LoadNextScene()
