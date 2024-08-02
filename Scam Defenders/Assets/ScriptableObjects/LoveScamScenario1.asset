@@ -16,17 +16,38 @@ MonoBehaviour:
   messages:
   - messageText: 'Hey... I see you liked one of my posts. I''ve been quite interested
       in you ever since... Could we go on a date? '
-    isPlayerMessage: 0
     responses:
     - responseText: Sure, I'd love to! Where and when should we meet?
-      isCorrect: 0
-      nextMessageIndex: 0
+      nextMessageIndex: 1
     - responseText: I'm not sure. Could you tell me more about yourself first?
-      isCorrect: 0
-      nextMessageIndex: 0
+      nextMessageIndex: 4
     - responseText: This seems suspicious. How do I know you're real?
-      isCorrect: 1
-      nextMessageIndex: 0
-  - messageText: 
-    isPlayerMessage: 0
+      nextMessageIndex: 3
+  - messageText: Great! Can you send me your number so we can plan this better?
+    responses:
+    - responseText: Sure, here's my number.
+      nextMessageIndex: 2
+    - responseText: Actually, I'm not comfortable with this.
+      nextMessageIndex: 3
+  - messageText: Thanks :) I was thinking we could hang at your place, what's your
+      address?
     responses: []
+  - messageText: Cmon.. I thought u were interested in me :(
+    responses:
+    - responseText: Continue the conversation
+      nextMessageIndex: 0
+    - responseText: End the conversation
+      nextMessageIndex: 0
+  - messageText: I'm an entrepreneur who loves traveling. What about you?
+    responses:
+    - responseText: That sounds interesting. What kind of business do you run?
+      nextMessageIndex: 5
+    - responseText: How do I know you're telling the truth? This is too suspicious.
+      nextMessageIndex: 3
+  - messageText: Uhh... I run a business. How about we meet at your place and discuss
+      further? What's your address? :)
+    responses:
+    - responseText: Continue the conversation
+      nextMessageIndex: 0
+    - responseText: End the conversation
+      nextMessageIndex: 0
