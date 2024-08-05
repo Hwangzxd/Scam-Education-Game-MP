@@ -1,24 +1,30 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterAnims : MonoBehaviour
 {
-    [SerializeField] private Vector3 finalPosition;
+    [SerializeField] private float offscreenMovement = 1000f; // Amount to move offscreen
+    [SerializeField] private float animationDuration = 0.5f; // Duration of the animation
+    private float centerPosition = 269f; // Center position
+
     private Vector3 initialPosition;
+    private Vector3 offscreenPosition;
 
-    private void Awake()
+    private void Start()
     {
-        initialPosition = transform.position;
+        initialPosition = transform.localPosition;
+        offscreenPosition = new Vector3(centerPosition + offscreenMovement, transform.localPosition.y, transform.localPosition.z);
     }
 
-    private void Update()
+    public void MoveToCenter()
     {
-        transform.position = Vector3.Lerp(transform.position, finalPosition, 0.1f);
+        LeanTween.moveLocalX(gameObject, centerPosition, animationDuration);
     }
 
-    private void OnDisable()
+    public void MoveOffscreen(float direction)
     {
-        transform.position = initialPosition;
+        // Direction determines if we move to the right or left
+        // Move the character by `offscreenMovement` units in the specified direction
+        LeanTween.moveLocalX(gameObject, initialPosition.x + direction * offscreenMovement, animationDuration);
     }
 }

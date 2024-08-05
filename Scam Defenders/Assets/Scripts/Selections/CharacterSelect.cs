@@ -7,8 +7,8 @@ public class CharacterSelect : MonoBehaviour
     [SerializeField] private Button leftArrow;
     [SerializeField] private Button rightArrow;
     [SerializeField] private float animationDuration = 0.5f; // Duration of the animation
-    [SerializeField] private float offscreenPosition = 1000f; // Position to move offscreen
-    [SerializeField] private float centerPosition = 0f; // Position to move to center
+    [SerializeField] private float offscreenPositionX = 1000f; // Position to move offscreen
+    [SerializeField] private float centerPositionX = 0f; // Position to move to center
 
     private int currentCharacter = 0;
 
@@ -27,20 +27,25 @@ public class CharacterSelect : MonoBehaviour
         // Calculate the new index
         int newIndex = (currentCharacter + direction + transform.childCount) % transform.childCount;
 
-        // Get the current position of the characters
-        Vector3 offscreenPosition = direction == 1 ? new Vector3(this.transform.position.x - this.transform.GetComponent<RectTransform>().rect.width, this.transform.position.y, this.transform.position.z) : new Vector3(this.transform.position.x + this.transform.GetComponent<RectTransform>().rect.width, this.transform.position.y, this.transform.position.z);
+        // Position off-screen based on direction
+        float newOffscreenPositionX = direction == 1 ? -offscreenPositionX : offscreenPositionX;
 
-        // Move the current character offscreen
-        LeanTween.moveLocalX(gameObject, direction == 1 ? offscreenPosition.x : -offscreenPosition.x, animationDuration);
+        // Position current character off-screen
+        LeanTween.moveLocalX(transform.GetChild(currentCharacter).gameObject, newOffscreenPositionX, animationDuration);
 
-        // Wait for the animation to complete
+        // Position new character off-screen based on direction
+        float oldOffscreenPositionX = direction == 1 ? offscreenPositionX : -offscreenPositionX;
+        LeanTween.moveLocalX(transform.GetChild(newIndex).gameObject, centerPositionX, 0f);
+        LeanTween.moveLocalX(transform.GetChild(newIndex).gameObject, oldOffscreenPositionX, 0f);
+
+        // Wait for the current character animation to complete
         yield return new WaitForSeconds(animationDuration);
 
         // Update the character selection
         SelectCharacter(newIndex);
 
-        // Move the new character into the center
-        LeanTween.moveLocalX(gameObject, centerPosition, animationDuration);
+        // Move the new character to the center
+        LeanTween.moveLocalX(transform.GetChild(currentCharacter).gameObject, centerPositionX, animationDuration);
     }
 
     private void SelectCharacter(int index)
