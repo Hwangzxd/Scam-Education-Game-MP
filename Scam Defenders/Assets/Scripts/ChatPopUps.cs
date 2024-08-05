@@ -9,7 +9,7 @@ public class ChatPopUps : MonoBehaviour
 
     public void Report()
     {
-        Debug.Log("Report clicked");
+        Debug.Log("Red clicked");
 
         if (!losePop.activeSelf && !winPop.activeSelf)
         {
@@ -19,7 +19,7 @@ public class ChatPopUps : MonoBehaviour
 
     public void Apply()
     {
-        Debug.Log("Reply clicked");
+        Debug.Log("Green clicked");
 
         if (!winPop.activeSelf && !losePop.activeSelf)
         {
