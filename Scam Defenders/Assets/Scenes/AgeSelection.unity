@@ -2274,9 +2274,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1776614600}
-        m_TargetAssemblyTypeName: SceneTransitions, Assembly-CSharp
-        m_MethodName: GoToStart
+      - m_Target: {fileID: 325480990}
+        m_TargetAssemblyTypeName: SelectionManager, Assembly-CSharp
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

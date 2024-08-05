@@ -241,4 +241,24 @@ public class SelectionManager : MonoBehaviour
     }
 
     #endregion
+
+    public void Back()
+    {
+        if (nameSelection.activeSelf)
+        {
+            sceneTransitions.GoToStart();
+        }
+        else if (genderSelection.activeSelf)
+        {
+            genderSelection.SetActive(false);
+            ageSelection.SetActive(false);
+            nameSelection.SetActive(true);
+        }
+        else if (ageSelection.activeSelf)
+        {
+            ageSelection.SetActive(false);
+            nameSelection.SetActive(false);
+            genderSelection.SetActive(true);
+        }
+    }
 }
