@@ -45,7 +45,6 @@ public class DialogueManagerGois : MonoBehaviour
         StartCoroutine(scenarios["StartScene"]);
     }
 
-
     #region Original Message
     private IEnumerator StartScene()
     {
