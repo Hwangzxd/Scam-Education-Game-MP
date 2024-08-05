@@ -1,16 +1,20 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterSelect : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI ageText;
     [SerializeField] private Button leftArrow;
     [SerializeField] private Button rightArrow;
     [SerializeField] private float animationDuration = 0.5f; // Duration of the animation
     [SerializeField] private float offscreenPositionX = 1000f; // Position to move offscreen
-    [SerializeField] private float centerPositionX = 0f; // Position to move to center
+    [SerializeField] private float centerPositionX = 269f; // Position to move to center
 
     private int currentCharacter = 0;
+
+    private readonly string[] ageRanges = { "Below 20", "20-29", "30-49", "50-64", "Above 64" };
 
     private void Start()
     {
@@ -35,17 +39,16 @@ public class CharacterSelect : MonoBehaviour
 
         // Position new character off-screen based on direction
         float oldOffscreenPositionX = direction == 1 ? offscreenPositionX : -offscreenPositionX;
-        LeanTween.moveLocalX(transform.GetChild(newIndex).gameObject, centerPositionX, 0f);
-        LeanTween.moveLocalX(transform.GetChild(newIndex).gameObject, oldOffscreenPositionX, 0f);
+        transform.GetChild(newIndex).localPosition = new Vector3(oldOffscreenPositionX, transform.GetChild(newIndex).localPosition.y, transform.GetChild(newIndex).localPosition.z);
 
         // Wait for the current character animation to complete
         yield return new WaitForSeconds(animationDuration);
 
+        // Move the new character to the center
+        LeanTween.moveLocalX(transform.GetChild(newIndex).gameObject, centerPositionX, animationDuration);
+
         // Update the character selection
         SelectCharacter(newIndex);
-
-        // Move the new character to the center
-        LeanTween.moveLocalX(transform.GetChild(currentCharacter).gameObject, centerPositionX, animationDuration);
     }
 
     private void SelectCharacter(int index)
@@ -61,5 +64,22 @@ public class CharacterSelect : MonoBehaviour
         {
             transform.GetChild(i).gameObject.SetActive(i == index);
         }
+
+        // Update the age text based on the current character index
+        ageText.text = ageRanges[currentCharacter];
+    }
+
+    public int GetCurrentCharacterIndex()
+    {
+        return currentCharacter; // Assuming currentCharacter is a variable that holds the current index
+    }
+
+    public string GetAgeRange(int index)
+    {
+        if (index >= 0 && index < ageRanges.Length)
+        {
+            return ageRanges[index];
+        }
+        return null;
     }
 }

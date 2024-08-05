@@ -167,6 +167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 325480991}
   - component: {fileID: 325480990}
+  - component: {fileID: 325480992}
   m_Layer: 0
   m_Name: SelectionManager
   m_TagString: Untagged
@@ -186,12 +187,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a5efd2060376946b1abc235dde9ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneTransitions: {fileID: 325480992}
   confirmButton: {fileID: 427376771}
   playerNameInput: {fileID: 1020250240}
   playerNameKey: playerName
   maleButton: {fileID: 824989768}
   femaleButton: {fileID: 620226932}
   playerGenderKey: playerGender
+  characterSelect: {fileID: 383442070}
+  playerAgeKey: playerAge
+  playerScenarioKey: playerScenario
   nameSelection: {fileID: 1768269070}
   genderSelection: {fileID: 1505739791}
   ageSelection: {fileID: 1217876987}
@@ -210,6 +215,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &325480992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325480989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &383442068
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e692ccb42f21f594c9b4153c5f05c717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ageText: {fileID: 844424003}
   leftArrow: {fileID: 985454316}
   rightArrow: {fileID: 1566567724}
   animationDuration: 0.15
@@ -1535,8 +1553,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -96}
-  m_SizeDelta: {x: 514.4243, y: 78.9647}
+  m_AnchoredPosition: {x: 0, y: -108}
+  m_SizeDelta: {x: 656.2861, y: 153.1948}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &844424003
 MonoBehaviour:
@@ -2508,7 +2526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1217876988
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3568,7 +3586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1768269071
 RectTransform:
   m_ObjectHideFlags: 0
