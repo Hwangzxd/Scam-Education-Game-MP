@@ -70,6 +70,7 @@ public class SelectionManager : MonoBehaviour
     private void OnPlayerNameInputChanged(string input)
     {
         nameEntered = !string.IsNullOrWhiteSpace(input);
+        Debug.Log($"Player Name Input Changed: {input}, Name Entered: {nameEntered}");
         UpdateConfirmButtonState();
     }
 
@@ -79,6 +80,11 @@ public class SelectionManager : MonoBehaviour
         {
             playerName = playerNameInput.text;
             PlayerPrefs.SetString(playerNameKey, playerName);
+            Debug.Log($"Saved Player Name: {playerName}");
+        }
+        else
+        {
+            Debug.LogWarning("No name entered to save.");
         }
     }
 
@@ -96,6 +102,7 @@ public class SelectionManager : MonoBehaviour
         genderSelected = true;
         playerGender = gender;
         PlayerPrefs.SetString(playerGenderKey, playerGender);
+        Debug.Log($"Gender Selected: {playerGender}");
 
         if (gender == "Male")
         {
@@ -128,16 +135,21 @@ public class SelectionManager : MonoBehaviour
 
     private void UpdateConfirmButtonState()
     {
+        bool nameScreenActive = nameSelection.activeSelf;
+        bool genderScreenActive = genderSelection.activeSelf;
+
         // Enable the confirm button if the name is entered in the name selection screen or the gender is selected in the gender selection screen
-        if ((nameSelection.activeSelf && nameEntered) || (genderSelection.activeSelf && genderSelected))
+        if ((nameScreenActive && nameEntered) || (genderScreenActive && genderSelected))
         {
             SetConfirmButtonOpacity(1.0f);
             confirmButton.enabled = true;
+            Debug.Log("Confirm Button Enabled");
         }
         else
         {
             SetConfirmButtonOpacity(0.75f);
             confirmButton.enabled = false;
+            Debug.Log("Confirm Button Disabled");
         }
     }
 
@@ -145,6 +157,7 @@ public class SelectionManager : MonoBehaviour
     {
         confirmButtonColor.a = opacity;
         confirmButtonImage.color = confirmButtonColor;
+        //Debug.Log($"Confirm Button Opacity Set To: {opacity}");
     }
 
     public void Confirm()
@@ -152,20 +165,22 @@ public class SelectionManager : MonoBehaviour
         if (nameSelection.activeSelf)
         {
             SaveName();
-            Debug.Log("Player Name: " + GetPlayerName());
+            Debug.Log($"Player Name Confirmed: {GetPlayerName()}");
 
             nameSelection.SetActive(false);
             genderSelection.SetActive(true);
+            Debug.Log("Switched to Gender Selection Screen");
 
             // Reset the confirm button state for gender selection screen
             UpdateConfirmButtonState();
         }
         else if (genderSelection.activeSelf)
         {
-            Debug.Log("Player Gender: " + GetPlayerGender());
+            Debug.Log($"Player Gender Confirmed: {GetPlayerGender()}");
 
             genderSelection.SetActive(false);
             ageSelection.SetActive(true);
+            Debug.Log("Switched to Age Selection Screen");
 
             // Reset the confirm button state for age selection screen (if applicable)
             UpdateConfirmButtonState();
@@ -177,6 +192,7 @@ public class SelectionManager : MonoBehaviour
         Color color = buttonImage.color;
         color.a = opacity;
         buttonImage.color = color;
+        //Debug.Log($"Button Opacity Set To: {opacity}");
     }
 
     #endregion
