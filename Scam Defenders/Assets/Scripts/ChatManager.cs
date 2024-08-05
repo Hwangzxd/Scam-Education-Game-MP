@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class ChatManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class ChatManager : MonoBehaviour
     public GameObject scammerMessagePrefab; // Prefab for scammer chat messages
     public GameObject playerMessagePrefab; // Prefab for player chat messages
     public GameObject responseButtonPrefab; // Prefab for response buttons
+    public GameObject typingAnimationPrefab; // Prefab for typing animation
+    public ScrollRect scrollRect; // Reference to the ScrollRect component
 
     private int currentMessageIndex = 0;
     private List<GameObject> activeResponseButtons = new List<GameObject>();
@@ -33,6 +36,8 @@ public class ChatManager : MonoBehaviour
         TMP_Text messageText = messageGO.GetComponentInChildren<TMP_Text>();
         messageText.text = message.messageText;
 
+        // Scroll to bottom
+        StartCoroutine(ScrollToBottom());
 
         foreach (ChatResponse response in message.responses)
         {
@@ -62,6 +67,57 @@ public class ChatManager : MonoBehaviour
         TMP_Text playerMessageText = playerMessageGO.GetComponentInChildren<TMP_Text>();
         playerMessageText.text = response.responseText;
 
-        DisplayMessage(response.nextMessageIndex);
+        // Scroll to bottom
+        StartCoroutine(ScrollToBottom());
+
+        //DisplayMessage(response.nextMessageIndex);
+
+        // Start coroutine to display the NPC message after a delay
+        if (currentMessageIndex > 0) // Skip typing animation for the first message
+        {
+            StartCoroutine(DisplayTypingAnimationThenMessage(response.nextMessageIndex, 1.5f)); // 1.5 seconds delay
+        }
+        else
+        {
+            StartCoroutine(DisplayNextMessageWithDelay(response.nextMessageIndex, 1.5f)); // 1.5 seconds delay
+        }
+    }
+
+    IEnumerator DisplayNextMessageWithDelay(int nextMessageIndex, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        DisplayMessage(nextMessageIndex);
+    }
+
+    IEnumerator DisplayTypingAnimationThenMessage(int nextMessageIndex, float delay)
+    {
+        // Instantiate typing animation
+        GameObject typingAnimationGO = Instantiate(typingAnimationPrefab, chatContent);
+
+        // Scroll to bottom
+        StartCoroutine(ScrollToBottom());
+
+        yield return new WaitForSeconds(delay);
+
+        // Destroy typing animation
+        Destroy(typingAnimationGO);
+
+        // Display the next message
+        DisplayMessage(nextMessageIndex);
+    }
+
+    IEnumerator ScrollToBottom()
+    {
+        // Wait for the end of the frame to ensure the UI has updated
+        yield return new WaitForEndOfFrame();
+
+        // Force the canvas to update to ensure layout calculations are done
+        Canvas.ForceUpdateCanvases();
+
+        // Scroll to the bottom
+        scrollRect.verticalNormalizedPosition = 0f;
+
+        // Force the canvas to update again to ensure the scroll position is applied
+        Canvas.ForceUpdateCanvases();
     }
 }
