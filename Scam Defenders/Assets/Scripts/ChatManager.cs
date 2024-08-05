@@ -12,6 +12,7 @@ public class ChatManager : MonoBehaviour
     public GameObject scammerMessagePrefab; // Prefab for scammer chat messages
     public GameObject playerMessagePrefab; // Prefab for player chat messages
     public GameObject responseButtonPrefab; // Prefab for response buttons
+    public GameObject typingAnimationPrefab; // Prefab for typing animation
     public ScrollRect scrollRect; // Reference to the ScrollRect component
 
     private int currentMessageIndex = 0;
@@ -72,12 +73,36 @@ public class ChatManager : MonoBehaviour
         //DisplayMessage(response.nextMessageIndex);
 
         // Start coroutine to display the NPC message after a delay
-        StartCoroutine(DisplayNextMessageWithDelay(response.nextMessageIndex, 1.5f)); // 1.5 seconds delay
+        if (currentMessageIndex > 0) // Skip typing animation for the first message
+        {
+            StartCoroutine(DisplayTypingAnimationThenMessage(response.nextMessageIndex, 1.5f)); // 1.5 seconds delay
+        }
+        else
+        {
+            StartCoroutine(DisplayNextMessageWithDelay(response.nextMessageIndex, 1.5f)); // 1.5 seconds delay
+        }
     }
 
     IEnumerator DisplayNextMessageWithDelay(int nextMessageIndex, float delay)
     {
         yield return new WaitForSeconds(delay);
+        DisplayMessage(nextMessageIndex);
+    }
+
+    IEnumerator DisplayTypingAnimationThenMessage(int nextMessageIndex, float delay)
+    {
+        // Instantiate typing animation
+        GameObject typingAnimationGO = Instantiate(typingAnimationPrefab, chatContent);
+
+        // Scroll to bottom
+        StartCoroutine(ScrollToBottom());
+
+        yield return new WaitForSeconds(delay);
+
+        // Destroy typing animation
+        Destroy(typingAnimationGO);
+
+        // Display the next message
         DisplayMessage(nextMessageIndex);
     }
 
