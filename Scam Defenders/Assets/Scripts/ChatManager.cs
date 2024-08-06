@@ -36,6 +36,13 @@ public class ChatManager : MonoBehaviour
         TMP_Text messageText = messageGO.GetComponentInChildren<TMP_Text>();
         messageText.text = message.messageText;
 
+        // LeanTween animation
+        messageGO.transform.localScale = Vector3.zero;
+        LeanTween.scale(messageGO, Vector3.one, 0.5f).setEaseOutBounce();
+
+        // Force layout rebuild
+        LayoutRebuilder.ForceRebuildLayoutImmediate(chatContent.GetComponent<RectTransform>());
+
         // Scroll to bottom
         StartCoroutine(ScrollToBottom());
 
@@ -67,6 +74,16 @@ public class ChatManager : MonoBehaviour
         TMP_Text playerMessageText = playerMessageGO.GetComponentInChildren<TMP_Text>();
         playerMessageText.text = response.responseText;
 
+        // Force layout rebuild
+        LayoutRebuilder.ForceRebuildLayoutImmediate(chatContent.GetComponent<RectTransform>());
+
+        // LeanTween animation
+        playerMessageGO.transform.localScale = Vector3.zero;
+        LeanTween.scale(playerMessageGO, Vector3.one, 0.5f).setEaseOutBounce();
+
+        // Force layout rebuild
+        LayoutRebuilder.ForceRebuildLayoutImmediate(chatContent.GetComponent<RectTransform>());
+
         // Scroll to bottom
         StartCoroutine(ScrollToBottom());
 
@@ -91,8 +108,13 @@ public class ChatManager : MonoBehaviour
 
     IEnumerator DisplayTypingAnimationThenMessage(int nextMessageIndex, float delay)
     {
+        yield return new WaitForSeconds(delay);
+
         // Instantiate typing animation
         GameObject typingAnimationGO = Instantiate(typingAnimationPrefab, chatContent);
+
+        // Force layout rebuild
+        LayoutRebuilder.ForceRebuildLayoutImmediate(chatContent.GetComponent<RectTransform>());
 
         // Scroll to bottom
         StartCoroutine(ScrollToBottom());
