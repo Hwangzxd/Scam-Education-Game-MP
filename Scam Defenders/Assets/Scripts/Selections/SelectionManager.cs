@@ -109,8 +109,8 @@ public class SelectionManager : MonoBehaviour
     {
         genderSelected = true;
         playerGender = gender;
-        PlayerPrefs.SetString(playerGenderKey, playerGender);
-        //Debug.Log($"Gender Selected: {playerGender}");
+        PlayerPrefs.SetString(playerGenderKey, playerGender); // Save the gender to PlayerPrefs
+        Debug.Log($"Gender Selected: {playerGender}");
 
         if (gender == "Male")
         {
@@ -125,6 +125,7 @@ public class SelectionManager : MonoBehaviour
 
         UpdateConfirmButtonState();
     }
+
 
     public string GetPlayerGender()
     {
