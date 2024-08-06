@@ -1,8 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class CharacterSelect : MonoBehaviour
 {
@@ -22,16 +21,25 @@ public class CharacterSelect : MonoBehaviour
 
     private readonly string[] ageRanges = { "Below 20", "20-29", "30-49", "50-64", "Above 64" };
 
-    private void Start()
+    private void OnEnable()
     {
-        // Retrieve the saved gender preference
+        // Retrieve the updated gender preference from PlayerPrefs
         selectedGender = PlayerPrefs.GetString("playerGender", "None");
 
         // Get all Image components in the child objects
         characterImages = GetComponentsInChildren<Image>();
 
+        // Ensure the character sprites are updated based on the current selection
+        SelectCharacter(currentCharacter);
+    }
+
+    private void Start()
+    {
+        // Get all Image components in the child objects
+        //characterImages = GetComponentsInChildren<Image>();
+
         // Initialize by selecting the first character
-        SelectCharacter(0);
+        //SelectCharacter(currentCharacter);
 
         // Add listeners to the buttons
         leftArrow.onClick.AddListener(() => StartCoroutine(AnimateCharacter(-1)));
@@ -71,11 +79,11 @@ public class CharacterSelect : MonoBehaviour
 
     private void SelectCharacter(int index)
     {
-        Debug.Log($"Selecting character with index: {index}");
+        //Debug.Log($"Selecting character with index: {index}");
 
         // Ensure the index is within bounds
         index = Mathf.Clamp(index, 0, transform.childCount - 1);
-        Debug.Log($"Clamped index: {index}");
+        //Debug.Log($"Clamped index: {index}");
 
         // Update the current character index
         currentCharacter = index;
@@ -100,6 +108,12 @@ public class CharacterSelect : MonoBehaviour
         }
 
         // Update the character sprites for all age groups
+        UpdateCharacterSprites();
+    }
+
+    private void UpdateCharacterSprites()
+    {
+        Debug.Log("Updating character sprites.");
         foreach (var img in characterImages)
         {
             if (selectedGender == "Male")
@@ -142,6 +156,8 @@ public class CharacterSelect : MonoBehaviour
         }
 
         selectedGender = gender;
+        PlayerPrefs.SetString("playerGender", selectedGender);
+        PlayerPrefs.Save();
         SelectCharacter(currentCharacter); // Refresh the character sprite
     }
 
