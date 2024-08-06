@@ -19,5 +19,7 @@ public class ChatMessage
 public class ChatResponse
 {
     public string responseText;
+    public bool isCorrect;
+    public bool isWrong;
     public int nextMessageIndex; // Index of the next message in the scenario
 }
