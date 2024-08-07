@@ -26,6 +26,8 @@ public class CharacterSelect : MonoBehaviour
         // Retrieve the updated gender preference from PlayerPrefs
         selectedGender = PlayerPrefs.GetString("playerGender", "None");
 
+        //Debug.Log(selectedGender);
+
         // Get all Image components in the child objects
         characterImages = GetComponentsInChildren<Image>();
 
@@ -35,12 +37,6 @@ public class CharacterSelect : MonoBehaviour
 
     private void Start()
     {
-        // Get all Image components in the child objects
-        //characterImages = GetComponentsInChildren<Image>();
-
-        // Initialize by selecting the first character
-        //SelectCharacter(currentCharacter);
-
         // Add listeners to the buttons
         leftArrow.onClick.AddListener(() => StartCoroutine(AnimateCharacter(-1)));
         rightArrow.onClick.AddListener(() => StartCoroutine(AnimateCharacter(1)));

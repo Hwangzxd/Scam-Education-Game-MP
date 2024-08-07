@@ -42,6 +42,7 @@ public class SelectionManager : MonoBehaviour
     public GameObject genderSelection;
     public GameObject ageSelection;
 
+    public GameObject characters;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -257,9 +258,19 @@ public class SelectionManager : MonoBehaviour
         }
         else if (ageSelection.activeSelf)
         {
+            SetAllChildrenActive(characters, true);
             ageSelection.SetActive(false);
             nameSelection.SetActive(false);
             genderSelection.SetActive(true);
+        }
+    }
+
+    // Method to set all child GameObjects to active
+    public static void SetAllChildrenActive(GameObject parent, bool isActive)
+    {
+        foreach (Transform child in parent.transform)
+        {
+            child.gameObject.SetActive(isActive);
         }
     }
 }
