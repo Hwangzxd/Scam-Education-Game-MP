@@ -109,7 +109,7 @@ public class CharacterSelect : MonoBehaviour
 
     private void UpdateCharacterSprites()
     {
-        Debug.Log("Updating character sprites.");
+        //Debug.Log("Updating character sprites.");
         foreach (var img in characterImages)
         {
             if (selectedGender == "Male")
@@ -117,7 +117,7 @@ public class CharacterSelect : MonoBehaviour
                 if (currentCharacter >= 0 && currentCharacter < maleSprites.Length)
                 {
                     img.sprite = maleSprites[currentCharacter];
-                    Debug.Log($"Male sprite set to: {maleSprites[currentCharacter].name}");
+                    //Debug.Log($"Male sprite set to: {maleSprites[currentCharacter].name}");
                 }
                 else
                 {
@@ -129,7 +129,7 @@ public class CharacterSelect : MonoBehaviour
                 if (currentCharacter >= 0 && currentCharacter < femaleSprites.Length)
                 {
                     img.sprite = femaleSprites[currentCharacter];
-                    Debug.Log($"Female sprite set to: {femaleSprites[currentCharacter].name}");
+                    //Debug.Log($"Female sprite set to: {femaleSprites[currentCharacter].name}");
                 }
                 else
                 {

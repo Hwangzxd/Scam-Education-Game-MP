@@ -111,7 +111,7 @@ public class SelectionManager : MonoBehaviour
         genderSelected = true;
         playerGender = gender;
         PlayerPrefs.SetString(playerGenderKey, playerGender); // Save the gender to PlayerPrefs
-        Debug.Log($"Gender Selected: {playerGender}");
+        //Debug.Log($"Gender Selected: {playerGender}");
 
         if (gender == "Male")
         {
@@ -215,7 +215,7 @@ public class SelectionManager : MonoBehaviour
         }
         else if (genderSelection.activeSelf)
         {
-            Debug.Log($"Player Gender Confirmed: {GetPlayerGender()}");
+            Debug.Log($"Saved Player Gender: {GetPlayerGender()}");
 
             genderSelection.SetActive(false);
             ageSelection.SetActive(true);

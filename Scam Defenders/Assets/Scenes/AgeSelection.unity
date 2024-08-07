@@ -201,6 +201,7 @@ MonoBehaviour:
   nameSelection: {fileID: 1768269070}
   genderSelection: {fileID: 1505739791}
   ageSelection: {fileID: 1217876987}
+  characters: {fileID: 383442068}
 --- !u!4 &325480991
 Transform:
   m_ObjectHideFlags: 0
