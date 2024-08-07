@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ef21c67a9117244a1f92dd4621c5cb, type: 3}
+  m_Name: JobScam
+  m_EditorClassIdentifier: 
+  scenarioName: Scenario1
+  messages:
+  - messageText: 'Hey... I see you liked one of my posts. I''ve been quite interested
+      in you ever since... Could we go on a date? '
+    responses:
+    - responseText: Sure, I'd love to! Where and when should we meet?
+      nextMessageIndex: 1
+    - responseText: I'm not sure. Could you tell me more about yourself first?
+      nextMessageIndex: 4
+    - responseText: This seems suspicious. How do I know you're real?
+      nextMessageIndex: 3
+  - messageText: Great! Can you send me your number so we can plan this better?
+    responses:
+    - responseText: Sure, here's my number.
+      nextMessageIndex: 2
+    - responseText: Actually, I'm not comfortable with this.
+      nextMessageIndex: 3
+  - messageText: Thanks :) I was thinking we could hang at your place, what's your
+      address?
+    responses: []
+  - messageText: Cmon.. I thought u were interested in me :(
+    responses:
+    - responseText: Continue the conversation
+      nextMessageIndex: 0
+    - responseText: End the conversation
+      nextMessageIndex: 0
+  - messageText: I'm an entrepreneur who loves traveling. What about you?
+    responses:
+    - responseText: That sounds interesting. What kind of business do you run?
+      nextMessageIndex: 5
+    - responseText: How do I know you're telling the truth? This is too suspicious.
+      nextMessageIndex: 3
+  - messageText: Uhh... I run a business. How about we meet at your place and discuss
+      further? What's your address? :)
+    responses:
+    - responseText: Continue the conversation
+      nextMessageIndex: 0
+    - responseText: End the conversation
+      nextMessageIndex: 0
