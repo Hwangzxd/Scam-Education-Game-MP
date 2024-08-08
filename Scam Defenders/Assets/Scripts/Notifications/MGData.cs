@@ -11,7 +11,8 @@ public class MGData : MonoBehaviour
     public bool enteredScene1 = false; 
     public bool enteredScene2 = false; 
     public bool enteredScene3 = false; 
-    public bool enteredScene4 = false; 
+    public bool enteredScene4 = false;
+    public bool enteredScene5 = false;
 
     private void Awake()
     {
@@ -52,16 +53,18 @@ public class MGData : MonoBehaviour
                 break;
             case "YabberChatHome":
                 enteredScene4 = true;
+                enteredScene5 = true;
                 break;
         }
 
         //Check if all 4 bools are true
-        if (enteredScene1 && enteredScene2 && enteredScene3 && enteredScene4)
+        if (enteredScene1 && enteredScene2 && enteredScene3 && enteredScene4 && enteredScene5)
         {
             enteredScene1 = false;
             enteredScene2 = false;
             enteredScene3 = false;
             enteredScene4 = false;
+            enteredScene5 = false;
 
             Debug.Log("All bools have been reset.");
         }

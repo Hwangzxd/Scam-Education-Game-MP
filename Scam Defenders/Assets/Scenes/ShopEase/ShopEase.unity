@@ -2083,7 +2083,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &250255098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6166,6 +6166,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769550864}
   m_CullTransparentMesh: 1
+--- !u!95 &769768414 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6240754720163074099, guid: 889b8551530c19f47b5c2ef0fe95760f, type: 3}
+  m_PrefabInstance: {fileID: 6355694193262180665}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &787203834
 GameObject:
   m_ObjectHideFlags: 0
@@ -16540,7 +16545,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4405112904313729588, guid: 50e7c4bd207bb594bbb6103726364584, type: 3}
       propertyPath: time
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4405112904313729588, guid: 50e7c4bd207bb594bbb6103726364584, type: 3}
       propertyPath: levelLoader
@@ -16648,6 +16653,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1332080091425998976, guid: 889b8551530c19f47b5c2ef0fe95760f, type: 3}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 769768414}
+    - target: {fileID: 1332080091425998976, guid: 889b8551530c19f47b5c2ef0fe95760f, type: 3}
       propertyPath: sceneToLoad
       value: ShopEaseChoose
       objectReference: {fileID: 0}
@@ -16695,9 +16704,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7007641005468551550, guid: 889b8551530c19f47b5c2ef0fe95760f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7421198940618360649, guid: 889b8551530c19f47b5c2ef0fe95760f, type: 3}
       propertyPath: m_Name
       value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421198940618360649, guid: 889b8551530c19f47b5c2ef0fe95760f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805763249603320297, guid: 889b8551530c19f47b5c2ef0fe95760f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

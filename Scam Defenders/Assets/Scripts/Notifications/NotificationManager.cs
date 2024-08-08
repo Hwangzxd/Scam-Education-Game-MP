@@ -125,6 +125,8 @@ public class NotificationManager : MonoBehaviour
                 return data.enteredScene3;
             case 3:
                 return data.enteredScene4;
+            case 4:
+                return data.enteredScene5;
             default:
                 return false;
         }
@@ -150,6 +152,11 @@ public class NotificationManager : MonoBehaviour
         if (data.enteredScene4)
         {
             DisableNotification(3); //Disable notification for Scene4 (QuickChats)
+        }
+
+        if (data.enteredScene5)
+        {
+            DisableNotification(4); //Disable notification for Scene4 (QuickChats)
         }
     }
 
