@@ -140,5 +140,9 @@ public class SceneTransitions : MonoBehaviour
     {
         SceneManager.LoadScene("ShopEase");
     }
-
+     
+    public void GoToGeemailScam2()
+    {
+        SceneManager.LoadScene("JobScamGroup");
+    }
 }
