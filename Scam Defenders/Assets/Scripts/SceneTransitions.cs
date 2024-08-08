@@ -41,6 +41,7 @@ public class SceneTransitions : MonoBehaviour
         {
             //Loads the next scene
             SceneManager.LoadScene(lastSceneIndex);
+            audioManager.PlaySFX(audioManager.ButtonSFX);
         }
         else
         {
