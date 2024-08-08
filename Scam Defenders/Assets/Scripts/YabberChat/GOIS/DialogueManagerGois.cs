@@ -26,10 +26,6 @@ public class DialogueManagerGois : MonoBehaviour
 
     //others
     public float fadeDuration;
-    public GameObject Chat;
-    public GameObject User;
-    public GameObject BrowserScreen;
-    public GameObject BrowserScreenFilled;
 
     private Dictionary<string, IEnumerator> scenarios;
 
