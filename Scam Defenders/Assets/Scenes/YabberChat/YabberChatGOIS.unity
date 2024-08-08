@@ -170,9 +170,6 @@ MonoBehaviour:
   DialogueManagerGois: {fileID: 994236485}
   button1: {fileID: 449433282}
   button2: {fileID: 245246548}
-  button3: {fileID: 1302929609}
-  button4: {fileID: 433938424}
-  backBtn: {fileID: 1118846936}
 --- !u!1 &13081116
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,7 +2231,7 @@ GameObject:
   - component: {fileID: 449433280}
   - component: {fileID: 449433282}
   m_Layer: 5
-  m_Name: VisitSiteBtn
+  m_Name: ClickLinkBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4567,10 +4564,6 @@ MonoBehaviour:
   originalMessages:
   - {fileID: 753909270}
   fadeDuration: 0
-  Chat: {fileID: 1704442319}
-  User: {fileID: 1023449713}
-  BrowserScreen: {fileID: 1151969400}
-  BrowserScreenFilled: {fileID: 2128682508}
 --- !u!1 &994985474
 GameObject:
   m_ObjectHideFlags: 0
@@ -8030,7 +8023,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Visit Site
+  m_text: Click link
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
