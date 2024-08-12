@@ -1523,6 +1523,7 @@ GameObject:
   - component: {fileID: 180201826}
   - component: {fileID: 180201827}
   - component: {fileID: 180201828}
+  - component: {fileID: 180201829}
   m_Layer: 5
   m_Name: BatteryBar
   m_TagString: Untagged
@@ -1624,6 +1625,18 @@ MonoBehaviour:
   batteryIconImage: {fileID: 1846852547}
   topBatteryIconImage: {fileID: 572923309}
   batteryPercentageText: {fileID: 241059815}
+--- !u!114 &180201829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180201825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2426041b0ff654a4d93aa357c41bb945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &213791520
 GameObject:
   m_ObjectHideFlags: 0
@@ -3593,6 +3606,8 @@ GameObject:
   - component: {fileID: 572923308}
   - component: {fileID: 572923310}
   - component: {fileID: 572923309}
+  - component: {fileID: 572923311}
+  - component: {fileID: 572923312}
   m_Layer: 5
   m_Name: Battery Icon
   m_TagString: Untagged
@@ -3657,6 +3672,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572923307}
   m_CullTransparentMesh: 1
+--- !u!114 &572923311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572923307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2426041b0ff654a4d93aa357c41bb945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &572923312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572923307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd253666e900c44b8daa4d5330107a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 180201827}
+  batteryIcons:
+  - {fileID: 21300000, guid: 4f3cbe9db640ccf4fb95fe3560d3dc2e, type: 3}
+  - {fileID: 21300000, guid: 333280c85dc918040992eeec65a62f7e, type: 3}
+  - {fileID: 21300000, guid: 148531a79c260424ba8b4e22f015df0e, type: 3}
+  - {fileID: 21300000, guid: 023f4e52803ea8e489765967d91a32a0, type: 3}
+  - {fileID: 21300000, guid: dd5cdc1ce0b789b40b3e3d94db6ead21, type: 3}
+  batteryIconImage: {fileID: 572923309}
+  topBatteryIconImage: {fileID: 572923309}
+  batteryPercentageText: {fileID: 241059815}
 --- !u!1 &575618027
 GameObject:
   m_ObjectHideFlags: 0
@@ -12630,7 +12679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1932636731
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13690,6 +13739,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098711547}
   m_CullTransparentMesh: 1
+--- !u!1 &2127438304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2127438306}
+  - component: {fileID: 2127438305}
+  m_Layer: 0
+  m_Name: BatteryData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2127438305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127438304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f9f645684ed794f93bf1f8097f110f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2127438306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127438304}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 318.29608, y: 1615.3945, z: -4.1953363}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -13707,3 +13800,4 @@ SceneRoots:
   - {fileID: 1531408692}
   - {fileID: 790235917}
   - {fileID: 971798451}
+  - {fileID: 2127438306}
