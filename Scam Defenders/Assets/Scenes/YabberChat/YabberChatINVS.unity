@@ -4579,8 +4579,8 @@ MonoBehaviour:
   scrollRect: {fileID: 749597240}
   scaleAnimationDuration: 0.5
   initialScale: {x: 0.1, y: 0.1, z: 0.1}
-  loseScreen1: {fileID: 0}
-  winScreen1: {fileID: 0}
+  loseScreen1: {fileID: 6508001986655694825}
+  winScreen1: {fileID: 5679951396015191525}
   originalMessages:
   - {fileID: 753909270}
   - {fileID: 888372411}
@@ -10277,6 +10277,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+--- !u!1 &5679951396015191525 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4545697501741322982, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+  m_PrefabInstance: {fileID: 5679951396015191524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6508001986655694824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10378,6 +10383,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+--- !u!1 &6508001986655694825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8758486036666189231, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+  m_PrefabInstance: {fileID: 6508001986655694824}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -18,8 +18,6 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private DropArea snapDropArea;
     private DropArea previousDropArea;
 
-    private bool isSnapped = false;
-
     public Image flagRenderer;
     private Vector2 originalPosition;
     private Sprite originalSprite; // To store the original sprite
@@ -37,7 +35,6 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     public void OnBeginDrag(PointerEventData eventData)
     {
         offset = rectTransform.anchoredPosition - GetAnchoredPosition(eventData);
-        isSnapped = false;
 
         // Reset to original image
         flagRenderer.sprite = originalSprite;
@@ -74,7 +71,6 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
                 {
                     snapTransform = result.gameObject.transform;
                     snapDropArea = result.gameObject.GetComponent<DropArea>();
-                    isSnapped = true;
 
                     rectTransform.anchoredPosition = ((RectTransform)snapTransform).anchoredPosition;
                     snapDropArea.isOccupied = true; // Mark the drop area as occupied
@@ -101,7 +97,6 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         snapTransform = null;
         snapDropArea = null;
-        isSnapped = false;
 
         // Reset to original position and image if not snapped to a new drop area
         rectTransform.anchoredPosition = originalPosition;

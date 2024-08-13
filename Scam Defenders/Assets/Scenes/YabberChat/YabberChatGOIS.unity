@@ -4402,8 +4402,8 @@ MonoBehaviour:
   scrollRect: {fileID: 749597240}
   scaleAnimationDuration: 0.5
   initialScale: {x: 0.1, y: 0.1, z: 0.1}
-  loseScreen: {fileID: 0}
-  winScreen: {fileID: 0}
+  loseScreen: {fileID: 402314082}
+  winScreen: {fileID: 1852649040}
   originalMessages:
   - {fileID: 753909270}
   fadeDuration: 0
