@@ -11,19 +11,16 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public string destinationTag = "DropArea";
     public string hotbarTag = "Hotbar";
-    public Color defaultColor = Color.white;
-    public Color snapColor = Color.red;
-    public Color hoverColor = Color.yellow;
+
+    public Sprite snappedSprite; // Add this for the snapped sprite
 
     private Transform snapTransform;
     private DropArea snapDropArea;
     private DropArea previousDropArea;
 
-    private bool isSnapped = false;
-    private bool isInPlace = false;
-
     public Image flagRenderer;
     private Vector2 originalPosition;
+    private Sprite originalSprite; // To store the original sprite
 
     void Awake()
     {
@@ -31,65 +28,39 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         canvas = GetComponentInParent<Canvas>();
         flagRenderer = GetComponent<Image>();
         originalPosition = rectTransform.anchoredPosition; // Store the starting position of the flag
+        originalSprite = flagRenderer.sprite; // Store the original sprite
+        flagRenderer.raycastTarget = true; // Ensure Raycast Target is enabled
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         offset = rectTransform.anchoredPosition - GetAnchoredPosition(eventData);
-        snapTransform = null;
-        snapDropArea = null;
-        isSnapped = false;
-        isInPlace = false;
-        flagRenderer.color = defaultColor;
 
-        // Store the previous drop area
-        if (previousDropArea != null)
+        // Reset to original image
+        flagRenderer.sprite = originalSprite;
+
+        // Release the drop area if the flag is dragged out
+        if (snapDropArea != null)
         {
-            previousDropArea.isOccupied = false;
-            previousDropArea = null;
+            snapDropArea.isOccupied = false;
+            snapDropArea = null;
         }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition = GetAnchoredPosition(eventData) + offset;
-        flagRenderer.color = defaultColor;
-
-        // Perform raycast to check for hover over drop area
-        PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
-        pointerEventData.position = eventData.position;
-
-        List<RaycastResult> results = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(pointerEventData, results);
-
-        foreach (RaycastResult result in results)
-        {
-            if (result.gameObject.CompareTag(destinationTag))
-            {
-                DropArea hoverDropArea = result.gameObject.GetComponent<DropArea>();
-                if (!result.gameObject.CompareTag(hotbarTag) && !hoverDropArea.isOccupied)
-                {
-                    flagRenderer.color = hoverColor; // Change color on hover
-                }
-                break;
-            }
-        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        // Release from previous drop area if snapped
-        if (isSnapped && snapTransform != null)
-        {
-            snapDropArea.isOccupied = false;
-            snapDropArea = null;
-        }
-
         PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
         pointerEventData.position = eventData.position;
 
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(pointerEventData, results);
+
+        bool foundDropArea = false;
 
         foreach (RaycastResult result in results)
         {
@@ -100,49 +71,36 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
                 {
                     snapTransform = result.gameObject.transform;
                     snapDropArea = result.gameObject.GetComponent<DropArea>();
-                    isSnapped = true;
 
                     rectTransform.anchoredPosition = ((RectTransform)snapTransform).anchoredPosition;
-                    isInPlace = true;
                     snapDropArea.isOccupied = true; // Mark the drop area as occupied
                     previousDropArea = snapDropArea; // Update the previous drop area
+
+                    flagRenderer.sprite = snappedSprite; // Change to snapped sprite
+
+                    // Ensure Raycast Target is enabled
+                    flagRenderer.raycastTarget = true;
+
+                    foundDropArea = true;
                     break;
                 }
-                else
-                {
-                    ResetToOriginalPosition();
-                }
-            }
-            else
-            {
-                ResetToOriginalPosition();
             }
         }
 
-        UpdateColor();
+        if (!foundDropArea)
+        {
+            ResetToOriginalPosition();
+        }
     }
 
     void ResetToOriginalPosition()
     {
         snapTransform = null;
         snapDropArea = null;
-        isSnapped = false;
-        isInPlace = false;
 
-        // Reset to original position if not snapped to a new drop area
+        // Reset to original position and image if not snapped to a new drop area
         rectTransform.anchoredPosition = originalPosition;
-    }
-
-    void UpdateColor()
-    {
-        if (isInPlace)
-        {
-            flagRenderer.color = snapColor;
-        }
-        else
-        {
-            flagRenderer.color = defaultColor;
-        }
+        flagRenderer.sprite = originalSprite;
     }
 
     Vector2 GetAnchoredPosition(PointerEventData eventData)

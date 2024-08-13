@@ -4,7 +4,8 @@ using TMPro;
 public class JobScamManager : MonoBehaviour
 {
     public DropArea[] scamSigns;
-    public TextMeshProUGUI statusText; 
+    public TextMeshProUGUI statusText;
+    public int score = 0; // Initialize score
 
     void Start()
     {
@@ -13,7 +14,7 @@ public class JobScamManager : MonoBehaviour
             scamSigns = FindObjectsOfType<DropArea>();
         }
 
-        UpdateStatusText(0); 
+        UpdateStatusText(0);
     }
 
     void Update()
@@ -25,7 +26,7 @@ public class JobScamManager : MonoBehaviour
     {
         int foundSignsCount = 0;
 
-        //Check each scam sign to see if occupied
+        // Check each scam sign to see if occupied
         foreach (DropArea dropArea in scamSigns)
         {
             if (dropArea.isOccupied)
@@ -34,7 +35,7 @@ public class JobScamManager : MonoBehaviour
             }
         }
 
-        //Provide feedback based on the number of signs found
+        // Provide feedback based on the number of signs found
         UpdateStatusText(foundSignsCount);
     }
 
@@ -43,17 +44,26 @@ public class JobScamManager : MonoBehaviour
         switch (foundSignsCount)
         {
             case 0:
-                statusText.text = "0/3 signs";
+                score = 0; // Set score to 0
+                statusText.text = "0/3 signs - Score: " + score;
                 break;
             case 1:
-                statusText.text = "1/3 signs";
+                score = 1; // Set score to 1
+                statusText.text = "1/3 signs - Score: " + score;
                 break;
             case 2:
-                statusText.text = "2/3 signs";
+                score = 2; // Set score to 2
+                statusText.text = "2/3 signs - Score: " + score;
                 break;
             case 3:
-                statusText.text = "3/3 signs";
+                score = 3; // Set score to 3
+                statusText.text = "3/3 signs - Score: " + score;
                 break;
         }
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 }

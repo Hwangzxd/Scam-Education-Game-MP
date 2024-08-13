@@ -1,15 +1,11 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
 public class BatteryBar : MonoBehaviour
 {
-    // Gets the Slider component and calls it slider
+    // Reference to the Slider component for battery display
     public Slider slider;
-
-    // Total time for the battery to drain in seconds (5 minutes)
-    private float totalTime = 300f;
 
     // Array to store battery icon images
     public Sprite[] batteryIcons;
@@ -23,62 +19,47 @@ public class BatteryBar : MonoBehaviour
     // Reference to the UI Text component for the battery percentage
     public TextMeshProUGUI batteryPercentageText;
 
+    private BatteryData batteryData;
+
     // Start is called before the first frame update
     void Start()
     {
-        // Set max battery level to 100 and also sets it to 100
+        // Access the BatteryData singleton instance
+        batteryData = BatteryData.Instance;
+
+        if (batteryData == null)
+        {
+            Debug.LogError("BatteryData instance not found.");
+            return;
+        }
+
+        // Set max battery level based on BatteryData
         SetMaxBatteryLevel(100);
-        // Start the battery drain coroutine
-        StartCoroutine(DrainBattery());
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Update battery visuals based on BatteryData
+        UpdateBatteryVisuals();
     }
 
     // Sets max value of battery bar and also the current value
     public void SetMaxBatteryLevel(int value)
     {
-        // Changes the slider's max value
         slider.maxValue = value;
-
-        // Changes the slider's current value
-        slider.value = value;
+        slider.value = batteryData.GetBatteryValue();
     }
 
-    // Coroutine to drain the battery over time
-    private IEnumerator DrainBattery()
+    // Method to update the battery visuals based on the battery data
+    private void UpdateBatteryVisuals()
     {
-        float elapsedTime = 0f;
+        if (batteryData == null) return;
 
-        while (elapsedTime < totalTime)
-        {
-            // Calculate the new battery level
-            float newBatteryLevel = Mathf.Lerp(slider.maxValue, 0, elapsedTime / totalTime);
-            // Set the new battery level
-            slider.value = newBatteryLevel;
-            // Update the battery icons
-            UpdateBatteryIcon(newBatteryLevel);
-            // Update the battery percentage text
-            UpdateBatteryPercentageText(newBatteryLevel);
-            // Increment elapsed time
-            elapsedTime += Time.deltaTime;
-            // Wait for the next frame
-            yield return null;
-        }
-
-        // Set battery level to 0 when time is up
-        slider.value = 0;
-        // Trigger event when the battery is completely drained
-        OnBatteryDrained();
-    }
-
-    // Method to handle the event when battery is drained
-    private void OnBatteryDrained()
-    {
-        Debug.Log("Battery is completely drained.");
-    }
-
-    // Method to get the current battery level
-    public float GetBatteryLevel()
-    {
-        return slider.value;
+        float batteryLevel = batteryData.GetBatteryValue();
+        slider.value = batteryLevel;
+        UpdateBatteryIcon(batteryLevel);
+        UpdateBatteryPercentageText(batteryLevel);
     }
 
     // Method to update the battery icons based on the battery level
