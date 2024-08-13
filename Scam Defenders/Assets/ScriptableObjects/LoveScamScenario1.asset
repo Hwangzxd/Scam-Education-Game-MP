@@ -28,7 +28,7 @@ MonoBehaviour:
     - responseText: This seems suspicious. How do I know you're real?
       isCorrect: 0
       isWrong: 0
-      nextMessageIndex: 3
+      nextMessageIndex: 7
   - messageText: Great! Can you send me your number so we can plan this better?
     responses:
     - responseText: Sure, here's my number.
@@ -61,9 +61,42 @@ MonoBehaviour:
     - responseText: How do I know you're telling the truth? This is too suspicious.
       isCorrect: 0
       isWrong: 0
-      nextMessageIndex: 3
+      nextMessageIndex: 6
   - messageText: Uhh... I run a business. How about we meet at your place and discuss
       further? What's your address? :)
+    responses:
+    - responseText: Continue the conversation
+      isCorrect: 0
+      isWrong: 1
+      nextMessageIndex: 0
+    - responseText: End the conversation
+      isCorrect: 1
+      isWrong: 0
+      nextMessageIndex: 0
+  - messageText: I thought you were interested in me! Believe what you want, you're
+      missing out...
+    responses:
+    - responseText: Continue the conversation
+      isCorrect: 0
+      isWrong: 1
+      nextMessageIndex: 0
+    - responseText: End the conversation
+      isCorrect: 1
+      isWrong: 0
+      nextMessageIndex: 0
+  - messageText: I understand your concern. Here's a picture of me. Can you send
+      one too?
+    responses:
+    - responseText: Ok... here's my picture.
+      isCorrect: 0
+      isWrong: 0
+      nextMessageIndex: 8
+    - responseText: No, I don't share pictures online. This feels off. I'm reporting
+        you.
+      isCorrect: 1
+      isWrong: 0
+      nextMessageIndex: 0
+  - messageText: You look amazing!
     responses:
     - responseText: Continue the conversation
       isCorrect: 0
