@@ -89,6 +89,11 @@ public class SceneTransitions : MonoBehaviour
         SceneManager.LoadScene("LoveScamChat");
     }
 
+    public void GoToLoveScamChatNew()
+    {
+        SceneManager.LoadScene("LoveScamChatNew");
+    }
+
     public void GoToStart()
     {
         SceneManager.LoadScene("Start");
