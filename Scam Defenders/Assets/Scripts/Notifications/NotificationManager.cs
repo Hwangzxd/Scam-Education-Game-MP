@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class NotificationManager : MonoBehaviour
 {
-    public GameObject[] notifs; 
-    public GameObject[] pings; 
+    public GameObject[] notifs;
+    public GameObject[] pings;
     private List<int> shownNotifs = new List<int>();
 
     private void Start()
@@ -68,20 +68,20 @@ public class NotificationManager : MonoBehaviour
 
         for (int i = 0; i < notifs.Length; i++)
         {
-            //Check if the notif active & if it is blocked by MGData
+            // Check if the notif is inactive & not blocked by MGData
             if (!shownNotifs.Contains(i) && !notifs[i].activeSelf && !IsNotificationBlocked(i))
             {
                 availableNotifs.Add(i);
             }
         }
 
-        //If all notifs have been shown, reset the list
+        // If all notifs have been shown, reset the list
         if (availableNotifs.Count == 0)
         {
             shownNotifs.Clear();
             for (int i = 0; i < notifs.Length; i++)
             {
-                //Check again if the notif is inactive & not blocked
+                // Check again if the notif is inactive & not blocked
                 if (!notifs[i].activeSelf && !IsNotificationBlocked(i))
                 {
                     availableNotifs.Add(i);
@@ -112,51 +112,25 @@ public class NotificationManager : MonoBehaviour
         if (data == null)
         {
             Debug.LogError("MGData instance is missing.");
-            return false; 
+            return false;
         }
 
-        switch (index)
-        {
-            case 0:
-                return data.enteredScene1;
-            case 1:
-                return data.enteredScene2;
-            case 2:
-                return data.enteredScene3;
-            case 3:
-                return data.enteredScene4;
-            case 4:
-                return data.enteredScene5;
-            default:
-                return false;
-        }
+        // Map the index to the corresponding enum value
+        MGData.Scenes sceneEnum = (MGData.Scenes)index;
+
+        // Check if the scene has already been entered
+        return data.enteredScenes.Contains(sceneEnum);
     }
 
     private void BlockNotifs(MGData data)
     {
-        if (data.enteredScene1)
+        for (int i = 0; i < notifs.Length; i++)
         {
-            DisableNotification(0); //Disable notification for Scene1 (ChatterNet)
-        }
-
-        if (data.enteredScene2)
-        {
-            DisableNotification(1); //Disable notification for Scene2 (ShopEase)
-        }
-
-        if (data.enteredScene3)
-        {
-            DisableNotification(2); //Disable notification for Scene3 (Geemail)
-        }
-
-        if (data.enteredScene4)
-        {
-            DisableNotification(3); //Disable notification for Scene4 (QuickChats)
-        }
-
-        if (data.enteredScene5)
-        {
-            DisableNotification(4); //Disable notification for Scene4 (QuickChats)
+            MGData.Scenes sceneEnum = (MGData.Scenes)i;
+            if (data.enteredScenes.Contains(sceneEnum))
+            {
+                DisableNotification(i); // Disable notification for the corresponding scene
+            }
         }
     }
 
@@ -164,10 +138,10 @@ public class NotificationManager : MonoBehaviour
     {
         if (index >= 0 && index < notifs.Length)
         {
-            notifs[index].SetActive(false); //Disable the notification
+            notifs[index].SetActive(false); // Disable the notification
             if (pings.Length > index)
             {
-                pings[index].SetActive(false); //Disable the respective ping
+                pings[index].SetActive(false); // Disable the respective ping
             }
         }
     }

@@ -6376,12 +6376,10 @@ MonoBehaviour:
   - {fileID: 1354772735}
   - {fileID: 1402290340}
   - {fileID: 286336188}
-  - {fileID: 1932636730}
   pings:
   - {fileID: 1600713864}
   - {fileID: 162438563}
   - {fileID: 1438111085}
-  - {fileID: 900512354}
   - {fileID: 900512354}
 --- !u!4 &704646910
 Transform:
@@ -14055,11 +14053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb61c423798582342be3f617110e74f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enteredScene1: 0
-  enteredScene2: 0
-  enteredScene3: 0
-  enteredScene4: 0
-  enteredScene5: 0
 --- !u!1 &1539667597
 GameObject:
   m_ObjectHideFlags: 0

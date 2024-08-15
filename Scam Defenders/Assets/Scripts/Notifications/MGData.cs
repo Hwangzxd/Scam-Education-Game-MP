@@ -5,68 +5,54 @@ using UnityEngine.SceneManagement;
 
 public class MGData : MonoBehaviour
 {
-    public static MGData Instance; //Singleton instance
+    public static MGData Instance; // Singleton instance
 
-    //Bools for tracking entered scenes
-    public bool enteredScene1 = false; 
-    public bool enteredScene2 = false; 
-    public bool enteredScene3 = false; 
-    public bool enteredScene4 = false;
-    public bool enteredScene5 = false;
+    public enum Scenes
+    {
+        ChatterNet,
+        ShopEase,
+        Geemail,
+        YabberChatHome
+    }
+
+    public HashSet<Scenes> enteredScenes = new HashSet<Scenes>();
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); 
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
     }
 
     private void Start()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded; 
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDestroy()
     {
-        SceneManager.sceneLoaded -= OnSceneLoaded; 
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        //Update bools based on the loaded scene
-        switch (scene.name)
+        // Check if the loaded scene matches any in the enum
+        if (System.Enum.TryParse(scene.name, out Scenes sceneEnum))
         {
-            case "ChatterNet":
-                enteredScene1 = true;
-                break;
-            case "ShopEase":
-                enteredScene2 = true;
-                break;
-            case "Geemail":
-                enteredScene3 = true;
-                break;
-            case "YabberChatHome":
-                enteredScene4 = true;
-                enteredScene5 = true;
-                break;
+            enteredScenes.Add(sceneEnum);
         }
 
-        //Check if all 4 bools are true
-        if (enteredScene1 && enteredScene2 && enteredScene3 && enteredScene4 && enteredScene5)
+        // Check if all scenes have been entered
+        if (enteredScenes.Count == System.Enum.GetValues(typeof(Scenes)).Length)
         {
-            enteredScene1 = false;
-            enteredScene2 = false;
-            enteredScene3 = false;
-            enteredScene4 = false;
-            enteredScene5 = false;
-
-            Debug.Log("All bools have been reset.");
+            enteredScenes.Clear();
+            Debug.Log("All scenes have been entered and the set has been reset.");
         }
     }
 }
