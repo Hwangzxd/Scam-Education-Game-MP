@@ -13,15 +13,11 @@ public class BatteryBar : MonoBehaviour
     // Reference to the UI Image component for the battery icon on the slider
     public Image batteryIconImage;
 
-    // Reference to the UI Image component for the battery icon at the top of the screen
-    public Image topBatteryIconImage;
-
     // Reference to the UI Text component for the battery percentage
     public TextMeshProUGUI batteryPercentageText;
 
     private BatteryData batteryData;
 
-    // Start is called before the first frame update
     void Start()
     {
         // Access the BatteryData singleton instance
@@ -37,21 +33,18 @@ public class BatteryBar : MonoBehaviour
         SetMaxBatteryLevel(100);
     }
 
-    // Update is called once per frame
     void Update()
     {
         // Update battery visuals based on BatteryData
         UpdateBatteryVisuals();
     }
 
-    // Sets max value of battery bar and also the current value
     public void SetMaxBatteryLevel(int value)
     {
         slider.maxValue = value;
         slider.value = batteryData.GetBatteryValue();
     }
 
-    // Method to update the battery visuals based on the battery data
     private void UpdateBatteryVisuals()
     {
         if (batteryData == null) return;
@@ -62,7 +55,6 @@ public class BatteryBar : MonoBehaviour
         UpdateBatteryPercentageText(batteryLevel);
     }
 
-    // Method to update the battery icons based on the battery level
     private void UpdateBatteryIcon(float batteryLevel)
     {
         Sprite newBatteryIcon;
@@ -88,12 +80,9 @@ public class BatteryBar : MonoBehaviour
             newBatteryIcon = batteryIcons[4];
         }
 
-        // Update both battery icon images
         batteryIconImage.sprite = newBatteryIcon;
-        topBatteryIconImage.sprite = newBatteryIcon;
     }
 
-    // Method to update the battery percentage text
     private void UpdateBatteryPercentageText(float batteryLevel)
     {
         batteryPercentageText.text = Mathf.RoundToInt(batteryLevel) + "%";
