@@ -2130,7 +2130,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1183660110}
         m_TargetAssemblyTypeName: SceneTransitions, Assembly-CSharp
-        m_MethodName: GoToLoveScamChat
+        m_MethodName: GoToLoveScamChatNew
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
