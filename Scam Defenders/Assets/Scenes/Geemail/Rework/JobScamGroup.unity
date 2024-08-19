@@ -989,6 +989,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2087930695}
     m_Modifications:
+    - target: {fileID: 700457868155826500, guid: 77a9c7225c9ac854083c2a7f422ac4b3, type: 3}
+      propertyPath: m_Name
+      value: Win3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612871835065149151, guid: 77a9c7225c9ac854083c2a7f422ac4b3, type: 3}
+      propertyPath: m_text
+      value: WELL DONE!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3344792899548714909, guid: 77a9c7225c9ac854083c2a7f422ac4b3, type: 3}
+      propertyPath: m_Name
+      value: Description
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696905676961687012, guid: 77a9c7225c9ac854083c2a7f422ac4b3, type: 3}
+      propertyPath: m_Name
+      value: Win1
+      objectReference: {fileID: 0}
     - target: {fileID: 3731233206218441353, guid: 77a9c7225c9ac854083c2a7f422ac4b3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1069,9 +1085,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4379110531459344270, guid: 77a9c7225c9ac854083c2a7f422ac4b3, type: 3}
+      propertyPath: m_text
+      value: "-Trust your instincts; if unsure, decline. \n\n-Too-good-to-be-true
+        earnings? Be cautious."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020176102537264897, guid: 77a9c7225c9ac854083c2a7f422ac4b3, type: 3}
+      propertyPath: m_text
+      value: "-Question deposit requests before paying anything. \n\n-Scammers often
+        use testimonials to build trust."
+      objectReference: {fileID: 0}
     - target: {fileID: 6416934093224258633, guid: 77a9c7225c9ac854083c2a7f422ac4b3, type: 3}
       propertyPath: m_Name
       value: Win Pop Ups
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852965624722084383, guid: 77a9c7225c9ac854083c2a7f422ac4b3, type: 3}
+      propertyPath: m_Name
+      value: Win2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693860792859751186, guid: 77a9c7225c9ac854083c2a7f422ac4b3, type: 3}
+      propertyPath: m_text
+      value: "-New group members may signal a scam.\r\n \r\n-Be cautious if a group
+        seems too fresh."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1739,6 +1774,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2087930695}
     m_Modifications:
+    - target: {fileID: 148738205593635669, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
+      propertyPath: m_text
+      value: "-Don't rush into 'too good' offers. \n\n-Scammers thrive on quick,
+        uninformed decisions."
+      objectReference: {fileID: 0}
     - target: {fileID: 324319713781397494, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1822,6 +1862,31 @@ PrefabInstance:
     - target: {fileID: 2083766494366696910, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
       propertyPath: m_Name
       value: Lose Pop Ups
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929876792581025661, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
+      propertyPath: m_Name
+      value: Lose2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209560811073208893, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
+      propertyPath: m_text
+      value: '-Avoid jobs requiring upfront payments.
+
+
+        -Beware of offers
+        that seem too perfect.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207548280124709058, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
+      propertyPath: m_text
+      value: "-Scammers rely on you ignoring red flags.\n \n-Always double-check
+        before sending any money.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143572888911649662, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
+      propertyPath: m_Name
+      value: Lose1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8995889072455109634, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
+      propertyPath: m_Name
+      value: Lose3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
