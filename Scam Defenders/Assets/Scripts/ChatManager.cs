@@ -7,6 +7,7 @@ using System.Collections;
 public class ChatManager : MonoBehaviour
 {
     public ChatScenario currentScenario;
+    public BirdyData birdyData;
     public Transform chatContent; // The parent object for chat messages
     public Transform responseContent; // The parent object for response buttons
     public GameObject scammerMessagePrefab; // Prefab for scammer chat messages
@@ -14,6 +15,9 @@ public class ChatManager : MonoBehaviour
     public GameObject responseButtonPrefab; // Prefab for response buttons
     public GameObject typingAnimationPrefab; // Prefab for typing animation
     public ScrollRect scrollRect; // Reference to the ScrollRect component
+
+    public Image senderImage;            // Reference to the Image component for the sender's avatar
+    public TextMeshProUGUI senderText;   // Reference to the TextMeshProUGUI component for the sender's name
 
     public List<GameObject> winScreens;
     public List<GameObject> loseScreens;
@@ -23,9 +27,67 @@ public class ChatManager : MonoBehaviour
 
     void Start()
     {
+        SetScenarioAvatarsAndNames(1);
         DisplayMessage(currentMessageIndex);
     }
 
+    //For saved data
+    public void SetScenarioAvatarsAndNames(int scenarioNumber)
+    {
+        string playerGender = PlayerPrefs.GetString("playerGender");
+        //Debug.Log(playerGender);
+        if (string.IsNullOrEmpty(playerGender))
+        {
+            Debug.LogWarning("No gender saved in PlayerPrefs");
+            return; // Exit the method if no gender is saved
+        }
+
+        switch (scenarioNumber)
+        {
+            case 1:
+                if (playerGender == "Male")
+                {
+                    senderImage.sprite = birdyData.girlAvatar1;
+                    senderText.text = birdyData.girlName1;
+                }
+                else if (playerGender == "Female")
+                {
+                    senderImage.sprite = birdyData.guyAvatar1;
+                    senderText.text = birdyData.guyName1;
+                }
+                break;
+
+            case 2:
+                if (playerGender == "Male")
+                {
+                    senderImage.sprite = birdyData.girlAvatar2;
+                    senderText.text = birdyData.girlName2;
+                }
+                else if (playerGender == "Female")
+                {
+                    senderImage.sprite = birdyData.guyAvatar2;
+                    senderText.text = birdyData.guyName2;
+                }
+                break;
+
+            case 3:
+                if (playerGender == "Male")
+                {
+                    senderImage.sprite = birdyData.girlAvatar3;
+                    senderText.text = birdyData.girlName3;
+                }
+                else if (playerGender == "Female")
+                {
+                    senderImage.sprite = birdyData.guyAvatar3;
+                    senderText.text = birdyData.guyName3;
+                }
+                break;
+
+            default:
+                Debug.LogWarning("Invalid scenario number");
+                break;
+        }
+    }
     //void DisplayMessage(int messageIndex)
     //{
     //    if (messageIndex >= currentScenario.messages.Count)

@@ -8204,6 +8204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScenario: {fileID: 11400000, guid: f2a4542a76744804dad62b9268971091, type: 2}
+  birdyData: {fileID: 11400000, guid: c26dfbe223659394d98a744178092a7b, type: 2}
   chatContent: {fileID: 1861857587}
   responseContent: {fileID: 1705661107}
   scammerMessagePrefab: {fileID: 2088860976434477981, guid: c43da1a730c58ec459417265f5fcb5e2, type: 3}
@@ -8211,6 +8212,8 @@ MonoBehaviour:
   responseButtonPrefab: {fileID: 831014479343012924, guid: dab5b4bbd9d44e04cbd2f943923955ea, type: 3}
   typingAnimationPrefab: {fileID: 6763095597999908313, guid: d9ff8d231f55b23489680f33f92564bb, type: 3}
   scrollRect: {fileID: 638202480}
+  senderImage: {fileID: 1972894823}
+  senderText: {fileID: 1156189436}
   winScreens:
   - {fileID: 1189321189}
   - {fileID: 1189321188}
@@ -10355,7 +10358,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jennifer_24
+  m_text: NAME
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17633,7 +17636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b0bd38fdac923c7479d0441420bbb292, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
