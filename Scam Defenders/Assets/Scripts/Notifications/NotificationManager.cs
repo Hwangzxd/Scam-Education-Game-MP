@@ -8,6 +8,7 @@ public class NotificationManager : MonoBehaviour
     public YabberData yabberData;
     public GameObject[] notifs;
     public GameObject[] pings;
+    public GameObject INVS;
     private List<int> shownNotifs = new List<int>();
 
     private void Start()
@@ -16,6 +17,14 @@ public class NotificationManager : MonoBehaviour
         UpdateNotifs();
     }
 
+    void Update()
+    {
+        // Check if the invs notif is active in the scene
+        if (INVS != null && INVS.activeInHierarchy)
+        {
+            yabberData.isINVSClicked = true;
+        }
+    }
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;

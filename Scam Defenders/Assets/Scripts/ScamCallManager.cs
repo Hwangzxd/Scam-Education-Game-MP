@@ -16,6 +16,7 @@ public class DialogueSegment
 
 public class ScamCallManager : MonoBehaviour
 {
+    public YabberData yabberdata;
     public AudioSource audioSource;
     public TextMeshProUGUI scamText;
     public DialogueSegment[] dialogueSegments;  // Array of dialogue segments
@@ -91,6 +92,7 @@ public class ScamCallManager : MonoBehaviour
         {
             declineNotification.SetActive(true);  // Activate the decline notification
             YabberPing.SetActive(true);
+            yabberdata.isGOISClicked = true;
         }
     }
 

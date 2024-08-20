@@ -4016,7 +4016,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 85150946}
         m_TargetAssemblyTypeName: SceneTransitions, Assembly-CSharp
-        m_MethodName: GoToQuickChats
+        m_MethodName: GoToYabberChatHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6856,6 +6856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0021674866681449c6423bf621c71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yabberdata: {fileID: 0}
   audioSource: {fileID: 1496986711}
   scamText: {fileID: 1544412022}
   dialogueSegments:
@@ -9334,6 +9335,7 @@ MonoBehaviour:
   - {fileID: 162438563}
   - {fileID: 1438111085}
   - {fileID: 900512354}
+  INVS: {fileID: 0}
 --- !u!4 &704646910
 Transform:
   m_ObjectHideFlags: 0
