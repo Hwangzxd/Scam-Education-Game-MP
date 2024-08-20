@@ -5862,6 +5862,7 @@ GameObject:
   - component: {fileID: 666533139}
   - component: {fileID: 666533138}
   - component: {fileID: 666533140}
+  - component: {fileID: 666533141}
   m_Layer: 5
   m_Name: Temperature
   m_TagString: Untagged
@@ -6006,6 +6007,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &666533141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666533136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee285871c20426c46ac45e8ac0d21da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temperature: {fileID: 666533138}
+  description: {fileID: 1025760730}
+  weatherImg: {fileID: 1632622857}
 --- !u!1 &669583947
 GameObject:
   m_ObjectHideFlags: 0
@@ -9260,6 +9276,7 @@ GameObject:
   - component: {fileID: 1025760731}
   - component: {fileID: 1025760730}
   - component: {fileID: 1025760732}
+  - component: {fileID: 1025760733}
   m_Layer: 5
   m_Name: Description
   m_TagString: Untagged
@@ -9404,6 +9421,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1025760733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025760728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee285871c20426c46ac45e8ac0d21da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temperature: {fileID: 666533138}
+  description: {fileID: 1025760730}
+  weatherImg: {fileID: 1632622857}
 --- !u!1 &1035394243
 GameObject:
   m_ObjectHideFlags: 0
@@ -13729,9 +13761,17 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3639927902064996485, guid: 9e0d14ff9452bbe46a438c2fece3ddd6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4788909367468137838, guid: 9e0d14ff9452bbe46a438c2fece3ddd6, type: 3}
       propertyPath: m_Name
       value: BottomBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7270030268182798506, guid: 9e0d14ff9452bbe46a438c2fece3ddd6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8387723632362255049, guid: 9e0d14ff9452bbe46a438c2fece3ddd6, type: 3}
       propertyPath: m_Pivot.x
