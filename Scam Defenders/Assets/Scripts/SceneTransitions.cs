@@ -48,6 +48,12 @@ public class SceneTransitions : MonoBehaviour
             Debug.LogWarning("No more scenes in the build settings.");
         }
     } 
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Quit game.");
+    }
      
     public void GoToHome()
     {
