@@ -16,11 +16,12 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     private Transform snapTransform;
     private DropArea snapDropArea;
-    private DropArea previousDropArea;
 
     public Image flagRenderer;
     private Vector2 originalPosition;
-    private Sprite originalSprite; // To store the original sprite
+    private Sprite originalSprite; // To store the original sprite 
+
+    public float yOffset;
 
     void Awake()
     {
@@ -72,9 +73,13 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
                     snapTransform = result.gameObject.transform;
                     snapDropArea = result.gameObject.GetComponent<DropArea>();
 
-                    rectTransform.anchoredPosition = ((RectTransform)snapTransform).anchoredPosition;
+                    // Get the center of the drop area
+                    Vector2 dropAreaCenter = ((RectTransform)snapTransform).anchoredPosition; 
+
+                    dropAreaCenter.y += yOffset;
+
+                    rectTransform.anchoredPosition = dropAreaCenter;
                     snapDropArea.isOccupied = true; // Mark the drop area as occupied
-                    previousDropArea = snapDropArea; // Update the previous drop area
 
                     flagRenderer.sprite = snappedSprite; // Change to snapped sprite
 
