@@ -832,7 +832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202992655620198472, guid: 37c63c78ffe746749a24f9f0c6c9b87a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3807297053231373403, guid: 37c63c78ffe746749a24f9f0c6c9b87a, type: 3}
       propertyPath: m_Pivot.x
@@ -912,6 +912,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3807297053231373403, guid: 37c63c78ffe746749a24f9f0c6c9b87a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574919379209418246, guid: 37c63c78ffe746749a24f9f0c6c9b87a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1007,13 +1011,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3676180817360255740, guid: d6065deddfe88234687483b77a7e31a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4429313597415389692, guid: d6065deddfe88234687483b77a7e31a5, type: 3}
       propertyPath: m_Name
       value: LosePopUps
       objectReference: {fileID: 0}
     - target: {fileID: 4429313597415389692, guid: d6065deddfe88234687483b77a7e31a5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -156,5 +156,10 @@ public class SceneTransitions : MonoBehaviour
     public void GoToGeemailScam2()
     {
         SceneManager.LoadScene("JobScamGroup");
+    } 
+     
+    public void GoToGeemailPost2()
+    {
+        SceneManager.LoadScene("Post2");
     }
 }
