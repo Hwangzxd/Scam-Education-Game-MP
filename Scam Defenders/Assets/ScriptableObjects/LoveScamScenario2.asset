@@ -1,0 +1,279 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ef21c67a9117244a1f92dd4621c5cb, type: 3}
+  m_Name: LoveScamScenario2
+  m_EditorClassIdentifier: 
+  scenarioName: Scenario2
+  messages:
+  - messageTexts:
+    - "Hey\u2026 I noticed you liked my post about a charity event."
+    - "I\u2019m really passionate about helping others."
+    - "Could we chat more about our interests and maybe support each other\u2019s
+      causes?"
+    responses:
+    - responseTexts:
+      - "Sure, I\u2019d love to! What\u2019s your cause about? "
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 1
+    - responseTexts:
+      - "I\u2019m curious, but I\u2019d like to know more about you before discussing
+        any causes. "
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 4
+    - responseTexts:
+      - "I\u2019m a bit skeptical. How do I know this isn\u2019t just a way to get
+        money from me?"
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 7
+  - messageTexts:
+    - "I\u2019m involved with a organization that supports children in need."
+    - "I\u2019ve been doing fundraising events."
+    - How about you?
+    responses:
+    - responseTexts:
+      - "That\u2019s wonderful! I\u2019m also involved in community service."
+      - 'How can I help with your events? '
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 2
+    - responseTexts:
+      - "I\u2019m not currently involved in any causes."
+      - 'Can you tell me more about your events? '
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 3
+  - messageTexts:
+    - "That\u2019s amazing! We could use some support for our next event."
+    - We're trying to reach our goal, and any donation would help a lot.
+    - You can transfer the money directly to our account!
+    responses:
+    - responseTexts:
+      - Continue the conversation.
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+    - responseTexts:
+      - End the conversation.
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+  - messageTexts:
+    - "Of course! We\u2019re hosting a fundraiser next weekend to help children in
+      need."
+    - Our goal is $2000, but we need a little more help, we're only halfway there.
+    - If you could donate the remaining, it would mean the world to these kids.
+    - You can send the money directly to our account!
+    responses:
+    - responseTexts:
+      - Continue the conversation.
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+    - responseTexts:
+      - End the conversation.
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+  - messageTexts:
+    - "I\u2019m a volunteer who loves giving back to the community."
+    - "I\u2019ve had some personal experiences that motivate me to help others."
+    - What are your passions?
+    responses:
+    - responseTexts:
+      - "That\u2019s inspiring. I\u2019m passionate about education on scams."
+      - Do you have any specific upcoming events?
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 5
+    - responseTexts:
+      - This sounds a bit vague. Can you share more details about your organization?
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 6
+  - messageTexts:
+    - "Yes We\u2019re hosting a fundraiser next weekend to help elderly in need,
+      and are really close to reaching our goal!"
+    - If you could donate, it would help out a lot! :)
+    responses:
+    - responseTexts:
+      - Continue the conversation.
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+    - responseTexts:
+      - End the conversation.
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+  - messageTexts:
+    - Um sure, we help children that need help. We are currently halfway through
+      our goal of $2000.
+    - If you can donate the remaining half, you would be helping out these children
+      a lot!
+    responses:
+    - responseTexts:
+      - Continue the conversation.
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+    - responseTexts:
+      - End the conversation.
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+  - messageTexts:
+    - I understand your concern.
+    - My focus is on making a positive impact, and I want to build connections.
+    - How about we just chat and get to know each other?
+    responses:
+    - responseTexts:
+      - "I\u2019m open to chatting, but I\u2019d prefer not to discuss money."
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 8
+    - responseTexts:
+      - "I\u2019m not comfortable continuing this conversation."
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+  - messageTexts:
+    - Sure! You can trust me.
+    - I mean we can talk for a bit, but maybe in the future you can support my cause
+      and I can support yours too? :)
+    responses:
+    - responseTexts:
+      - Continue the conversation.
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+    - responseTexts:
+      - End the conversation.
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
