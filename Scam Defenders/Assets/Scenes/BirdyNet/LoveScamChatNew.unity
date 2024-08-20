@@ -12862,7 +12862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1465599770
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17460,6 +17460,26 @@ PrefabInstance:
     - target: {fileID: 2083766494366696910, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
       propertyPath: m_Name
       value: Lose Pop Ups
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209560811073208893, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
+      propertyPath: m_text
+      value: '- Never share your phone number or personal information with strangers
+        online.
+
+
+        - Protect yourself by verifying identities first.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209560811073208893, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
+      propertyPath: m_fontSize
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209560811073208893, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143572888911649662, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
