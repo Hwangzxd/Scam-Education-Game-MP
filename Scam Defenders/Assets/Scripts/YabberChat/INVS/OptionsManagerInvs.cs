@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using static System.Net.WebRequestMethods;
 
 public class OptionsManagerInvs : MonoBehaviour
 {
@@ -31,6 +30,7 @@ public class OptionsManagerInvs : MonoBehaviour
     public GameObject loadIcon;
     public GameObject infoText;
     public GameObject searchBar;
+    public Animator searchBarAnimator;
     public GameObject research;
     public GameObject user;
     public GameObject chat;
@@ -41,6 +41,7 @@ public class OptionsManagerInvs : MonoBehaviour
     public Sprite btn2Sprite;
     private Sprite originalSprite;
 
+    private Vector3 originalSearchBarScale; // Store the original scale
     private IEnumerator loadCoroutine;
 
     void Start()
@@ -56,6 +57,13 @@ public class OptionsManagerInvs : MonoBehaviour
         reply.onClick.AddListener(OnReplyButtonClick);
 
         InitialiseUI();
+
+        // Store the original scale of the search bar
+        if (searchBar != null)
+        {
+            originalSearchBarScale = searchBar.transform.localScale;
+            Debug.Log("Original Scale: " + originalSearchBarScale);
+        }
     }
 
     void InitialiseUI()
@@ -68,33 +76,32 @@ public class OptionsManagerInvs : MonoBehaviour
         user.SetActive(true);
         chat.SetActive(true);
 
-        //set the sprite to be the scammer
-        if(topImage.TryGetComponent<Image>(out Image image))
+        // Set the sprite to be the scammer
+        if (topImage.TryGetComponent<Image>(out Image image))
         {
             originalSprite = image.sprite;
         }
     }
 
-    //for contacting independent financial advisor
+    // For contacting independent financial advisor
     public void OnButton1Click()
     {
         disableAllButtons();
         textName.text = "Trusted Financial Advisor";
-        DialogueManagerInvs.HideAllOriginalMessages(); 
+        DialogueManagerInvs.HideAllOriginalMessages();
         StartCoroutine(DialogueManagerInvs.ContactIndependentFinancialAdvisor());
         Debug.Log("Button 1 clicked");
     }
 
-    //for visiting official financial regulator website (shows companies that does financial stuff)
+    // For visiting official financial regulator website (shows companies that do financial stuff)
     public void OnButton2Click()
     {
         disableAllButtons();
         btn2UI();
         Debug.Log("Button 2 clicked");
-
     }
 
-    //UI for btn 2
+    // UI for btn 2
     private void btn2UI()
     {
         user.SetActive(false);
@@ -112,7 +119,7 @@ public class OptionsManagerInvs : MonoBehaviour
         backBtn.enabled = true;
     }
 
-    //for requesting official documentations
+    // For requesting official documentations
     public void OnButton3Click()
     {
         btn3Pressed = true;
@@ -123,7 +130,7 @@ public class OptionsManagerInvs : MonoBehaviour
         Debug.Log("Button 3 clicked");
     }
 
-    //for researching the company/fund on google
+    // For researching the company/fund on Google
     public void OnButton4Click()
     {
         btn4Pressed = true;
@@ -132,7 +139,7 @@ public class OptionsManagerInvs : MonoBehaviour
         Debug.Log("Button 4 clicked");
     }
 
-    //UI for btn 4
+    // UI for btn 4
     private void btn4UI()
     {
         user.SetActive(false);
@@ -151,27 +158,47 @@ public class OptionsManagerInvs : MonoBehaviour
         }
     }
 
-    //search bar btn for btn 4
+    // Search bar button for btn 4
     public void OnSearchBarClick()
     {
         if (btn4Pressed)
         {
             searchText.text = "SG Wealth Management";
+            infoText.SetActive(false);
             loadIcon.SetActive(true);
             loadCoroutine = ResearchCompany();
             StartCoroutine(loadCoroutine);
+
+            // Stop the search bar animation
+            if (searchBarAnimator != null)
+            {
+                searchBarAnimator.enabled = false;
+            }
+
+            // Reset the scale to the original
+            ResetSearchBarScale();
         }
     }
-    
+
+    private void ResetSearchBarScale()
+    {
+        // Use the stored original scale
+        if (searchBar != null)
+        {
+            searchBar.transform.localScale = originalSearchBarScale;
+            Debug.Log("Reset Scale: " + originalSearchBarScale);
+        }
+    }
+
     private IEnumerator ResearchCompany()
     {
-        yield return new WaitForSeconds(3f); // Wait for 3 second before showing the information
+        yield return new WaitForSeconds(3f); // Wait for 3 seconds before showing the information
         infoText.SetActive(true);
         loadIcon.SetActive(false);
         backBtn.enabled = true;
     }
 
-    //going back from the different buttons options (users can also just click on the buttons if shown)
+    // Going back from the different button options (users can also just click on the buttons if shown)
     public void OnBackBtnClick()
     {
         disableAllButtons();
@@ -180,17 +207,16 @@ public class OptionsManagerInvs : MonoBehaviour
         DialogueManagerInvs.HideAllAdvisorMessages();
         if (btn3Pressed)
         {
-            DialogueManagerInvs.ShowAllOriginalMessages();   
+            DialogueManagerInvs.ShowAllOriginalMessages();
         }
         else
         {
             originalMessage.SetActive(true);
         }
         enableAllButtons();
-        
     }
 
-    //when scenario is loading
+    // When scenario is loading
     private void disableAllButtons()
     {
         button1.enabled = false;
@@ -200,7 +226,7 @@ public class OptionsManagerInvs : MonoBehaviour
         backBtn.enabled = false;
     }
 
-    //after scenario has been loaded
+    // After scenario has been loaded
     public void enableAllButtons()
     {
         button1.enabled = true;
@@ -241,4 +267,3 @@ public class OptionsManagerInvs : MonoBehaviour
         StartCoroutine(DialogueManagerInvs.lose1());
     }
 }
-

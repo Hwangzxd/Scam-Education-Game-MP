@@ -170,9 +170,6 @@ MonoBehaviour:
   DialogueManagerGois: {fileID: 994236485}
   button1: {fileID: 449433282}
   button2: {fileID: 245246548}
-  button3: {fileID: 1302929609}
-  button4: {fileID: 433938424}
-  backBtn: {fileID: 1118846936}
 --- !u!1 &59163401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3312,6 +3309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqManager: {fileID: 0}
 --- !u!114 &793111608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4402,15 +4400,12 @@ MonoBehaviour:
   scrollRect: {fileID: 749597240}
   scaleAnimationDuration: 0.5
   initialScale: {x: 0.1, y: 0.1, z: 0.1}
+  typingAnimationPrefab: {fileID: 6763095597999908313, guid: d9ff8d231f55b23489680f33f92564bb, type: 3}
   loseScreen: {fileID: 402314082}
   winScreen: {fileID: 1852649040}
   originalMessages:
   - {fileID: 753909270}
   fadeDuration: 0
-  Chat: {fileID: 1704442319}
-  User: {fileID: 1023449713}
-  BrowserScreen: {fileID: 1151969400}
-  BrowserScreenFilled: {fileID: 2128682508}
 --- !u!1 &994985474
 GameObject:
   m_ObjectHideFlags: 0
@@ -6639,6 +6634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqManager: {fileID: 0}
 --- !u!114 &1382433874
 MonoBehaviour:
   m_ObjectHideFlags: 0

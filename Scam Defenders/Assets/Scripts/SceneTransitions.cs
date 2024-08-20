@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class SceneTransitions : MonoBehaviour
 {
     private AudioManager audioManager;
-
+    public ReqManager reqManager;
     public void Awake()
     {
         audioManager = AudioManager.instance;
@@ -58,6 +58,7 @@ public class SceneTransitions : MonoBehaviour
     public void GoToHome()
     {
         SceneManager.LoadScene("Home");
+        reqManager.resetBools();
     }
 
     public void GoToHome2()

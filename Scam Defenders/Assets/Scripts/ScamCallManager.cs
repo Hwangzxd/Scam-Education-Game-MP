@@ -16,9 +16,16 @@ public class DialogueSegment
 
 public class ScamCallManager : MonoBehaviour
 {
+    public YabberData yabberdata;
     public AudioSource audioSource;
     public TextMeshProUGUI scamText;
     public DialogueSegment[] dialogueSegments;  // Array of dialogue segments
+
+    public GameObject loseScreen;
+    public GameObject winScreen;
+    public GameObject scamCall;
+    public GameObject declineNotification;  // Reference to the notification GameObject in the scene
+    public GameObject YabberPing;
 
     void Start()
     {
@@ -40,10 +47,6 @@ public class ScamCallManager : MonoBehaviour
 
     IEnumerator PlayDialogueSegment(int segmentIndex)
     {
-        // Optionally disable the button after pressing
-        //dialogueSegments[segmentIndex].triggerButton.gameObject.SetActive(false);
-
-        // Activate scamText when dialogue starts
         scamText.gameObject.SetActive(true);
 
         string[] lines = dialogueSegments[segmentIndex].lines;
@@ -58,7 +61,6 @@ public class ScamCallManager : MonoBehaviour
             yield return new WaitForSeconds(durations[i]);
         }
 
-        // Clear the text and deactivate scamText after dialogue ends
         scamText.text = ""; // Clear text after the segment ends
         scamText.gameObject.SetActive(false);
 
@@ -79,5 +81,28 @@ public class ScamCallManager : MonoBehaviour
                 obj.SetActive(false);
             }
         }
+    }
+
+    // Method to handle call decline
+    public void DeclineCall()
+    {
+        scamCall.SetActive(false);
+
+        if (declineNotification != null)
+        {
+            declineNotification.SetActive(true);  // Activate the decline notification
+            YabberPing.SetActive(true);
+            yabberdata.isGOISClicked = true;
+        }
+    }
+
+    public void Lose()
+    {
+        loseScreen.SetActive(true);
+    }
+
+    public void Win()
+    {
+        loseScreen.SetActive(true);
     }
 }
