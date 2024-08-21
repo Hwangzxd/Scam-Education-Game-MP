@@ -164,30 +164,31 @@ public class OptionsManagerInvs : MonoBehaviour
     {
         if (btn4Pressed)
         {
-            if (SceneManager.GetActiveScene().name == "YabberChatINVS")
+
+            if (SceneManager.GetActiveScene().name == "YabberChatINVS" || SceneManager.GetActiveScene().name == "YabberChatINVS1")
             {
-                searchText.text = "SG Wealth Management";
+                if (SceneManager.GetActiveScene().name == "YabberChatINVS")
+                {
+                    searchText.text = "SG Wealth Management";
+                }
+                else if (SceneManager.GetActiveScene().name == "YabberChatINVS1")
+                {
+                    searchText.text = "Apex Global Investments";
+                }
+
+                infoText.SetActive(false);
+                loadIcon.SetActive(true);
+                loadCoroutine = ResearchCompany();
+                StartCoroutine(loadCoroutine);
             }
-            else if (SceneManager.GetActiveScene().name == "YabberChatINVS1")
+            else if (SceneManager.GetActiveScene().name == "YabberChatINVS2")
             {
-                searchText.text = "Apex Global Investments";
-            }
-            else if (SceneManager.GetActiveScene().name == "YabberChatINVS1")
-            {
-                searchText.text = "SG Wealth Management";
-            }
-            else
-            {
-                Debug.Log("error");
+                searchText.text = "DBS Multiplier Account";
+                //real scenario here
             }
 
-            infoText.SetActive(false);
-            loadIcon.SetActive(true);
-            loadCoroutine = ResearchCompany();
-            StartCoroutine(loadCoroutine);
-
-            // Stop the search bar animation
-            if (searchBarAnimator != null)
+                // Stop the search bar animation
+                if (searchBarAnimator != null)
             {
                 searchBarAnimator.enabled = false;
             }
