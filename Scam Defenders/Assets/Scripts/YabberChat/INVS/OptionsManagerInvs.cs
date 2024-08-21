@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class OptionsManagerInvs : MonoBehaviour
 {
@@ -62,7 +63,7 @@ public class OptionsManagerInvs : MonoBehaviour
         if (searchBar != null)
         {
             originalSearchBarScale = searchBar.transform.localScale;
-            Debug.Log("Original Scale: " + originalSearchBarScale);
+            //Debug.Log("Original Scale: " + originalSearchBarScale);
         }
     }
 
@@ -163,7 +164,23 @@ public class OptionsManagerInvs : MonoBehaviour
     {
         if (btn4Pressed)
         {
-            searchText.text = "SG Wealth Management";
+            if (SceneManager.GetActiveScene().name == "YabberChatINVS")
+            {
+                searchText.text = "SG Wealth Management";
+            }
+            else if (SceneManager.GetActiveScene().name == "YabberChatINVS1")
+            {
+                searchText.text = "Apex Global Investments";
+            }
+            else if (SceneManager.GetActiveScene().name == "YabberChatINVS1")
+            {
+                searchText.text = "SG Wealth Management";
+            }
+            else
+            {
+                Debug.Log("error");
+            }
+
             infoText.SetActive(false);
             loadIcon.SetActive(true);
             loadCoroutine = ResearchCompany();
