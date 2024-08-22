@@ -25,6 +25,7 @@ public class NotificationManager : MonoBehaviour
             yabberData.isINVSClicked = true;
         }
     }
+
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -50,7 +51,7 @@ public class NotificationManager : MonoBehaviour
         if (currentScene == "Home")
         {
             BlockNotifs(data);
-            ShowRandomNotif();
+            StartCoroutine(ShowRandomNotifWithDelay()); // Add delay before showing notification
         }
         else
         {
@@ -64,6 +65,12 @@ public class NotificationManager : MonoBehaviour
                 ping.SetActive(false);
             }
         }
+    }
+
+    private IEnumerator ShowRandomNotifWithDelay()
+    {
+        yield return new WaitForSeconds(2f); // Wait for 2 seconds before showing the notification
+        ShowRandomNotif();
     }
 
     private void ShowRandomNotif()
