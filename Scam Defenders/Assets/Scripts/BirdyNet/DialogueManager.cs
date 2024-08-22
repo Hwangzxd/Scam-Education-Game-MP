@@ -367,7 +367,27 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         yield return StartCoroutine(ShowMessage(scenario3Messages[1])); // Jennifer's response
         yield return new WaitForSeconds(1f);
-        yield return StartCoroutine(ShowMessage(scenario3Messages[2])); // Jennifer's response
+        if (PlayerPrefs.HasKey("Gender"))
+        {
+            string gender = PlayerPrefs.GetString("Gender");
+
+            if (gender == "Girl")
+            {
+                yield return StartCoroutine(ShowMessage(scenario3Messages[2]));
+            }
+            else if (gender == "Guy")
+            {
+                yield return StartCoroutine(ShowMessage(scenario3Messages[3]));
+            }
+            else
+            {
+                Debug.LogError("Error: Invalid gender saved.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Error: No gender saved.");
+        }
         yield return new WaitForSeconds(1f);
         optionsBlur.SetActive(false);
         optionList4.SetActive(true);
@@ -375,11 +395,11 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator Scenario3n1()
     {
-        yield return StartCoroutine(ShowMessage(scenario3Messages[3])); // User's response
-        yield return new WaitForSeconds(1f);
         yield return StartCoroutine(ShowMessage(scenario3Messages[4])); // User's response
         yield return new WaitForSeconds(1f);
-        yield return StartCoroutine(ShowMessage(scenario3Messages[5])); // Jennifer's response
+        yield return StartCoroutine(ShowMessage(scenario3Messages[5])); // User's response
+        yield return new WaitForSeconds(1f);
+        yield return StartCoroutine(ShowMessage(scenario3Messages[6])); // Jennifer's response
         yield return new WaitForSeconds(1f);
         optionsBlur.SetActive(false);
         optionListEnd3.SetActive(true);
@@ -388,7 +408,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator Scenario3n2()
     {
-        yield return StartCoroutine(ShowMessage(scenario3Messages[6])); // User's response
+        yield return StartCoroutine(ShowMessage(scenario3Messages[7])); // User's response
         yield return new WaitForSeconds(1f);
 
         // Wait for a few seconds before showing the lose screen

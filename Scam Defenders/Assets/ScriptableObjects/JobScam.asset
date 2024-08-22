@@ -14,30 +14,168 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenarioName: Scenario1
   messages:
-  - messageText: Hi there! We saw your profile and think you'd be a great fit for
-      our exclusive work-from-home opportunity! Are you interested in earning extra
-      income?
+  - messageTexts:
+    - 'John: Welcome to Easy Money Opportunities. Everyone here is making good money
+      with our side-hustle.'
+    - "Sarah: I\u2019m making $500 a week. Thanks, John."
+    - "Alex: I\u2019ve already made $200. This really helps."
+    - "John: We\u2019re accepting a few more people today. Secure your spot with
+      a $50 deposit. You\u2019ll start earning right away."
     responses:
-    - responseText: Hi! I'm definitely interested. Can you tell me more about the
-        job?
+    - responseTexts:
+      - "What\u2019s the deposit for?"
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
       nextMessageIndex: 1
-    - responseText: Sure, I'm curious. What's this opportunity about?
-      nextMessageIndex: 1
-    - responseText: This sounds too good to be true. Is it a scam?
-      nextMessageIndex: 1
-  - messageText: Absolutely! Our team works on promoting various products and services
-      online. You can earn up to $500 a week just by completing simple tasks. It's
-      super easy and flexible.
-    responses:
-    - responseText: That sounds great! What kind of tasks would I be doing?
-      nextMessageIndex: 2
-    - responseText: That sounds great! What kind of tasks would I be doing?
-      nextMessageIndex: 2
-  - messageText: You'd be liking posts, sharing content, and occasionally writing
-      short reviews. To get started, you'll need to complete a short training session.
-      Once you finish, you can start earning right away.
-    responses:
-    - responseText: Okay, what's involved in the training session?
+    - responseTexts:
+      - Is everyone here new?
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
       nextMessageIndex: 3
-    - responseText: 'Do I have to pay for the training? '
-      nextMessageIndex: 3
+    - responseTexts:
+      - Why are the amounts so perfectly rounded?
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 2
+  - messageTexts:
+    - "John: The deposit covers the starter kit, which includes all the resources
+      you need to get started. You\u2019ll make it back in no time."
+    responses:
+    - responseTexts:
+      - How quickly can I start earning?
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 4
+    - responseTexts:
+      - "How do I know this isn\u2019t a scam?"
+      winScreen1: 1
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+  - messageTexts:
+    - "It\u2019s just how the system works. Our methods are efficient, so people
+      often hit those numbers."
+    responses:
+    - responseTexts:
+      - That sounds reasonable. How do I get started?
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 5
+    - responseTexts:
+      - "This feels off. I\u2019m not sure I can trust this."
+      winScreen1: 0
+      winScreen2: 1
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+  - messageTexts:
+    - 'Lisa: John only invites a few people at a time to keep the group small and
+      manageable. It helps us all succeed faster.'
+    - "Sarah: I was new just like you, but look at me now. It\u2019s legit."
+    responses:
+    - responseTexts:
+      - "That makes sense. What\u2019s the next step?"
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 6
+    - responseTexts:
+      - Why is everyone so new? It feels suspicious.
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 1
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+  - messageTexts:
+    - "John: Most people start seeing money within a day or two. It\u2019s fast,
+      easy, and reliable."
+    responses:
+    - responseTexts:
+      - "Sounds good. I\u2019ll think about it."
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 1
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+  - messageTexts:
+    - "John: Just make the $50 deposit, and you\u2019ll be on your way to earning
+      like everyone else here."
+    responses:
+    - responseTexts:
+      - "Alright, I\u2019ll think about it."
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 1
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
+  - messageTexts:
+    - "Make the $50 deposit, and you\u2019ll get access to everything you need to
+      start earning."
+    responses:
+    - responseTexts:
+      - "I\u2019ll think about it."
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 1
+      loseScreen4: 0
+      nextMessageIndex: 0

@@ -11,7 +11,7 @@ public class DialogueManagerInvs : MonoBehaviour
     public ScrollRect scrollRect; // Reference to the ScrollRect component
     public float scaleAnimationDuration = 0.5f; // Duration for the scale animation
     public Vector3 initialScale = Vector3.one * 0.1f; // Initial scale for the size-in animation
-
+    public GameObject typingAnimationPrefab;
 
     // Lose screens
     public GameObject loseScreen1;
@@ -31,31 +31,20 @@ public class DialogueManagerInvs : MonoBehaviour
 
     private void Start()
     {
-
-
         // Initialize the scenario dictionary
         scenarios = new Dictionary<string, IEnumerator>
         {
             { "StartScene", StartScene() },
-
-
         };
 
         // Start the first scenario
         StartCoroutine(scenarios["StartScene"]);
     }
 
-    private void Update()
-    {
-
-
-    }
-
     private IEnumerator StartScene()
     {
         yield return StartCoroutine(ShowMessage(originalMessages[0])); // Scammer's first message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
-
     }
 
     public IEnumerator RequestOfficialDocumentations()
@@ -64,47 +53,40 @@ public class DialogueManagerInvs : MonoBehaviour
         {
             OptionsManagerInvs.originalMessage.SetActive(true);
         }
-        yield return StartCoroutine(ShowMessage(originalMessages[1])); // Scammer's first message
-        yield return new WaitForSeconds(3f); // Wait for 3 second before showing the next message
-        yield return StartCoroutine(ShowMessage(originalMessages[2])); // Scammer's first message
-        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
-        OptionsManagerInvs.enableAllButtons();
 
+        yield return StartCoroutine(ShowMessage(originalMessages[1])); // Player's message
+        yield return StartCoroutine(DisplayTypingAnimation(3f)); // Wait for 3 seconds before showing the next message
+        yield return StartCoroutine(ShowMessage(originalMessages[2])); // Scammer's message
+        yield return new WaitForSeconds(1f);
+        OptionsManagerInvs.enableAllButtons();
     }
 
     public IEnumerator ContactIndependentFinancialAdvisor()
     {
-        yield return StartCoroutine(ShowMessage(originalMessagesAdvisor[0])); // Scammer's first message
-        yield return new WaitForSeconds(1f); // Wait for 3 second before showing the next message
-        yield return StartCoroutine(ShowMessage(originalMessagesAdvisor[1])); // Scammer's first message
-        yield return new WaitForSeconds(3f); // Wait for 1 second before showing the next message
-        yield return StartCoroutine(ShowMessage(originalMessagesAdvisor[2])); // Scammer's first message
-        yield return new WaitForSeconds(2f); // Wait for 3 second before showing the next message
-        yield return StartCoroutine(ShowMessage(originalMessagesAdvisor[3])); // Scammer's first message
+        yield return StartCoroutine(ShowMessage(originalMessagesAdvisor[0])); // Player's message
+        yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
+        yield return StartCoroutine(ShowMessage(originalMessagesAdvisor[1])); // Player's message
+        yield return StartCoroutine(DisplayTypingAnimation(3f)); // Wait for 3 seconds before showing the next message
+        yield return StartCoroutine(ShowMessage(originalMessagesAdvisor[2])); // Scammer's message
+        yield return StartCoroutine(DisplayTypingAnimation(2f)); // Wait for 2 seconds before showing the next message
+        yield return StartCoroutine(ShowMessage(originalMessagesAdvisor[3])); // Scammer's message
         yield return new WaitForSeconds(1f); // Wait for 1 second before showing the next message
         OptionsManagerInvs.enableAllButtons();
     }
 
     public IEnumerator lose1()
     {
-        // Wait for a few seconds before showing the lose screen
         yield return new WaitForSeconds(1f); // Adjust the delay as needed
-
-        // Show the lose screen
         loseScreen1.SetActive(true);
     }
 
     public IEnumerator win1()
     {
-        // Wait for a few seconds before showing the win screen
         yield return new WaitForSeconds(1f); // Adjust the delay as needed
-
-        // Show the lose screen
         winScreen1.SetActive(true);
     }
+
     #region Chat Logic
-
-
 
     private IEnumerator ShowMessage(GameObject obj)
     {
@@ -116,22 +98,47 @@ public class DialogueManagerInvs : MonoBehaviour
         yield return StartCoroutine(UpdateScrollRect());
 
         // Animate scaling from initialScale to 1
-        LeanTween.scale(obj, Vector3.one, scaleAnimationDuration)
-            .setEase(LeanTweenType.easeOutBounce);
+        LeanTween.scale(obj, Vector3.one, scaleAnimationDuration).setEase(LeanTweenType.easeOutBounce);
 
         // Wait until scaling animation is done
         yield return new WaitForSeconds(scaleAnimationDuration);
     }
 
+    IEnumerator DisplayTypingAnimation(float duration)
+    {
+        // Check if the typing animation is already instantiated
+        Transform existingTypingAnimation = messageContainer.Find(typingAnimationPrefab.name);
+
+        if (existingTypingAnimation != null)
+        {
+            // Typing animation already exists, so just wait for the specified duration
+            yield return new WaitForSeconds(duration);
+        }
+        else
+        {
+            // Instantiate typing animation
+            GameObject typingAnimationGO = Instantiate(typingAnimationPrefab, messageContainer);
+            typingAnimationGO.name = typingAnimationPrefab.name; // Assign a unique name for easy identification
+
+            // Force layout rebuild
+            LayoutRebuilder.ForceRebuildLayoutImmediate(messageContainer.GetComponent<RectTransform>());
+
+            // Scroll to bottom
+            yield return StartCoroutine(UpdateScrollRect());
+
+            // Wait for the specified duration
+            yield return new WaitForSeconds(duration);
+
+            // Destroy typing animation
+            Destroy(typingAnimationGO);
+        }
+    }
+
+
     private IEnumerator UpdateScrollRect()
     {
-        // Wait for the end of the frame to ensure the layout group updates
         yield return new WaitForEndOfFrame();
-
-        // Force an update on the layout and content size fitter
         LayoutRebuilder.ForceRebuildLayoutImmediate(messageContainer);
-
-        // Scroll to the bottom
         scrollRect.verticalNormalizedPosition = 0;
     }
 
@@ -167,9 +174,5 @@ public class DialogueManagerInvs : MonoBehaviour
         }
     }
 
-
     #endregion
-
-
-
 }

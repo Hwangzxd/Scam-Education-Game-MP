@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class NotificationManager : MonoBehaviour
 {
+    public YabberData yabberData;
     public GameObject[] notifs;
     public GameObject[] pings;
+    public GameObject INVS;
     private List<int> shownNotifs = new List<int>();
 
     private void Start()
@@ -15,6 +17,14 @@ public class NotificationManager : MonoBehaviour
         UpdateNotifs();
     }
 
+    void Update()
+    {
+        // Check if the invs notif is active in the scene
+        if (INVS != null && INVS.activeInHierarchy)
+        {
+            yabberData.isINVSClicked = true;
+        }
+    }
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -153,4 +163,29 @@ public class NotificationManager : MonoBehaviour
             pings[appIndex].SetActive(false);
         }
     }
+
+    public void OnINVSNotificationClicked()
+    {
+        if (yabberData == null)
+        {
+            Debug.LogError("YabberData is not assigned");
+            return;
+        }
+
+        yabberData.isINVSClicked = true; // Update the GOISClicked boolean
+        Debug.Log("INVS notification clicked.");
+    }
+
+    public void OnGOISNotificationClicked()
+    {
+        if (yabberData == null)
+        {
+            Debug.LogError("YabberData is not assigned");
+            return;
+        }
+
+        yabberData.isGOISClicked = true; // Update the GOISClicked boolean
+        Debug.Log("GOIS notification clicked.");
+    }
+
 }

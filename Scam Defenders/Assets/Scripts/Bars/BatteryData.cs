@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BatteryData : MonoBehaviour
 {
@@ -36,6 +37,11 @@ public class BatteryData : MonoBehaviour
         else
         {
             batteryValue = 0;
+
+            if (SceneManager.GetActiveScene().name != "End")
+            {
+                SceneManager.LoadScene("End");
+            }
         }
     }
 
