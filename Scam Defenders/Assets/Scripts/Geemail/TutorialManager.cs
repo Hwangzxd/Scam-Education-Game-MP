@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GMTutorial : MonoBehaviour
+public class TutorialManager : MonoBehaviour
 {
     public GameObject[] guides;
 
