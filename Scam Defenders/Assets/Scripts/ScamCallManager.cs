@@ -36,11 +36,8 @@ public class ScamCallManager : MonoBehaviour
 
     void Start()
     {
-        // Start with the first scenario by default
-        if (scenarios.Length > 0)
-        {
-            SetScenario(0);
-        }
+        // Start with the first scenario by default for now
+        SetScenario(1);
     }
 
     // Method to set the current scenario
