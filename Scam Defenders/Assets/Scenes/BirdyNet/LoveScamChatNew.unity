@@ -2069,7 +2069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12702,7 +12702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -20338,6 +20338,14 @@ PrefabInstance:
     - target: {fileID: 1551851318708000107, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_text
       value: "Chat with others and \navoid <color=red>potential scams."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551851318708000107, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 1551851318708000107, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2831684874916025225, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_Pivot.x
