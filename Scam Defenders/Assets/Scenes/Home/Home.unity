@@ -433,6 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d8a7f9d824fb3b4caac21c5c73158e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  repValue: 0
   initialRep: 50
   maxRep: 100
   minRep: 0
@@ -5805,18 +5806,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notifications:
-  - notification: {fileID: 214623398}
-    ping: {fileID: 1600713864}
-    blocker: {fileID: 1441982901}
-  - notification: {fileID: 1354772735}
-    ping: {fileID: 162438563}
-    blocker: {fileID: 1869525838}
   - notification: {fileID: 1402290340}
     ping: {fileID: 1438111085}
     blocker: {fileID: 550025486}
-  - notification: {fileID: 286336188}
-    ping: {fileID: 900512354}
-    blocker: {fileID: 1743754789}
 --- !u!4 &704646910
 Transform:
   m_ObjectHideFlags: 0
@@ -10935,6 +10927,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238420315}
   m_CullTransparentMesh: 1
+--- !u!1 &1255499732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1255499733}
+  - component: {fileID: 1255499734}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1255499733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255499732}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 670.2592, y: 2063.0576, z: -17.152473}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1255499734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255499732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d00c72caa7773b94fb6c340547d96d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1268688463
 GameObject:
   m_ObjectHideFlags: 0
@@ -18332,3 +18368,4 @@ SceneRoots:
   - {fileID: 17969856}
   - {fileID: 704646910}
   - {fileID: 125464304}
+  - {fileID: 1255499733}
