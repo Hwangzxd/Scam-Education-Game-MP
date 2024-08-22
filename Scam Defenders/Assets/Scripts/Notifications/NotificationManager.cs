@@ -1,17 +1,17 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class NotificationManager : MonoBehaviour
 {
-    public GameObject[] notifs;
-    public GameObject[] pings;
-    private List<int> shownNotifs = new List<int>();
+    public Notification[] notifications; // Array of Notification objects
+
+    private List<int> shownNotifs = new List<int>(); // Track shown notifications
 
     private void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        ResetBlockedApps(); // Reset blocked apps when the scene starts
         UpdateNotifs();
     }
 
@@ -44,45 +44,52 @@ public class NotificationManager : MonoBehaviour
         }
         else
         {
-            foreach (GameObject notif in notifs)
+            foreach (var notif in notifications)
             {
-                notif.SetActive(false);
-            }
+                if (notif.notification != null)
+                {
+                    notif.notification.SetActive(false);
+                }
 
-            foreach (GameObject ping in pings)
-            {
-                ping.SetActive(false);
+                if (notif.ping != null)
+                {
+                    notif.ping.SetActive(false);
+                }
+
+                if (notif.blocker != null)
+                {
+                    notif.blocker.SetActive(false); // Ensure blockers are hidden
+                }
             }
         }
     }
 
     private void ShowRandomNotif()
     {
-        if (notifs.Length == 0)
+        if (notifications.Length == 0)
         {
-            Debug.LogWarning("No notifs assigned.");
+            Debug.LogWarning("No notifications assigned.");
             return;
         }
 
         List<int> availableNotifs = new List<int>();
 
-        for (int i = 0; i < notifs.Length; i++)
+        // Add available notifications if they are not blocked and not yet shown
+        for (int i = 0; i < notifications.Length; i++)
         {
-            // Check if the notif is inactive & not blocked by MGData
-            if (!shownNotifs.Contains(i) && !notifs[i].activeSelf && !IsNotificationBlocked(i))
+            if (!shownNotifs.Contains(i) && !notifications[i].notification.activeSelf && !IsNotificationBlocked(i))
             {
                 availableNotifs.Add(i);
             }
         }
 
-        // If all notifs have been shown, reset the list
+        // If all notifications have been shown, reset the list
         if (availableNotifs.Count == 0)
         {
             shownNotifs.Clear();
-            for (int i = 0; i < notifs.Length; i++)
+            for (int i = 0; i < notifications.Length; i++)
             {
-                // Check again if the notif is inactive & not blocked
-                if (!notifs[i].activeSelf && !IsNotificationBlocked(i))
+                if (!notifications[i].notification.activeSelf && !IsNotificationBlocked(i))
                 {
                     availableNotifs.Add(i);
                 }
@@ -91,18 +98,28 @@ public class NotificationManager : MonoBehaviour
 
         if (availableNotifs.Count == 0)
         {
-            Debug.LogWarning("No available notifs to show.");
+            Debug.LogWarning("No available notifications to show.");
             return;
         }
 
         int randomIndex = availableNotifs[Random.Range(0, availableNotifs.Count)];
         shownNotifs.Add(randomIndex);
 
-        notifs[randomIndex].SetActive(true);
-
-        if (pings.Length > randomIndex)
+        if (notifications[randomIndex].notification != null)
         {
-            pings[randomIndex].SetActive(true);
+            notifications[randomIndex].notification.SetActive(true);
+        }
+
+        BlockAppsExcept(randomIndex); // Block all apps except the chosen one
+
+        if (notifications[randomIndex].ping != null)
+        {
+            notifications[randomIndex].ping.SetActive(true);
+        }
+
+        if (notifications[randomIndex].blocker != null)
+        {
+            notifications[randomIndex].blocker.SetActive(false); // Disable the blocker for the randomly chosen notification
         }
     }
 
@@ -124,7 +141,7 @@ public class NotificationManager : MonoBehaviour
 
     private void BlockNotifs(MGData data)
     {
-        for (int i = 0; i < notifs.Length; i++)
+        for (int i = 0; i < notifications.Length; i++)
         {
             MGData.Scenes sceneEnum = (MGData.Scenes)i;
             if (data.enteredScenes.Contains(sceneEnum))
@@ -136,21 +153,61 @@ public class NotificationManager : MonoBehaviour
 
     private void DisableNotification(int index)
     {
-        if (index >= 0 && index < notifs.Length)
+        if (index >= 0 && index < notifications.Length)
         {
-            notifs[index].SetActive(false); // Disable the notification
-            if (pings.Length > index)
+            if (notifications[index].notification != null)
             {
-                pings[index].SetActive(false); // Disable the respective ping
+                notifications[index].notification.SetActive(false); // Disable the notification
+            }
+            if (notifications[index].ping != null)
+            {
+                notifications[index].ping.SetActive(false); // Disable the respective ping
+            }
+            if (notifications[index].blocker != null)
+            {
+                notifications[index].blocker.SetActive(true); // Activate blocker for the notification
+            }
+        }
+    }
+
+    private void BlockAppsExcept(int indexToKeep)
+    {
+        for (int i = 0; i < notifications.Length; i++)
+        {
+            if (i != indexToKeep)
+            {
+                if (notifications[i].ping != null)
+                {
+                    notifications[i].ping.SetActive(false); // Block the app by deactivating its ping
+                }
+                if (notifications[i].blocker != null)
+                {
+                    notifications[i].blocker.SetActive(true); // Activate blocker for other apps
+                }
+            }
+        }
+    }
+
+    private void ResetBlockedApps()
+    {
+        // Reset all blockers except for the chosen one
+        for (int i = 0; i < notifications.Length; i++)
+        {
+            if (notifications[i].blocker != null)
+            {
+                notifications[i].blocker.SetActive(true);
             }
         }
     }
 
     public void OnAppClicked(int appIndex)
     {
-        if (appIndex >= 0 && appIndex < pings.Length)
+        if (appIndex >= 0 && appIndex < notifications.Length)
         {
-            pings[appIndex].SetActive(false);
+            if (notifications[appIndex].ping != null)
+            {
+                notifications[appIndex].ping.SetActive(false); // Deactivate the ping when the app is clicked
+            }
         }
     }
 }
