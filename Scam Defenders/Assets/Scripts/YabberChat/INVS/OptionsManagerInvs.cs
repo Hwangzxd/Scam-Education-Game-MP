@@ -134,7 +134,7 @@ public class OptionsManagerInvs : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "YabberChatINVS1")
         {
-            textName.text = "+65 9123 4567k";
+            textName.text = "+65 9123 4567";
         }
         else if (SceneManager.GetActiveScene().name == "YabberChatINVS2")
         {
@@ -244,7 +244,18 @@ public class OptionsManagerInvs : MonoBehaviour
     public void OnBackBtnClick()
     {
         disableAllButtons();
-        textName.text = "+65 9343 3432";
+        if (SceneManager.GetActiveScene().name == "YabberChatINVS")
+        {
+            textName.text = "+65 9343 3432";
+        }
+        else if (SceneManager.GetActiveScene().name == "YabberChatINVS1")
+        {
+            textName.text = "+65 9123 4567";
+        }
+        else if (SceneManager.GetActiveScene().name == "YabberChatINVS2")
+        {
+            textName.text = "DBS Bank";
+        }
         ResetUI();
         DialogueManagerInvs.HideAllAdvisorMessages();
         if (btn3Pressed)
@@ -293,6 +304,7 @@ public class OptionsManagerInvs : MonoBehaviour
         {
             image.sprite = originalSprite;
         }
+        pfp.SetActive(true);
     }
 
     public void OnBlockButtonClick()
