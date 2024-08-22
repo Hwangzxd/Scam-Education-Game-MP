@@ -30,12 +30,14 @@ public class OptionsManagerInvs : MonoBehaviour
     public GameObject lockIcon;
     public GameObject loadIcon;
     public GameObject infoText;
+    public GameObject infoReal;
     public GameObject searchBar;
     public Animator searchBarAnimator;
     public GameObject research;
     public GameObject user;
     public GameObject chat;
     public GameObject topImage;
+    public GameObject pfp;
     public GameObject financialInstitutions;
 
     public Sprite btn4Sprite;
@@ -82,6 +84,7 @@ public class OptionsManagerInvs : MonoBehaviour
         {
             originalSprite = image.sprite;
         }
+        pfp.SetActive(true);
     }
 
     // For contacting independent financial advisor
@@ -110,7 +113,7 @@ public class OptionsManagerInvs : MonoBehaviour
 
         financialInstitutions.SetActive(true);
         lockIcon.SetActive(true);
-
+        pfp.SetActive(false);
         textName.text = "https://eservices.mas.gov.sg/fid/institution";
 
         if (topImage.TryGetComponent<Image>(out Image image))
@@ -125,7 +128,19 @@ public class OptionsManagerInvs : MonoBehaviour
     {
         btn3Pressed = true;
         disableAllButtons();
-        textName.text = "+65 9343 3432";
+        if (SceneManager.GetActiveScene().name == "YabberChatINVS")
+        {
+            textName.text = "+65 9343 3432";
+        }
+        else if (SceneManager.GetActiveScene().name == "YabberChatINVS1")
+        {
+            textName.text = "+65 9123 4567k";
+        }
+        else if (SceneManager.GetActiveScene().name == "YabberChatINVS2")
+        {
+            textName.text = "DBS Bank";
+        }
+
         DialogueManagerInvs.HideAllAdvisorMessages();
         StartCoroutine(DialogueManagerInvs.RequestOfficialDocumentations());
         Debug.Log("Button 3 clicked");
@@ -151,6 +166,7 @@ public class OptionsManagerInvs : MonoBehaviour
         searchBar.SetActive(true);
         loadIcon.SetActive(false);
         infoText.SetActive(false);
+        pfp.SetActive(false);
         textName.text = "https://google.com";
 
         if (topImage.TryGetComponent<Image>(out Image image))
@@ -175,20 +191,20 @@ public class OptionsManagerInvs : MonoBehaviour
                 {
                     searchText.text = "Apex Global Investments";
                 }
-
-                infoText.SetActive(false);
-                loadIcon.SetActive(true);
-                loadCoroutine = ResearchCompany();
-                StartCoroutine(loadCoroutine);
             }
             else if (SceneManager.GetActiveScene().name == "YabberChatINVS2")
             {
                 searchText.text = "DBS Multiplier Account";
-                //real scenario here
             }
 
-                // Stop the search bar animation
-                if (searchBarAnimator != null)
+            infoText.SetActive(false);
+            infoReal.SetActive(false);
+            loadIcon.SetActive(true);
+            loadCoroutine = ResearchCompany();
+            StartCoroutine(loadCoroutine);
+
+            // Stop the search bar animation
+            if (searchBarAnimator != null)
             {
                 searchBarAnimator.enabled = false;
             }
@@ -211,7 +227,15 @@ public class OptionsManagerInvs : MonoBehaviour
     private IEnumerator ResearchCompany()
     {
         yield return new WaitForSeconds(3f); // Wait for 3 seconds before showing the information
-        infoText.SetActive(true);
+        if (SceneManager.GetActiveScene().name == "YabberChatINVS" || SceneManager.GetActiveScene().name == "YabberChatINVS1")
+        {
+            infoText.SetActive(true);
+        }
+        else if (SceneManager.GetActiveScene().name == "YabberChatINVS2")
+        {
+            infoReal.SetActive(true);
+        }
+
         loadIcon.SetActive(false);
         backBtn.enabled = true;
     }
@@ -275,13 +299,25 @@ public class OptionsManagerInvs : MonoBehaviour
     {
         disableAllButtons();
         reply.enabled = false;
-        StartCoroutine(DialogueManagerInvs.win1());
+        if (SceneManager.GetActiveScene().name == "YabberChatINVS" || SceneManager.GetActiveScene().name == "YabberChatINVS1")
+        {
+            StartCoroutine(DialogueManagerInvs.win1());
+        }
+        else if (SceneManager.GetActiveScene().name == "YabberChatINVS2")
+        {
+            StartCoroutine(DialogueManagerInvs.lose1());
+        }
     }
 
     public void OnReplyButtonClick()
     {
-        disableAllButtons();
-        block.enabled = false;
-        StartCoroutine(DialogueManagerInvs.lose1());
+        if (SceneManager.GetActiveScene().name == "YabberChatINVS" || SceneManager.GetActiveScene().name == "YabberChatINVS1")
+        {
+            StartCoroutine(DialogueManagerInvs.lose1());
+        }
+        else if (SceneManager.GetActiveScene().name == "YabberChatINVS2")
+        {
+            StartCoroutine(DialogueManagerInvs.win1());
+        }
     }
 }

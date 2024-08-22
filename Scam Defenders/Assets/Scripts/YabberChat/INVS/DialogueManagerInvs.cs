@@ -15,11 +15,11 @@ public class DialogueManagerInvs : MonoBehaviour
 
     // Lose screens
     public GameObject loseScreen1;
-    //etc.
+    public GameObject loseScreen2;
 
     // Win screens
     public GameObject winScreen1;
-    //etc.
+    public GameObject winScreen2;
 
     // Arrays to store the pre-existing message GameObjects for each scenario
     public GameObject[] originalMessages;
@@ -76,13 +76,13 @@ public class DialogueManagerInvs : MonoBehaviour
 
     public IEnumerator lose1()
     {
-        yield return new WaitForSeconds(1f); // Adjust the delay as needed
+        yield return new WaitForSeconds(1f);
         loseScreen1.SetActive(true);
     }
 
     public IEnumerator win1()
     {
-        yield return new WaitForSeconds(1f); // Adjust the delay as needed
+        yield return new WaitForSeconds(1f);
         winScreen1.SetActive(true);
     }
 
