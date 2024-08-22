@@ -14,32 +14,60 @@ public class DialogueSegment
     public GameObject[] objectsToDeactivate;  // Objects to deactivate after dialogue
 }
 
+[System.Serializable]
+public class Scenario
+{
+    public string scenarioName;  // Name of the scenario
+    public DialogueSegment[] dialogueSegments;  // Dialogue segments for this scenario
+    public GameObject loseScreen;
+    public GameObject winScreen;
+    public GameObject scamCall;
+    public GameObject declineNotification;
+    public GameObject YabberPing;
+}
+
 public class ScamCallManager : MonoBehaviour
 {
     public YabberData yabberdata;
     public AudioSource audioSource;
     public TextMeshProUGUI scamText;
-    public DialogueSegment[] dialogueSegments;  // Array of dialogue segments
-
-    public GameObject loseScreen;
-    public GameObject winScreen;
-    public GameObject scamCall;
-    public GameObject declineNotification;  // Reference to the notification GameObject in the scene
-    public GameObject YabberPing;
+    public Scenario[] scenarios;  // Array of scenarios
+    private Scenario currentScenario;  // Reference to the currently active scenario
 
     void Start()
     {
-        // Assign listeners to each segment's button
-        for (int i = 0; i < dialogueSegments.Length; i++)
+        // Start with the first scenario by default
+        if (scenarios.Length > 0)
         {
-            int index = i;  // Capture the index for the lambda expression
-            dialogueSegments[i].triggerButton.onClick.AddListener(() => StartDialogueSegment(index));
+            SetScenario(0);
+        }
+    }
+
+    // Method to set the current scenario
+    public void SetScenario(int scenarioIndex)
+    {
+        if (scenarioIndex < scenarios.Length)
+        {
+            currentScenario = scenarios[scenarioIndex];
+
+            // Clear previous button listeners
+            foreach (var segment in currentScenario.dialogueSegments)
+            {
+                segment.triggerButton.onClick.RemoveAllListeners();
+            }
+
+            // Assign listeners to each segment's button for the selected scenario
+            for (int i = 0; i < currentScenario.dialogueSegments.Length; i++)
+            {
+                int index = i;  // Capture the index for the lambda expression
+                currentScenario.dialogueSegments[i].triggerButton.onClick.AddListener(() => StartDialogueSegment(index));
+            }
         }
     }
 
     void StartDialogueSegment(int segmentIndex)
     {
-        if (segmentIndex < dialogueSegments.Length)
+        if (currentScenario != null && segmentIndex < currentScenario.dialogueSegments.Length)
         {
             StartCoroutine(PlayDialogueSegment(segmentIndex));
         }
@@ -49,9 +77,9 @@ public class ScamCallManager : MonoBehaviour
     {
         scamText.gameObject.SetActive(true);
 
-        string[] lines = dialogueSegments[segmentIndex].lines;
-        AudioClip[] clips = dialogueSegments[segmentIndex].audioClips;
-        float[] durations = dialogueSegments[segmentIndex].lineDurations;
+        string[] lines = currentScenario.dialogueSegments[segmentIndex].lines;
+        AudioClip[] clips = currentScenario.dialogueSegments[segmentIndex].audioClips;
+        float[] durations = currentScenario.dialogueSegments[segmentIndex].lineDurations;
 
         for (int i = 0; i < lines.Length; i++)
         {
@@ -65,7 +93,7 @@ public class ScamCallManager : MonoBehaviour
         scamText.gameObject.SetActive(false);
 
         // Activate the specified game objects
-        foreach (GameObject obj in dialogueSegments[segmentIndex].objectsToActivate)
+        foreach (GameObject obj in currentScenario.dialogueSegments[segmentIndex].objectsToActivate)
         {
             if (obj != null)
             {
@@ -74,7 +102,7 @@ public class ScamCallManager : MonoBehaviour
         }
 
         // Deactivate the specified game objects
-        foreach (GameObject obj in dialogueSegments[segmentIndex].objectsToDeactivate)
+        foreach (GameObject obj in currentScenario.dialogueSegments[segmentIndex].objectsToDeactivate)
         {
             if (obj != null)
             {
@@ -86,23 +114,40 @@ public class ScamCallManager : MonoBehaviour
     // Method to handle call decline
     public void DeclineCall()
     {
-        scamCall.SetActive(false);
-
-        if (declineNotification != null)
+        if (currentScenario != null)
         {
-            declineNotification.SetActive(true);  // Activate the decline notification
-            YabberPing.SetActive(true);
-            yabberdata.isGOISClicked = true;
+            currentScenario.scamCall.SetActive(false);
+
+            if (currentScenario.declineNotification != null)
+            {
+                currentScenario.declineNotification.SetActive(true);  // Activate the decline notification
+                currentScenario.YabberPing.SetActive(true);
+                yabberdata.isGOISClicked = true;
+            }
         }
     }
 
     public void Lose()
     {
-        loseScreen.SetActive(true);
+        if (currentScenario != null)
+        {
+            currentScenario.loseScreen.SetActive(true);
+        }
     }
 
     public void Win()
     {
-        loseScreen.SetActive(true);
+        if (currentScenario != null)
+        {
+            currentScenario.winScreen.SetActive(true);
+        }
+    }
+
+    public void EndCall()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
     }
 }
