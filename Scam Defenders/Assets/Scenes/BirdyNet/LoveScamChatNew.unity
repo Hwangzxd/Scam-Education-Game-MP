@@ -18112,6 +18112,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 535783470222421859, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2083766494366696910, guid: 37e7edfd04d6d364297730352cb9c6e8, type: 3}
       propertyPath: m_Name
       value: Lose Pop Ups

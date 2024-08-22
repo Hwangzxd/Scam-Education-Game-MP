@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqManager: {fileID: 0}
 --- !u!1 &29767847886604984
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,11 +211,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '-Continuing despite suspicions is risky
-
-
-    -Charm and persuasion often
-    hide danger'
+  m_text: "- Don\u2019t ignore red flags. \n\n- Always verify the identity of people
+    who ask for personal information."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -468,6 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqManager: {fileID: 0}
 --- !u!1 &821279588943497087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,6 +1051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqManager: {fileID: 0}
 --- !u!1 &4238668789545407257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,11 +1117,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '-Beware of those pushing for info
-
-
-    -Never share your number under
-    pressure'
+  m_text: "- Trust your instincts. \n\n- If something feels off, it's okay to step
+    back and reconsider."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -1410,6 +1407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqManager: {fileID: 0}
 --- !u!1 &4677786412043169974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,11 +1663,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '-Sharing personal details can be risky
+  m_text: '- Never share your phone number or personal information with strangers
+    online.
 
 
-    -Only share info with trusted
-    sources'
+    - Protect yourself by verifying identities first.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -1696,8 +1694,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1937,11 +1935,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '-Continuing after sending a picture increases risk
-
-
-    -Watch for manipulation
-    & protect your info'
+  m_text: "- Protect your privacy. \n\n- Sharing images with strangers online can
+    lead to misuse or exploitation."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -1968,8 +1963,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2364,6 +2359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqManager: {fileID: 0}
 --- !u!1 &7248872598082325979
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,11 +2634,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '-Sharing your address risks your safety
-
-
-    -Be cautious revealing info
-    to strangers'
+  m_text: "- Be cautious with online conversations. \n\n- Scammers often use fake
+    stories to gain your trust and information."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
