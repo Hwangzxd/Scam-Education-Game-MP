@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class OptionsManagerGois : MonoBehaviour
 {
@@ -8,8 +10,22 @@ public class OptionsManagerGois : MonoBehaviour
     public Button button1;
     public Button button2;
 
+    public TextMeshProUGUI textName;
+
     void Start()
     {
+        if (SceneManager.GetActiveScene().name == "YabberChatGOIS")
+        {
+            textName.text = "+65 9837 3949";
+        }
+        else if (SceneManager.GetActiveScene().name == "YabberChatGOIS1")
+        {
+            textName.text = "+65 8765 4321";
+        }
+        else if (SceneManager.GetActiveScene().name == "YabberChatGOIS2")
+        {
+            textName.text = "real";
+        }
         // Assign listeners to the buttons
         button1.onClick.AddListener(OnButton1Click);
         button2.onClick.AddListener(OnButton2Click);
