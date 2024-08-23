@@ -170,6 +170,7 @@ MonoBehaviour:
   DialogueManagerGois: {fileID: 994236485}
   button1: {fileID: 449433282}
   button2: {fileID: 245246548}
+  textName: {fileID: 1682422393}
 --- !u!1 &59163401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3372,7 +3373,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f57d4b6d758e2b54ea7179677161206c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74a5a7c2d3af6fb4498b1a6f2f22d9e9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3406,8 +3407,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 411.23306, y: -267.185}
-  m_SizeDelta: {x: 1022.4661, y: 534.37}
+  m_AnchoredPosition: {x: 427.73608, y: -265.895}
+  m_SizeDelta: {x: 1055.4722, y: 531.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &793111605
 GameObject:

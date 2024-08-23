@@ -24,7 +24,7 @@ public class OptionsManagerGois : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "YabberChatGOIS2")
         {
-            textName.text = "real";
+            textName.text = "gov.sg";
         }
         // Assign listeners to the buttons
         button1.onClick.AddListener(OnButton1Click);
