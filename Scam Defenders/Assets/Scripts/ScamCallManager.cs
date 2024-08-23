@@ -21,6 +21,8 @@ public class Scenario
     public DialogueSegment[] dialogueSegments;  // Dialogue segments for this scenario
     public GameObject loseScreen;
     public GameObject winScreen;
+    public GameObject loseScreen1;
+    public GameObject winScreen1;
     public GameObject scamCall;
     public GameObject declineNotification;
     public GameObject YabberPing;
@@ -36,8 +38,8 @@ public class ScamCallManager : MonoBehaviour
 
     void Start()
     {
-        // Start with the first scenario by default for now
-        SetScenario(1);
+        // Randomize the GOIS scenarios here with SetScenario(), index 0 to 2
+        SetScenario(2);
     }
 
     // Method to set the current scenario
@@ -123,23 +125,6 @@ public class ScamCallManager : MonoBehaviour
             }
         }
     }
-
-    public void Lose()
-    {
-        if (currentScenario != null)
-        {
-            currentScenario.loseScreen.SetActive(true);
-        }
-    }
-
-    public void Win()
-    {
-        if (currentScenario != null)
-        {
-            currentScenario.winScreen.SetActive(true);
-        }
-    }
-
     public void EndCall()
     {
         if (audioSource.isPlaying)
@@ -147,4 +132,72 @@ public class ScamCallManager : MonoBehaviour
             audioSource.Stop();
         }
     }
+
+    public void Lose()
+    {
+        if (currentScenario != null)
+        {
+            // Ensure only the correct lose screen is activated
+            currentScenario.loseScreen.SetActive(false);  // Deactivate the scam lose screen if necessary
+            currentScenario.loseScreen1.SetActive(false); // Deactivate the real scenario lose screen if necessary
+
+            // Determine the scenario index
+            int scenarioIndex = System.Array.IndexOf(scenarios, currentScenario);
+
+            if (scenarioIndex == 0 || scenarioIndex == 1)
+            {
+                currentScenario.loseScreen.SetActive(true);  // Trigger lose for scam scenarios
+            }
+            else if (scenarioIndex == 2)
+            {
+                currentScenario.loseScreen1.SetActive(true); // Trigger lose for the real scenario
+            }
+        }
+    }
+
+    public void Win()
+    {
+        if (currentScenario != null)
+        {
+            // Ensure only the correct win screen is activated
+            currentScenario.winScreen.SetActive(false);  // Deactivate the scam win screen if necessary
+            currentScenario.winScreen1.SetActive(false); // Deactivate the real scenario win screen if necessary
+
+            // Determine the scenario index
+            int scenarioIndex = System.Array.IndexOf(scenarios, currentScenario);
+
+            if (scenarioIndex == 0 || scenarioIndex == 1)
+            {
+                currentScenario.winScreen.SetActive(true);  // Trigger win for scam scenarios
+            }
+            else if (scenarioIndex == 2)
+            {
+                currentScenario.winScreen1.SetActive(true); // Trigger win for the real scenario
+            }
+        }
+    }
+
+
+    public void EndCallBtn()
+    {
+        if (currentScenario != null)
+        {
+            // Determine the scenario index
+            int scenarioIndex = System.Array.IndexOf(scenarios, currentScenario);
+
+            // Check the scenario index and trigger the appropriate screen
+            if (scenarioIndex == 0 || scenarioIndex == 1)
+            {
+                // Trigger win for scam scenarios
+                Win();
+            }
+            else if (scenarioIndex == 2)
+            {
+                // Trigger lose for the real scenario
+                Lose();
+            }
+        }
+    }
+
+
 }
