@@ -293,10 +293,14 @@ public class ChatManager : MonoBehaviour
         else if (response.winScreen2) winScreens[1].SetActive(true);
         else if (response.winScreen3) winScreens[2].SetActive(true);
         else if (response.winScreen4) winScreens[3].SetActive(true);
+        else if (response.winScreen5) winScreens[4].SetActive(true);
+        else if (response.winScreen6) winScreens[5].SetActive(true);
         else if (response.loseScreen1) loseScreens[0].SetActive(true);
         else if (response.loseScreen2) loseScreens[1].SetActive(true);
         else if (response.loseScreen3) loseScreens[2].SetActive(true);
         else if (response.loseScreen4) loseScreens[3].SetActive(true);
+        else if (response.loseScreen5) loseScreens[4].SetActive(true);
+        else if (response.loseScreen6) loseScreens[5].SetActive(true);
         else
             return false; // No ending screen displayed, continue normally
 

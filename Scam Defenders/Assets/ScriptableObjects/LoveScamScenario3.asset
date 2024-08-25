@@ -25,10 +25,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 1
     - responseTexts:
       - "I\u2019m interested, but I\u2019d like to know more about your photography
@@ -37,22 +41,30 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
-      nextMessageIndex: 0
+      loseScreen5: 0
+      loseScreen6: 0
+      nextMessageIndex: 5
     - responseTexts:
       - "I\u2019m cautious about online interactions and prefer not to chat. "
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
-      nextMessageIndex: 0
+      loseScreen5: 0
+      loseScreen6: 0
+      nextMessageIndex: 8
   - messageTexts:
     - 'Great! I love capturing nature and wildlife. How about you? '
     responses:
@@ -62,10 +74,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 2
     - responseTexts:
       - "I\u2019m still exploring, but I\u2019d love to learn more."
@@ -73,24 +89,32 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 3
   - messageTexts:
     - '*Starts yapping*'
     responses:
     - responseTexts:
       - "Thanks for sharing! Let\u2019s exchange tips more often."
-      winScreen1: 0
+      winScreen1: 1
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - "I might be busy for a while. Let\u2019s chat later."
@@ -98,10 +122,47 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
+      loseScreen1: 1
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
+      nextMessageIndex: 0
+  - messageTexts:
+    - '*Starts yapping*'
+    responses:
+    - responseTexts:
+      - Awesome! I can recommend some resources to help you get started.
+      winScreen1: 0
+      winScreen2: 1
+      winScreen3: 0
+      winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
+      nextMessageIndex: 0
+    - responseTexts:
+      - "I\u2019ll check those out, thanks. Maybe later."
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
+      loseScreen1: 0
+      loseScreen2: 1
+      loseScreen3: 0
+      loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - '*Starts yapping*'
@@ -112,10 +173,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - "I\u2019ll check those out, thanks. Maybe later."
@@ -123,35 +188,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
-      nextMessageIndex: 0
-  - messageTexts:
-    - '*Starts yapping*'
-    responses:
-    - responseTexts:
-      - Awesome! I can recommend some resources to help you get started.
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 0
-      winScreen4: 0
-      loseScreen1: 0
-      loseScreen2: 0
-      loseScreen3: 0
-      loseScreen4: 0
-      nextMessageIndex: 0
-    - responseTexts:
-      - "I\u2019ll check those out, thanks. Maybe later."
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 0
-      winScreen4: 0
-      loseScreen1: 0
-      loseScreen2: 0
-      loseScreen3: 0
-      loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - "I\u2019ve been photographing urban scenes and landscapes for a few years.
@@ -163,22 +207,30 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
-      nextMessageIndex: 0
+      loseScreen5: 0
+      loseScreen6: 0
+      nextMessageIndex: 6
     - responseTexts:
       - "I\u2019m not sure yet. Still exploring different subjects."
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
-      nextMessageIndex: 0
+      loseScreen5: 0
+      loseScreen6: 0
+      nextMessageIndex: 7
   - messageTexts:
     - '*Yapping*'
     responses:
@@ -186,12 +238,16 @@ MonoBehaviour:
       - "I\u2019d love to see some of your work!"
       winScreen1: 0
       winScreen2: 0
-      winScreen3: 0
+      winScreen3: 1
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - "Maybe another time. I\u2019m quite busy now."
@@ -199,10 +255,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
-      loseScreen3: 0
+      loseScreen3: 1
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - '*Yapping*'
@@ -212,11 +272,15 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
+      winScreen4: 1
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - "I\u2019ll let you know when I have more time to explore."
@@ -224,10 +288,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
+      loseScreen4: 1
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - 'I understand. I just wanted to connect with someone who shares my passion
@@ -239,10 +307,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 1
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - "I\u2019m not interested in talking."
@@ -250,8 +322,12 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 1
+      loseScreen6: 0
       nextMessageIndex: 0

@@ -26,10 +26,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 1
     - responseTexts:
       - I'm not sure.
@@ -38,11 +42,15 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
-      nextMessageIndex: 4
+      loseScreen5: 0
+      loseScreen6: 0
+      nextMessageIndex: 3
     - responseTexts:
       - 'This seems suspicious. '
       - How do I know you're real?
@@ -50,11 +58,15 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
-      nextMessageIndex: 7
+      loseScreen5: 0
+      loseScreen6: 0
+      nextMessageIndex: 6
   - messageTexts:
     - Great! Can you send me your number so we can plan this better?
     responses:
@@ -65,24 +77,30 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 1
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
-      nextMessageIndex: 2
+      loseScreen5: 0
+      loseScreen6: 0
+      nextMessageIndex: 0
     - responseTexts:
       - Actually, I'm not comfortable with this.
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
-      nextMessageIndex: 3
-  - messageTexts: []
-    responses: []
+      loseScreen5: 0
+      loseScreen6: 0
+      nextMessageIndex: 2
   - messageTexts:
     - cmon... I thought u were interested in me :(
     responses:
@@ -92,10 +110,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
-      loseScreen1: 1
-      loseScreen2: 0
+      winScreen5: 0
+      winScreen6: 0
+      loseScreen1: 0
+      loseScreen2: 1
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - End the conversation.
@@ -103,10 +125,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - I'm an entrepreneur who loves traveling.
@@ -119,11 +145,15 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
-      nextMessageIndex: 5
+      loseScreen5: 0
+      loseScreen6: 0
+      nextMessageIndex: 4
     - responseTexts:
       - How do I know you're telling the truth?
       - This is too suspicious.
@@ -131,11 +161,15 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
-      nextMessageIndex: 6
+      loseScreen5: 0
+      loseScreen6: 0
+      nextMessageIndex: 5
   - messageTexts:
     - '*Leads to vague answers and prompts for personal details*'
     responses:
@@ -145,10 +179,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
-      loseScreen2: 1
-      loseScreen3: 0
+      loseScreen2: 0
+      loseScreen3: 1
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - End the conversation.
@@ -156,10 +194,14 @@ MonoBehaviour:
       winScreen2: 1
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - '*Reveals inconsistencies compared to what was previously said*'
@@ -170,10 +212,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
-      loseScreen3: 1
-      loseScreen4: 0
+      loseScreen3: 0
+      loseScreen4: 1
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - End the conversation.
@@ -181,10 +227,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 1
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - I understand your concern.
@@ -194,49 +244,31 @@ MonoBehaviour:
     responses:
     - responseTexts:
       - Ok... here's my picture.
-      - '*Sends picture*'
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
-      nextMessageIndex: 8
+      loseScreen5: 1
+      loseScreen6: 0
+      nextMessageIndex: 0
     - responseTexts:
       - No, I don't share pictures online. This feels off. I'm reporting you.
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 1
-      loseScreen1: 0
-      loseScreen2: 0
-      loseScreen3: 0
-      loseScreen4: 0
-      nextMessageIndex: 0
-  - messageTexts:
-    - Wow! You look amazing!
-    responses:
-    - responseTexts:
-      - Continue the conversation.
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 0
       winScreen4: 0
-      loseScreen1: 0
-      loseScreen2: 0
-      loseScreen3: 0
-      loseScreen4: 1
-      nextMessageIndex: 0
-    - responseTexts:
-      - End the conversation.
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 0
-      winScreen4: 1
+      winScreen5: 1
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
