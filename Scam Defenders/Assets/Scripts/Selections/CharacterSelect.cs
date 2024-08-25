@@ -105,6 +105,10 @@ public class CharacterSelect : MonoBehaviour
 
         // Update the character sprites for all age groups
         UpdateCharacterSprites();
+
+        //for photowidget
+        PlayerPrefs.SetInt("playerCharacterIndex", currentCharacter);
+        PlayerPrefs.Save();
     }
 
     private void UpdateCharacterSprites()
