@@ -10232,6 +10232,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1079585218}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
+      propertyPath: scenarios.Array.data[0].winScreen1
+      value: 
+      objectReference: {fileID: 302166836}
+    - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[1].YabberPing
       value: 
       objectReference: {fileID: 900512354}
@@ -10239,6 +10243,10 @@ PrefabInstance:
       propertyPath: scenarios.Array.data[1].loseScreen
       value: 
       objectReference: {fileID: 1079585218}
+    - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
+      propertyPath: scenarios.Array.data[1].winScreen1
+      value: 
+      objectReference: {fileID: 302166836}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[2].YabberPing
       value: 
@@ -10251,6 +10259,14 @@ PrefabInstance:
       propertyPath: scenarios.Array.data[2].winScreen1
       value: 
       objectReference: {fileID: 302166836}
+    - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
+      propertyPath: scenarios.Array.data[0].loseScreen1
+      value: 
+      objectReference: {fileID: 978090784}
+    - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
+      propertyPath: scenarios.Array.data[1].loseScreen1
+      value: 
+      objectReference: {fileID: 978090784}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[2].loseScreen1
       value: 

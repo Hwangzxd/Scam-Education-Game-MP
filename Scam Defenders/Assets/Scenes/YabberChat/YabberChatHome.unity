@@ -3355,9 +3355,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 676310071}
-        m_TargetAssemblyTypeName: SceneTransitions, Assembly-CSharp
-        m_MethodName: GoToYabberChatGOIS
+      - m_Target: {fileID: 680061389}
+        m_TargetAssemblyTypeName: ReqManager, Assembly-CSharp
+        m_MethodName: OnMsgClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

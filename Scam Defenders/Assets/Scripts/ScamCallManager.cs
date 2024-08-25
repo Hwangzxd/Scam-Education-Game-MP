@@ -38,8 +38,13 @@ public class ScamCallManager : MonoBehaviour
 
     void Start()
     {
-        // Randomize the GOIS scenarios here with SetScenario(), index 0 to 2
-        SetScenario(2);
+        // Randomize the GOIS scenarios
+        int randomScenarioIndex = Random.Range(0, 3); // Selects an index between 0 and 2
+        SetScenario(randomScenarioIndex);
+
+        // Store the scenario index in YabberData
+        yabberdata.SetGOISScenarioIndex(randomScenarioIndex);
+        Debug.Log(randomScenarioIndex);
     }
 
     // Method to set the current scenario

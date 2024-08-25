@@ -80,4 +80,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShopEase/Scenario 3 - Bottle/ShopEaseChoose3.unity
     guid: 1a251eec19b394c4f9f0d7bfcda92ea5
+  - enabled: 1
+    path: Assets/Scenes/YabberChat/GOIS/YabberChatGOIS1.unity
+    guid: d2b80e1d733847e4792f446d53ea2b87
+  - enabled: 1
+    path: Assets/Scenes/YabberChat/GOIS/YabberChatGOIS2.unity
+    guid: 4b8f97fff13c3834ca3023298356d808
   m_configObjects: {}
