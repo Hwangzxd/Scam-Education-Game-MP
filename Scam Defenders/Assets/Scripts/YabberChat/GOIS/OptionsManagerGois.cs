@@ -36,16 +36,27 @@ public class OptionsManagerGois : MonoBehaviour
     public void OnButton1Click()
     {
         disableAllButtons();
-
-        StartCoroutine(DialogueManagerGois.lose());
-
+        if (SceneManager.GetActiveScene().name == "YabberChatGOIS" || SceneManager.GetActiveScene().name == "YabberChatGOIS1")
+        {
+            StartCoroutine(DialogueManagerGois.lose());
+        }
+        else if (SceneManager.GetActiveScene().name == "YabberChatGOIS2")
+        {
+            StartCoroutine(DialogueManagerGois.win());
+        }
     }
 
     public void OnButton2Click()
     {
         disableAllButtons();
-
-        StartCoroutine(DialogueManagerGois.win());
+        if (SceneManager.GetActiveScene().name == "YabberChatGOIS" || SceneManager.GetActiveScene().name == "YabberChatGOIS1")
+        {
+            StartCoroutine(DialogueManagerGois.win());
+        }
+        else if (SceneManager.GetActiveScene().name == "YabberChatGOIS2")
+        {
+            StartCoroutine(DialogueManagerGois.lose());
+        }
     }
 
     //helper methods

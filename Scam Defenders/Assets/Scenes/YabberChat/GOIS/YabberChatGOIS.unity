@@ -3502,7 +3502,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Information on GOIS
+  m_text: 'Remember, always:
+
+
+    - Verify unknown callers or senders.
+
+
+    - Protect
+    your personal and financial details.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -5007,7 +5014,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Information on GOIS
+  m_text: 'Remember, always:
+
+
+    - Verify unknown callers or senders.
+
+
+    - Protect
+    your personal and financial details.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
