@@ -71,7 +71,7 @@ MonoBehaviour:
       loseScreen4: 0
       nextMessageIndex: 4
     - responseTexts:
-      - "How do I know this isn\u2019t a scam?"
+      - This looks too good to be true... I'm leaving.
       winScreen1: 1
       winScreen2: 0
       winScreen3: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
       loseScreen4: 0
       nextMessageIndex: 5
     - responseTexts:
-      - "This feels off. I\u2019m not sure I can trust this."
+      - "This feels off. I\u2019m not sure I can trust this, i'm leaving."
       winScreen1: 0
       winScreen2: 1
       winScreen3: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
       loseScreen4: 0
       nextMessageIndex: 6
     - responseTexts:
-      - Why is everyone so new? It feels suspicious.
+      - Why is everyone so new? It feels suspicious, I'm leaving.
       winScreen1: 0
       winScreen2: 0
       winScreen3: 1
@@ -149,12 +149,23 @@ MonoBehaviour:
       loseScreen3: 0
       loseScreen4: 0
       nextMessageIndex: 0
+    - responseTexts:
+      - One or two days? Sorry, this is surely a scam.
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 1
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
   - messageTexts:
     - "John: Just make the $50 deposit, and you\u2019ll be on your way to earning
       like everyone else here."
     responses:
     - responseTexts:
-      - "Alright, I\u2019ll think about it."
+      - Okay, I'm depositing it now.
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -164,12 +175,34 @@ MonoBehaviour:
       loseScreen3: 0
       loseScreen4: 0
       nextMessageIndex: 0
+    - responseTexts:
+      - A deposit? That seems suspicious. I don't trust you.
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 1
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      nextMessageIndex: 0
   - messageTexts:
     - "Make the $50 deposit, and you\u2019ll get access to everything you need to
       start earning."
     responses:
     - responseTexts:
-      - "I\u2019ll think about it."
+      - Okay! Depositing now.
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 1
+      loseScreen4: 0
+      nextMessageIndex: 0
+    - responseTexts:
+      - A deposit? This seems suspicious. I'm leaving.
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0

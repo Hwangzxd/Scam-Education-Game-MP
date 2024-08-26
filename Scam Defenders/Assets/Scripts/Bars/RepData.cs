@@ -4,7 +4,7 @@ public class RepData : MonoBehaviour
 {
     public static RepData Instance;
 
-    private float repValue;
+    public int repValue;
 
     public int initialRep = 50;
     public int maxRep = 100;

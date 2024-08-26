@@ -7,7 +7,7 @@ public class BatteryData : MonoBehaviour
     private float batteryValue = 100f;
 
     // Duration for battery drain (5 minutes)
-    private float totalTime = 300f;
+    public float totalTime = 300f;
     private float elapsedTime = 0f;
 
     // Singleton instance
