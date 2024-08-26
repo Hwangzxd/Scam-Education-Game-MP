@@ -5,11 +5,10 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
 
     private bool ptsGiven = false;
+    private PointChecker pointChecker;
 
     void Awake()
     {
-        ptsGiven = false;
-
         if (instance == null)
         {
             instance = this;
@@ -22,21 +21,34 @@ public class ScoreManager : MonoBehaviour
     }
 
     void Update()
-    { 
-        if (GMData.Instance != null)
+    {
+        // Dynamically find the PointChecker instance if not already found
+        if (pointChecker == null)
         {
-            if (GMData.Instance.GetWin() && !ptsGiven)
+            pointChecker = FindObjectOfType<PointChecker>();
+
+            // If no PointChecker is found, exit the update early
+            if (pointChecker == null)
             {
-                RepData.Instance.PlusReputation(10);
-                GMData.Instance.SetWin(false); // Reset win state
-                ptsGiven = true;
+                return; // Safely handle scenes without a PointChecker
             }
-            else if (GMData.Instance.GetLose() && !ptsGiven)
-            {
-                RepData.Instance.MinusReputation(10);
-                GMData.Instance.SetLose(false); // Reset lose state
-                ptsGiven = true;
-            }
+        }
+
+        if (pointChecker.IsWinActive && !ptsGiven)
+        {
+            RepData.Instance.PlusReputation(10);
+            ptsGiven = true;
+        }
+        else if (pointChecker.IsLoseActive && !ptsGiven)
+        {
+            RepData.Instance.MinusReputation(10);
+            ptsGiven = true;
+        }
+
+        // Reset the `ptsGiven` flag when neither win nor lose screen is active
+        if (!pointChecker.IsWinActive && !pointChecker.IsLoseActive)
+        {
+            ptsGiven = false;
         }
     }
 }

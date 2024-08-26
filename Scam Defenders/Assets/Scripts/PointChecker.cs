@@ -5,19 +5,12 @@ public class PointChecker : MonoBehaviour
     public GameObject winScreen;
     public GameObject loseScreen;
 
+    public bool IsWinActive { get; private set; }
+    public bool IsLoseActive { get; private set; }
+
     void Update()
     {
-        if (winScreen.activeSelf)
-        {
-            GMData.Instance.SetWin(true);
-            GMData.Instance.SetLose(false);
-            Debug.Log("Win screen is active.");
-        }
-        else if (loseScreen.activeSelf)
-        {
-            GMData.Instance.SetWin(false);
-            GMData.Instance.SetLose(true);
-            Debug.Log("Lose screen is active.");
-        }
+        IsWinActive = winScreen.activeSelf;
+        IsLoseActive = loseScreen.activeSelf;
     }
 }
