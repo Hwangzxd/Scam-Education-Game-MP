@@ -2918,8 +2918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00c72caa7773b94fb6c340547d96d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jobScamManager: {fileID: 1463102456}
-  jobScamScore: 0
+  winPts: 10
+  losePts: -10
 --- !u!4 &1177404315
 Transform:
   m_ObjectHideFlags: 0
