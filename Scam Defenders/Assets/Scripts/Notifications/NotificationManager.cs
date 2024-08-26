@@ -1,18 +1,30 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class NotificationManager : MonoBehaviour
 {
+    public YabberData yabberData;
     public Notification[] notifications; // Array of Notification objects
+    public GameObject INVS;
 
-    private List<int> shownNotifs = new List<int>(); // Track shown notifications
+    private List<int> shownNotifs = new List<int>();
 
     private void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         ResetBlockedApps(); // Reset blocked apps when the scene starts
         UpdateNotifs();
+    }
+
+    void Update()
+    {
+        // Check if the INVS notification is active in the scene
+        if (INVS != null && INVS.activeInHierarchy)
+        {
+            yabberData.isINVSClicked = true;
+        }
     }
 
     private void OnDestroy()
@@ -40,7 +52,7 @@ public class NotificationManager : MonoBehaviour
         if (currentScene == "Home")
         {
             BlockNotifs(data);
-            ShowRandomNotif();
+            StartCoroutine(ShowRandomNotifWithDelay()); // Add delay before showing notification
         }
         else
         {
@@ -64,6 +76,12 @@ public class NotificationManager : MonoBehaviour
         }
     }
 
+    private IEnumerator ShowRandomNotifWithDelay()
+    {
+        yield return new WaitForSeconds(2f); // Wait for 2 seconds before showing the notification
+        ShowRandomNotif();
+    }
+
     private void ShowRandomNotif()
     {
         if (notifications.Length == 0)
@@ -74,9 +92,9 @@ public class NotificationManager : MonoBehaviour
 
         List<int> availableNotifs = new List<int>();
 
-        // Add available notifications if they are not blocked and not yet shown
         for (int i = 0; i < notifications.Length; i++)
         {
+            // Check if the notif is inactive & not blocked by MGData
             if (!shownNotifs.Contains(i) && !notifications[i].notification.activeSelf && !IsNotificationBlocked(i))
             {
                 availableNotifs.Add(i);
@@ -209,5 +227,29 @@ public class NotificationManager : MonoBehaviour
                 notifications[appIndex].ping.SetActive(false); // Deactivate the ping when the app is clicked
             }
         }
+    }
+
+    public void OnINVSNotificationClicked()
+    {
+        if (yabberData == null)
+        {
+            Debug.LogError("YabberData is not assigned");
+            return;
+        }
+
+        yabberData.isINVSClicked = true; // Update the GOISClicked boolean
+        Debug.Log("INVS notification clicked.");
+    }
+
+    public void OnGOISNotificationClicked()
+    {
+        if (yabberData == null)
+        {
+            Debug.LogError("YabberData is not assigned");
+            return;
+        }
+
+        yabberData.isGOISClicked = true; // Update the GOISClicked boolean
+        Debug.Log("GOIS notification clicked.");
     }
 }
