@@ -2805,7 +2805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &590576771
 Transform:
   m_ObjectHideFlags: 0
@@ -4423,7 +4423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &971286999
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5141,7 +5141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1065732286
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10469,10 +10469,23 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5693812210292863933, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_text
+      value: 'Great job! '
+      objectReference: {fileID: 0}
     - target: {fileID: 6781125565301093269, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
       propertyPath: m_text
-      value: You avoided falling for a scam. Always question unsolicited requests
-        for your details and verify with official sources before sharing anything.
+      value: "You avoided giving away personal information to a scam. \n\nAlways
+        question unsolicited requests for your details and verify with official sources
+        before sharing anything."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781125565301093269, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781125565301093269, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 8027856301758688974, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
       propertyPath: m_SizeDelta.y
@@ -10666,8 +10679,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4148216969575017463, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_text
-      value: You shared personal information to a scammer! Protect yourself by questioning
-        unsolicited requests and verify with official sources.
+      value: "You shared personal information with a potential scam. \n\nProtect
+        yourself by questioning unsolicited requests and verifying the legitimacy
+        of such offers through trusted channels."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148216969575017463, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148216969575017463, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 4506914757673742265, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_SizeDelta.y
@@ -10680,6 +10702,10 @@ PrefabInstance:
     - target: {fileID: 4506914757673742265, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685116448142720274, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_text
+      value: 'Alert! '
       objectReference: {fileID: 0}
     - target: {fileID: 8758486036666189231, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_Name

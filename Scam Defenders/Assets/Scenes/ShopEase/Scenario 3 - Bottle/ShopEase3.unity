@@ -21556,7 +21556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4405112904313729588, guid: 50e7c4bd207bb594bbb6103726364584, type: 3}
       propertyPath: time
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4405112904313729588, guid: 50e7c4bd207bb594bbb6103726364584, type: 3}
       propertyPath: levelLoader
