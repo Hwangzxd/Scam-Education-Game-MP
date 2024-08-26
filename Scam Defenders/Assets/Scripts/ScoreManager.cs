@@ -3,15 +3,17 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
-    public JobScamManager jobScamManager; // Reference to JobScamManager
-    public int jobScamScore = 0;
+
+    private bool ptsGiven = false;
 
     void Awake()
     {
+        ptsGiven = false;
+
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Persist across scenes
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -20,32 +22,21 @@ public class ScoreManager : MonoBehaviour
     }
 
     void Update()
-    {
-        // Check if the JobScamManager reference is set and if it's not null
-        if (jobScamManager != null)
+    { 
+        if (GMData.Instance != null)
         {
-            // Get the current score from the JobScamManager
-            jobScamScore = jobScamManager.GetScore();
-        }
-        else
-        {
-            // Optionally, try to find the JobScamManager in the new scene
-            JobScamManager foundManager = FindObjectOfType<JobScamManager>();
-
-            if (foundManager != null)
+            if (GMData.Instance.GetWin() && !ptsGiven)
             {
-                jobScamManager = foundManager;
+                RepData.Instance.PlusReputation(10);
+                GMData.Instance.SetWin(false); // Reset win state
+                ptsGiven = true;
             }
-            else
+            else if (GMData.Instance.GetLose() && !ptsGiven)
             {
-                // If JobScamManager doesn't exist in the new scene, do nothing or handle accordingly
-                // You could log a warning, or simply continue without updating the score
+                RepData.Instance.MinusReputation(10);
+                GMData.Instance.SetLose(false); // Reset lose state
+                ptsGiven = true;
             }
         }
-    }
-
-    public int GetJobScamScore()
-    {
-        return jobScamScore;
     }
 }
