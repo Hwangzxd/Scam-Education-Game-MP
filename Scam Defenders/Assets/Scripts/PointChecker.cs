@@ -2,15 +2,27 @@ using UnityEngine;
 
 public class PointChecker : MonoBehaviour
 {
-    public GameObject winScreen;
-    public GameObject loseScreen;
+    public GameObject[] winScreens;
+    public GameObject[] loseScreens;
 
-    public bool IsWinActive { get; private set; }
-    public bool IsLoseActive { get; private set; }
+    public bool IsAnyWinActive { get; private set; }
+    public bool IsAnyLoseActive { get; private set; }
 
     void Update()
     {
-        IsWinActive = winScreen.activeSelf;
-        IsLoseActive = loseScreen.activeSelf;
+        IsAnyWinActive = CheckIfAnyActive(winScreens);
+        IsAnyLoseActive = CheckIfAnyActive(loseScreens);
+    }
+
+    private bool CheckIfAnyActive(GameObject[] screens)
+    {
+        foreach (GameObject screen in screens)
+        {
+            if (screen.activeSelf)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

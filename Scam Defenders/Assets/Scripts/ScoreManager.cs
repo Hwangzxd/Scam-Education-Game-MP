@@ -34,19 +34,19 @@ public class ScoreManager : MonoBehaviour
             }
         }
 
-        if (pointChecker.IsWinActive && !ptsGiven)
+        if (pointChecker.IsAnyWinActive && !ptsGiven)
         {
             RepData.Instance.PlusReputation(10);
             ptsGiven = true;
         }
-        else if (pointChecker.IsLoseActive && !ptsGiven)
+        else if (pointChecker.IsAnyLoseActive && !ptsGiven)
         {
             RepData.Instance.MinusReputation(10);
             ptsGiven = true;
         }
 
         // Reset the `ptsGiven` flag when neither win nor lose screen is active
-        if (!pointChecker.IsWinActive && !pointChecker.IsLoseActive)
+        if (!pointChecker.IsAnyWinActive && !pointChecker.IsAnyLoseActive)
         {
             ptsGiven = false;
         }

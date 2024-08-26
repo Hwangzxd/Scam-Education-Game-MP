@@ -6588,6 +6588,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661559786}
   m_CullTransparentMesh: 1
+--- !u!1 &670698899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 670698901}
+  - component: {fileID: 670698900}
+  m_Layer: 0
+  m_Name: PointChecker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &670698900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670698899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 210c341ad1a950d4d96c7b3e6a40bed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winScreens:
+  - {fileID: 1189321190}
+  - {fileID: 1189321189}
+  - {fileID: 1189321188}
+  - {fileID: 1189321187}
+  - {fileID: 1189321186}
+  loseScreens:
+  - {fileID: 1946028947}
+  - {fileID: 1946028946}
+  - {fileID: 1946028945}
+  - {fileID: 1946028944}
+  - {fileID: 1946028943}
+--- !u!4 &670698901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670698899}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 381.37112, y: 1169.9937, z: 38691.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &683855490
 GameObject:
   m_ObjectHideFlags: 0
@@ -20513,3 +20569,4 @@ SceneRoots:
   - {fileID: 843664557}
   - {fileID: 1991884259}
   - {fileID: 690283402}
+  - {fileID: 670698901}
