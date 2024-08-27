@@ -8,6 +8,7 @@ public class NotificationManager : MonoBehaviour
     public YabberData yabberData;
     public Notification[] notifications; // Array of Notification objects
     public GameObject INVS;
+    public GameObject scamCall;
 
     private bool isNotificationActive = false;
 
@@ -24,7 +25,7 @@ public class NotificationManager : MonoBehaviour
         if (INVS != null && INVS.activeInHierarchy)
         {
             yabberData.isINVSClicked = true;
-            Debug.Log("INVS is active and isINVSClicked set to true."); // Debug log to confirm the condition is met
+            //Debug.Log("INVS is active and isINVSClicked set to true."); // Debug log to confirm the condition is met
         }
     }
 
@@ -53,7 +54,7 @@ public class NotificationManager : MonoBehaviour
 
         if (currentScene == "Home")
         {
-            if (!isNotificationActive)
+            if (!isNotificationActive && !IsScamCallActive()) // Check if the scam call is active
             {
                 StartCoroutine(ShowRandomNotifWithDelay()); // Add delay before showing notification
             }
@@ -63,6 +64,21 @@ public class NotificationManager : MonoBehaviour
             HideAllNotifs(); // Hide all notifications in non-Home scenes
         }
     }
+
+    private bool IsScamCallActive()
+    {
+        if (scamCall == null)
+        {
+            Debug.LogWarning("ScamCall GameObject is not assigned or is missing.");
+            return false;
+        }
+
+        bool isActive = scamCall.activeInHierarchy;
+        Debug.Log("ScamCall GameObject is " + (isActive ? "active" : "inactive") + " in the scene.");
+
+        return isActive;
+    }
+
 
     private IEnumerator ShowRandomNotifWithDelay()
     {
@@ -140,7 +156,17 @@ public class NotificationManager : MonoBehaviour
 
     private IEnumerator DeactivateNotificationAfterDelay(int index)
     {
+        // Check if the notification is related to a scam call
+        if (notifications[index].notification == scamCall)
+        {
+            // If it's a scam call, do not apply the delay or deactivate
+            Debug.Log("Scam call notification detected. Skipping deactivation delay.");
+            yield break; // Exit the coroutine early without deactivating
+        }
+
+        // Apply delay for non-scam call notifications
         yield return new WaitForSeconds(10f); // Adjust the delay as needed
+
         if (notifications[index].notification != null)
         {
             notifications[index].notification.SetActive(false);
@@ -149,6 +175,7 @@ public class NotificationManager : MonoBehaviour
         isNotificationActive = false; // Indicate that no notification is currently active
         UpdateNotifs(); // Check for the next notification
     }
+
 
     private void HideAllNotifs()
     {

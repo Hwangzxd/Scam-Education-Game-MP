@@ -5454,6 +5454,7 @@ MonoBehaviour:
     ping: {fileID: 900512354}
     blocker: {fileID: 1466485905}
   INVS: {fileID: 286336188}
+  scamCall: {fileID: 113932874}
 --- !u!4 &704646910
 Transform:
   m_ObjectHideFlags: 0
