@@ -2914,7 +2914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &590576771
 Transform:
   m_ObjectHideFlags: 0
@@ -4608,7 +4608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &971286999
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5326,7 +5326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1065732286
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10518,13 +10518,31 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5693812210292863933, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_text
+      value: 'Congratulations! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5693812210292863933, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_fontSize
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5693812210292863933, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 6781125565301093269, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
       propertyPath: m_text
-      value: '- Verify the advisor''s credentials through official sources.
-
-
-        -
-        Always research the  firm before making any decisions.'
+      value: "You recognized a legitimate investment offer by verifying the advisor's
+        credentials and the company's reputation. \n\nRemember to always do your
+        research before proceeding.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781125565301093269, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781125565301093269, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 8702515811508011500, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
       propertyPath: m_Pivot.x
@@ -10706,11 +10724,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4148216969575017463, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_text
-      value: '- Verify the advisor''s credentials through official sources.
-
-
-        -
-        Always research the  firm before making any decisions.'
+      value: "You missed recognizing a legitimate opportunity. \n\nAlways take time
+        to verify the credentials of the advisor and the investment firm's reputation
+        through official channels.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148216969575017463, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148216969575017463, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685116448142720274, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_text
+      value: 'Careful! '
       objectReference: {fileID: 0}
     - target: {fileID: 8758486036666189231, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_Name

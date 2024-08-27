@@ -61,11 +61,6 @@ public class SceneTransitions : MonoBehaviour
         reqManager.resetBools();
     }
 
-    public void GoToHome2()
-    {
-        SceneManager.LoadScene("Home2");
-    }
-
     public void GoToYabberChatINVS()
     {
         SceneManager.LoadScene("YabberChatINVS");
@@ -96,9 +91,9 @@ public class SceneTransitions : MonoBehaviour
         SceneManager.LoadScene("LoveScamChat");
     }
 
-    public void GoToLoveScamChatNew()
+    public void GoToLoveScamChatNew1()
     {
-        SceneManager.LoadScene("LoveScamChatNew");
+        SceneManager.LoadScene("LoveScamChatNew1");
     }
 
     public void GoToStart()
@@ -127,31 +122,6 @@ public class SceneTransitions : MonoBehaviour
     public void GoToNotifications()
     {
         SceneManager.LoadScene("Notifications");
-    }
-
-    public void GoToShopEaseSearch()
-    {
-        SceneManager.LoadScene("ShopEaseSearch");
-    }
-
-    public void GoToShopEaseChat()
-    {
-        SceneManager.LoadScene("ShopEaseChat");
-    }
-
-    public void GoToShopEaseProfile1()
-    {
-        SceneManager.LoadScene("ShopEaseProfile1");
-    }
-
-    public void GoToShopEaseProfile2()
-    {
-        SceneManager.LoadScene("ShopEaseProfile2");
-    }
-
-    public void GoToShopEase()
-    {
-        SceneManager.LoadScene("ShopEase");
     }
      
     public void GoToGeemailScam2()

@@ -204,5 +204,8 @@ public class ScamCallManager : MonoBehaviour
         }
     }
 
-
+    public void INVSclicked()
+    {
+        yabberdata.isINVSClicked = true;
+    }
 }
