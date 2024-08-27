@@ -20,12 +20,14 @@ public class NotificationManager : MonoBehaviour
 
     void Update()
     {
-        // Check if the INVS notification is active in the scene
+
         if (INVS != null && INVS.activeInHierarchy)
         {
             yabberData.isINVSClicked = true;
+            Debug.Log("INVS is active and isINVSClicked set to true."); // Debug log to confirm the condition is met
         }
     }
+
 
     private void OnDestroy()
     {
