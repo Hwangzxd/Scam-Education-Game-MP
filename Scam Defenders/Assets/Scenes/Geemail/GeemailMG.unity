@@ -4885,8 +4885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00c72caa7773b94fb6c340547d96d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winPts: 10
-  losePts: -10
 --- !u!4 &1177404315
 Transform:
   m_ObjectHideFlags: 0
@@ -6576,7 +6574,6 @@ MonoBehaviour:
   - {fileID: 1538229311}
   - {fileID: 2115214977}
   - {fileID: 1579353034}
-  statusText: {fileID: 480714126}
   score: 0
 --- !u!1001 &1468079540
 PrefabInstance:
@@ -6586,6 +6583,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3891229610828155542, guid: 50e7c4bd207bb594bbb6103726364584, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4405112904313729588, guid: 50e7c4bd207bb594bbb6103726364584, type: 3}
       propertyPath: time
       value: 10

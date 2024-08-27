@@ -1411,6 +1411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqManager: {fileID: 0}
 --- !u!1 &601495100
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,7 +3107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1177404314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3119,8 +3120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00c72caa7773b94fb6c340547d96d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jobScamManager: {fileID: 1463102456}
-  jobScamScore: 0
 --- !u!4 &1177404315
 Transform:
   m_ObjectHideFlags: 0
@@ -4127,7 +4126,6 @@ MonoBehaviour:
   - {fileID: 769655901}
   - {fileID: 294869729}
   - {fileID: 1538229311}
-  statusText: {fileID: 480714126}
   score: 0
 --- !u!1001 &1468079540
 PrefabInstance:
