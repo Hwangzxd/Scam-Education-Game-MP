@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class BatteryData : MonoBehaviour
 {
+    private bool isGameOver = false; // Add this flag
+
     // Battery value
     private float batteryValue = 100f;
 
@@ -29,7 +31,7 @@ public class BatteryData : MonoBehaviour
     void Update()
     {
         // Update battery level over time
-        if (elapsedTime < totalTime)
+        if (elapsedTime < totalTime && !isGameOver)
         {
             elapsedTime += Time.deltaTime;
             batteryValue = Mathf.Lerp(100, 0, elapsedTime / totalTime);
@@ -38,8 +40,9 @@ public class BatteryData : MonoBehaviour
         {
             batteryValue = 0;
 
-            if (SceneManager.GetActiveScene().name != "End")
+            if (SceneManager.GetActiveScene().name != "End" && !isGameOver)
             {
+                isGameOver = true; // Set the flag to prevent reloading
                 SceneManager.LoadScene("End");
             }
         }

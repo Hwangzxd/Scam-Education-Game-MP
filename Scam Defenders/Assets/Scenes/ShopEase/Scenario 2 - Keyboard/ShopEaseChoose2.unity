@@ -7240,8 +7240,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 210c341ad1a950d4d96c7b3e6a40bed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winScreen: {fileID: 1365933220}
-  loseScreen: {fileID: 826070808}
+  winScreens:
+  - {fileID: 1365933220}
+  loseScreens:
+  - {fileID: 826070808}
 --- !u!4 &2029562163
 Transform:
   m_ObjectHideFlags: 0
