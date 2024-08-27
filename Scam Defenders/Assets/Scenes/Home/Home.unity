@@ -5567,7 +5567,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 715660502}
         m_TargetAssemblyTypeName: SceneRandomizer, Assembly-CSharp
-        m_MethodName: LoadRandomScene
+        m_MethodName: LoadRandomSceneShopEase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5627,6 +5627,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994224ea9065f2c45b6daaf88b29c081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopEaseScenes:
+  - ShopEase
+  - ShopEase2
+  - ShopEase3
+  birdyNetScenes:
+  - LoveScamChatNew1
+  - LoveScamChatNew2
+  - LoveScamChatNew3
 --- !u!1 &716159534
 GameObject:
   m_ObjectHideFlags: 0
@@ -10975,7 +10983,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1354772742}
         m_TargetAssemblyTypeName: SceneRandomizer, Assembly-CSharp
-        m_MethodName: LoadRandomScene
+        m_MethodName: LoadRandomSceneShopEase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11035,6 +11043,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994224ea9065f2c45b6daaf88b29c081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopEaseScenes:
+  - ShopEase
+  - ShopEase2
+  - ShopEase3
+  birdyNetScenes:
+  - LoveScamChatNew1
+  - LoveScamChatNew2
+  - LoveScamChatNew3
 --- !u!1 &1363354324
 GameObject:
   m_ObjectHideFlags: 0
