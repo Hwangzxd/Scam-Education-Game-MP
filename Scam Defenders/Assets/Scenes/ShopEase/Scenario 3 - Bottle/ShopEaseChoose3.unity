@@ -1499,6 +1499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqManager: {fileID: 0}
 --- !u!114 &237628328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2858,6 +2859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqManager: {fileID: 0}
 --- !u!114 &747230292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4734,6 +4736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqManager: {fileID: 0}
 --- !u!114 &1298776248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5450,6 +5453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqManager: {fileID: 0}
 --- !u!114 &1464998191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6246,6 +6250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqManager: {fileID: 0}
 --- !u!114 &1723927190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7548,6 +7553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22422905209cc1e4f92ab7335abc6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqManager: {fileID: 0}
 --- !u!114 &2122075828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7734,6 +7740,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinScreenCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1368576792533554726, guid: 880582dc686fb2e4bb76980ff4cfe570, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502212127336740773, guid: 880582dc686fb2e4bb76980ff4cfe570, type: 3}
+      propertyPath: m_text
+      value: "- Verify the seller\u2019s identity on the platform \n \n- Use secure
+        in-platform payment options"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7830,6 +7845,15 @@ PrefabInstance:
     - target: {fileID: 3433873374880854013, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
       propertyPath: m_Name
       value: LoseScreenCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433873374880854013, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086739265950908158, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_text
+      value: "- Verify the seller\u2019s identity on the platform \n \n- Be skeptical
+        of huge discount, low ratings with high sales, and generic reviews\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
