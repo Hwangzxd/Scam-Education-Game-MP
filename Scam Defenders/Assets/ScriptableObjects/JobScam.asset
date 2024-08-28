@@ -15,12 +15,12 @@ MonoBehaviour:
   scenarioName: Scenario1
   messages:
   - messageTexts:
-    - 'John: Welcome to Easy Money Opportunities. Everyone here is making good money
-      with our side-hustle.'
-    - "Sarah: I\u2019m making $500 a week. Thanks, John."
-    - "Alex: I\u2019ve already made $200. This really helps."
-    - "John: We\u2019re accepting a few more people today. Secure your spot with
-      a $50 deposit. You\u2019ll start earning right away."
+    - '<color=green>John</color>: Welcome to Easy Money Opportunities. Everyone here
+      is making good money with our side-hustle.'
+    - "<color=orange>Sarah</color>: I\u2019m making $500 a week. Thanks, John."
+    - "<color=yellow>Alex</color>: I\u2019ve already made $200. This really helps."
+    - "<color=green>John</color>: We\u2019re accepting a few more people today. Secure
+      your spot with a $50 deposit. You\u2019ll start earning right away."
     responses:
     - responseTexts:
       - "What\u2019s the deposit for?"
@@ -28,10 +28,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 1
     - responseTexts:
       - Is everyone here new?
@@ -39,10 +43,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 3
     - responseTexts:
       - Why are the amounts so perfectly rounded?
@@ -50,10 +58,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 2
   - messageTexts:
     - "John: The deposit covers the starter kit, which includes all the resources
@@ -65,10 +77,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 4
     - responseTexts:
       - This looks too good to be true... I'm leaving.
@@ -76,10 +92,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - "It\u2019s just how the system works. Our methods are efficient, so people
@@ -91,10 +111,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 5
     - responseTexts:
       - "This feels off. I\u2019m not sure I can trust this, i'm leaving."
@@ -102,10 +126,14 @@ MonoBehaviour:
       winScreen2: 1
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - 'Lisa: John only invites a few people at a time to keep the group small and
@@ -118,10 +146,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 6
     - responseTexts:
       - Why is everyone so new? It feels suspicious, I'm leaving.
@@ -129,10 +161,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 1
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - "John: Most people start seeing money within a day or two. It\u2019s fast,
@@ -144,10 +180,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 1
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - One or two days? Sorry, this is surely a scam.
@@ -155,10 +195,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 1
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - "John: Just make the $50 deposit, and you\u2019ll be on your way to earning
@@ -170,10 +214,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 1
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - A deposit? That seems suspicious. I don't trust you.
@@ -181,10 +229,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 1
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - "Make the $50 deposit, and you\u2019ll get access to everything you need to
@@ -196,10 +248,14 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 1
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - A deposit? This seems suspicious. I'm leaving.
@@ -207,8 +263,12 @@ MonoBehaviour:
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 1
       loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
       nextMessageIndex: 0

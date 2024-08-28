@@ -147,6 +147,9 @@ public class ChatManager : MonoBehaviour
             TMP_Text messageText = messageGO.GetComponentInChildren<TMP_Text>();
             messageText.text = text;
 
+            // Force layout rebuild
+            LayoutRebuilder.ForceRebuildLayoutImmediate(chatContent.GetComponent<RectTransform>());
+
             // LeanTween animation
             messageGO.transform.localScale = Vector3.zero;
             LeanTween.scale(messageGO, Vector3.one, 0.5f).setEaseOutBounce();

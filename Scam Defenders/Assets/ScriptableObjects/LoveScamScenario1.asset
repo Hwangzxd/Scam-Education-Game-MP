@@ -238,9 +238,8 @@ MonoBehaviour:
       nextMessageIndex: 0
   - messageTexts:
     - I understand your concern.
-    - Here's a picture of me!
-    - '*Sends pic*'
-    - Can you send one too?
+    - I'll send a picture of myself if you share yours too!
+    - You go first :)
     responses:
     - responseTexts:
       - Ok... here's my picture.
