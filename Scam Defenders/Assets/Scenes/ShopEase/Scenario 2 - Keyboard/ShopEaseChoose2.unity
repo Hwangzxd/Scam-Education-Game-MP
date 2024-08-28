@@ -8187,6 +8187,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinScreenCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1368576792533554726, guid: 880582dc686fb2e4bb76980ff4cfe570, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502212127336740773, guid: 880582dc686fb2e4bb76980ff4cfe570, type: 3}
+      propertyPath: m_text
+      value: "- Verify the seller\u2019s identity on the platform \n \n- Use secure
+        in-platform payment options"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8283,6 +8292,15 @@ PrefabInstance:
     - target: {fileID: 3433873374880854013, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
       propertyPath: m_Name
       value: LoseScreenCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433873374880854013, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086739265950908158, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_text
+      value: "-Verify the seller\u2019s identity on the platform \n \n- Be wary of
+        unrealistic discounts, low ratings and sales"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

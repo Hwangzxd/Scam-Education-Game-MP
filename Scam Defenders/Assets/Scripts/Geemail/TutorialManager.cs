@@ -6,8 +6,23 @@ public class TutorialManager : MonoBehaviour
 
     private int currentGuideIndex = 0;
 
+    //private bool isTutSeen = false;
+
+    //public GameObject SkipBtn;
+
     void Start()
     {
+        //SkipBtn.SetActive(false);
+
+        //if (isTutSeen == false)
+        //{
+        //    isTutSeen = true;
+        //}
+        //else
+        //{
+        //    SkipBtn.SetActive(true);
+        //}
+
         for (int i = 0; i < guides.Length; i++)
         {
             guides[i].SetActive(i == 0); //Activates the first guide, deactivates the rest
