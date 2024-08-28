@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repValue: 0
-  initialRep: 50
+  initialRep: 10
   maxRep: 100
   minRep: 0
 --- !u!1 &21556196
