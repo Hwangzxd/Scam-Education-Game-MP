@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class RepData : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class RepData : MonoBehaviour
     public int initialRep = 50;
     public int maxRep = 100;
     public int minRep = 0;
+
+    public event Action RepValueChanged; // Event to notify when reputation changes
 
     void Awake()
     {
@@ -27,11 +30,14 @@ public class RepData : MonoBehaviour
     {
         // Initialize the reputation value
         repValue = initialRep;
+        RepValueChanged?.Invoke(); // Invoke the event to update the UI
     }
 
     public void SetReputationValue(int value)
     {
         repValue = Mathf.Clamp(value, minRep, maxRep);
+
+        RepValueChanged?.Invoke(); // Invoke the event to update the UI
 
         // Check if reputation is completely drained
         if (repValue == minRep)
