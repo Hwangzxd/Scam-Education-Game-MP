@@ -1,56 +1,76 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour
 {
     public GameObject[] guides;
-
     private int currentGuideIndex = 0;
-
-    //private bool isTutSeen = false;
-
-    //public GameObject SkipBtn;
+    private static bool isTutSeen = false; // Static variable persists across scenes
+    public GameObject shopeaseSkipBtn;
+    public string[] shopeaseScenes;
 
     void Start()
     {
-        //SkipBtn.SetActive(false);
+        Debug.Log("Start method called. isTutSeen: " + isTutSeen);
 
-        //if (isTutSeen == false)
-        //{
-        //    isTutSeen = true;
-        //}
-        //else
-        //{
-        //    SkipBtn.SetActive(true);
-        //}
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        Debug.Log("Current Scene: " + currentSceneName);
+
+        if (IsSceneInList(currentSceneName, shopeaseScenes))
+        {
+            HandleSkipButton(shopeaseSkipBtn);
+        }
 
         for (int i = 0; i < guides.Length; i++)
         {
-            guides[i].SetActive(i == 0); //Activates the first guide, deactivates the rest
+            guides[i].SetActive(i == 0);
+            Debug.Log("Guide " + i + " active status: " + guides[i].activeSelf);
         }
+    }
+
+    private void HandleSkipButton(GameObject skipButton)
+    {
+        if (skipButton != null)
+        {
+            skipButton.SetActive(false);
+
+            if (isTutSeen == false)
+            {
+                Debug.Log("Tutorial not seen before. Setting isTutSeen to true.");
+                isTutSeen = true;
+            }
+            else
+            {
+                Debug.Log("Tutorial already seen. Activating skip button.");
+                skipButton.SetActive(true);
+            }
+        }
+    }
+
+    private bool IsSceneInList(string sceneName, string[] sceneList)
+    {
+        foreach (string name in sceneList)
+        {
+            if (sceneName == name)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void EnableNextGuide()
     {
-        //Ensures current index is within array length
+        Debug.Log("EnableNextGuide method called. Current Guide Index: " + currentGuideIndex);
+
         if (currentGuideIndex < guides.Length)
         {
-            //Deactivates the current guide
             guides[currentGuideIndex].SetActive(false);
-
-            //Increments the index and activates the next guide if available
             currentGuideIndex++;
 
             if (currentGuideIndex < guides.Length)
             {
                 guides[currentGuideIndex].SetActive(true);
-            }
-            else
-            {
-                //If no more guides, deactivate all
-                for (int i = 0; i < guides.Length; i++)
-                {
-                    guides[i].SetActive(false);
-                }
             }
         }
     }

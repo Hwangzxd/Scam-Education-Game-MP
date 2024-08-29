@@ -67,7 +67,7 @@ public class SelectionManager : MonoBehaviour
         femaleButtonImage = femaleButton.GetComponent<Image>();
         maleButtonColor = maleButtonImage.color;
         femaleButtonColor = femaleButtonImage.color;
-        SetGenderButtonsOpacity(0.8f);
+        SetGenderButtonsOpacity(0.5f);
 
         // Add listeners to the gender buttons
         maleButton.onClick.AddListener(() => OnGenderButtonClick("Male"));
@@ -116,11 +116,11 @@ public class SelectionManager : MonoBehaviour
         if (gender == "Male")
         {
             SetButtonOpacity(maleButtonImage, 1.0f);
-            SetButtonOpacity(femaleButtonImage, 0.8f);
+            SetButtonOpacity(femaleButtonImage, 0.5f);
         }
         else if (gender == "Female")
         {
-            SetButtonOpacity(maleButtonImage, 0.8f);
+            SetButtonOpacity(maleButtonImage, 0.5f);
             SetButtonOpacity(femaleButtonImage, 1.0f);
         }
 
