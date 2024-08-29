@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using System;
 
 public class RepData : MonoBehaviour
 {
@@ -11,7 +11,7 @@ public class RepData : MonoBehaviour
     public int maxRep = 100;
     public int minRep = 0;
 
-    private bool isReputationDrained = false; // New flag to track if reputation is drained
+    public event Action RepValueChanged; // Event to notify when reputation changes
 
     void Awake()
     {
@@ -30,11 +30,14 @@ public class RepData : MonoBehaviour
     {
         // Initialize the reputation value
         repValue = initialRep;
+        RepValueChanged?.Invoke(); // Invoke the event to update the UI
     }
 
     public void SetReputationValue(int value)
     {
         repValue = Mathf.Clamp(value, minRep, maxRep);
+
+        RepValueChanged?.Invoke(); // Invoke the event to update the UI
 
         // Check if reputation is completely drained
         if (repValue == minRep)
@@ -57,16 +60,6 @@ public class RepData : MonoBehaviour
     {
         Debug.Log("Reputation is completely drained.");
         // Implement additional logic when reputation is fully drained, if needed
-        isReputationDrained = true; // Set the flag to true
-        //SceneManager.LoadScene("GameOver");
-    }
-
-    public void HandleSceneExit()
-    {
-        if (isReputationDrained)
-        {
-            SceneManager.LoadScene("GameOver"); // Replace with your scene name
-        }
     }
 
     public float GetReputation()

@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 428156990}
   - component: {fileID: 428156992}
   - component: {fileID: 428156991}
+  - component: {fileID: 428156993}
   m_Layer: 5
   m_Name: ReputationText
   m_TagString: Untagged
@@ -287,7 +288,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Reputation: 10'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -364,6 +365,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428156989}
   m_CullTransparentMesh: 1
+--- !u!114 &428156993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428156989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd5f95efea9e8a74fb0cb7c2d2c834ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repText: {fileID: 428156991}
 --- !u!1 &556852244
 GameObject:
   m_ObjectHideFlags: 0
