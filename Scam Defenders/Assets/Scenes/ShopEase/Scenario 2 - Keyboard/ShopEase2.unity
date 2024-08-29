@@ -12759,7 +12759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &989238285
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17726,7 +17726,11 @@ MonoBehaviour:
   - {fileID: 115387274}
   - {fileID: 268702836}
   - {fileID: 279256501}
-  SkipBtn: {fileID: 1822250830}
+  shopeaseSkipBtn: {fileID: 1822250830}
+  shopeaseScenes:
+  - ShopEase
+  - ShopEase2
+  - ShopEase3
 --- !u!1 &1420071680
 GameObject:
   m_ObjectHideFlags: 0
@@ -24013,7 +24017,55 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1822250832}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 626575743}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 626575744}
+        m_TargetAssemblyTypeName: CountdownTimer, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1403391934}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 989238284}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1822250832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24925,23 +24977,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5166511033414239097, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5166511033414239097, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5166511033414239097, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 113.36
       objectReference: {fileID: 0}
     - target: {fileID: 5166511033414239097, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5166511033414239097, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -106.68
       objectReference: {fileID: 0}
     - target: {fileID: 5407329293687073808, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_Name
@@ -24949,35 +25001,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8072227167168065528, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8072227167168065528, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8072227167168065528, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 689.52
       objectReference: {fileID: 0}
     - target: {fileID: 8072227167168065528, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 113.36
       objectReference: {fileID: 0}
     - target: {fileID: 8072227167168065528, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 544.76
       objectReference: {fileID: 0}
     - target: {fileID: 8072227167168065528, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -106.68
       objectReference: {fileID: 0}
     - target: {fileID: 8177655264336437407, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 939.52
       objectReference: {fileID: 0}
     - target: {fileID: 8177655264336437407, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 213.36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
