@@ -38,8 +38,6 @@ public class BatteryData : MonoBehaviour
         }
         else
         {
-            batteryValue = 0;
-
             if (SceneManager.GetActiveScene().name != "End" && !isGameOver)
             {
                 isGameOver = true; // Set the flag to prevent reloading
