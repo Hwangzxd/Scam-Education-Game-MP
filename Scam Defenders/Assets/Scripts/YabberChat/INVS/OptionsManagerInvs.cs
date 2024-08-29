@@ -90,6 +90,7 @@ public class OptionsManagerInvs : MonoBehaviour
     // For contacting independent financial advisor
     public void OnButton1Click()
     {
+        ResetUI();
         disableAllButtons();
         textName.text = "Trusted Financial Advisor";
         DialogueManagerInvs.HideAllOriginalMessages();
@@ -100,7 +101,7 @@ public class OptionsManagerInvs : MonoBehaviour
     // For visiting official financial regulator website (shows companies that do financial stuff)
     public void OnButton2Click()
     {
-        disableAllButtons();
+        ResetUI();
         btn2UI();
         Debug.Log("Button 2 clicked");
     }
@@ -126,6 +127,7 @@ public class OptionsManagerInvs : MonoBehaviour
     // For requesting official documentations
     public void OnButton3Click()
     {
+        ResetUI();
         btn3Pressed = true;
         disableAllButtons();
         if (SceneManager.GetActiveScene().name == "YabberChatINVS")
@@ -149,6 +151,7 @@ public class OptionsManagerInvs : MonoBehaviour
     // For researching the company/fund on Google
     public void OnButton4Click()
     {
+        ResetUI();
         btn4Pressed = true;
         disableAllButtons();
         btn4UI();
@@ -237,7 +240,7 @@ public class OptionsManagerInvs : MonoBehaviour
         }
 
         loadIcon.SetActive(false);
-        backBtn.enabled = true;
+        enableAllButtons();
     }
 
     // Going back from the different button options (users can also just click on the buttons if shown)
@@ -270,24 +273,83 @@ public class OptionsManagerInvs : MonoBehaviour
     }
 
     // When scenario is loading
-    private void disableAllButtons()
+    public void disableAllButtons()
     {
+        // Disable all buttons
         button1.enabled = false;
         button2.enabled = false;
         button3.enabled = false;
         button4.enabled = false;
         backBtn.enabled = false;
+
+        // Grey out or lower the opacity of the buttons
+        GreyOutButton(button1);
+        GreyOutButton(button2);
+        GreyOutButton(button3);
+        GreyOutButton(button4);
+        GreyOutButton(backBtn);
     }
+
+    private void GreyOutButton(Button button)
+    {
+        // Lower the opacity of the button's image (if it has one)
+        if (button.image != null)
+        {
+            Color imageColor = button.image.color;
+            imageColor.a = 0.5f; // Set alpha to 50% opacity
+            button.image.color = imageColor;
+        }
+
+        // Lower the opacity or grey out the button's text (if it has any)
+        Text buttonText = button.GetComponentInChildren<Text>();
+        if (buttonText != null)
+        {
+            Color textColor = buttonText.color;
+            textColor.a = 0.5f; // Set alpha to 50% opacity
+            textColor = Color.grey; // Optionally, set text color to grey
+            buttonText.color = textColor;
+        }
+    }
+
 
     // After scenario has been loaded
     public void enableAllButtons()
     {
+        // Enable all buttons
         button1.enabled = true;
         button2.enabled = true;
         button3.enabled = true;
         button4.enabled = true;
         backBtn.enabled = true;
+
+        // Restore the full opacity of the buttons
+        RestoreButtonOpacity(button1);
+        RestoreButtonOpacity(button2);
+        RestoreButtonOpacity(button3);
+        RestoreButtonOpacity(button4);
+        RestoreButtonOpacity(backBtn);
     }
+
+    private void RestoreButtonOpacity(Button button)
+    {
+        // Restore the opacity of the button's image (if it has one)
+        if (button.image != null)
+        {
+            Color imageColor = button.image.color;
+            imageColor.a = 1f; // Set alpha back to full opacity
+            button.image.color = imageColor;
+        }
+
+        // Restore the opacity of the button's text (if it has any)
+        Text buttonText = button.GetComponentInChildren<Text>();
+        if (buttonText != null)
+        {
+            Color textColor = buttonText.color;
+            textColor.a = 1f; // Set alpha back to full opacity
+            buttonText.color = textColor;
+        }
+    }
+
 
     private void ResetUI()
     {
