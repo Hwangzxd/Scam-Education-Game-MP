@@ -1,11 +1,17 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.SceneManagement;
 
 public class JobScamManager : MonoBehaviour
 {
-    public DropArea[] scamSigns;
-    public int score = 0; // Initialize score 
+    [System.Serializable]
+    public class DropAreaScore
+    {
+        public DropArea dropArea;
+        public int scoreValue;
+    }
+
+    public DropAreaScore[] scamSignsAndScores;
+    public int score = 0;
 
     public static JobScamManager instance;
 
@@ -14,12 +20,10 @@ public class JobScamManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            // Remove persistence by commenting out or removing the following line:
-            // DontDestroyOnLoad(gameObject); // Ensure this object persists across scenes
         }
         else
         {
-            Destroy(gameObject); // Destroy duplicate instances
+            Destroy(gameObject);
         }
     }
 
@@ -44,7 +48,6 @@ public class JobScamManager : MonoBehaviour
         InitializeDropAreas(); // Reinitialize DropAreas when a new scene is loaded
         UpdateGMData(); // Update GMData with the current score when the scene is loaded
 
-        // Check if the scene is the start screen and reset score if necessary
         if (scene.name == "StartScreen") // Replace "StartScreen" with your actual start screen scene name
         {
             ResetScore();
@@ -53,14 +56,13 @@ public class JobScamManager : MonoBehaviour
 
     private void InitializeDropAreas()
     {
-        scamSigns = FindObjectsOfType<DropArea>(); // Find DropAreas in the current scene
-
-        if (scamSigns.Length == 0)
+        // This assumes that the DropArea references are already set in the Inspector
+        if (scamSignsAndScores.Length == 0)
         {
-            Debug.LogWarning("No DropArea instances found in the current scene.");
+            Debug.LogWarning("No DropAreaScore instances found in the current scene.");
         }
 
-        UpdateStatusText(0); // Update status text with initial values
+        UpdateStatusText(); // Update status text with initial values
     }
 
     void Update()
@@ -70,38 +72,25 @@ public class JobScamManager : MonoBehaviour
 
     private void GameStatus()
     {
-        int foundSignsCount = 0;
+        int totalScore = 0;
 
         // Check each scam sign to see if occupied
-        foreach (DropArea dropArea in scamSigns)
+        foreach (DropAreaScore item in scamSignsAndScores)
         {
-            if (dropArea.isOccupied)
+            if (item.dropArea.isOccupied)
             {
-                foundSignsCount++;
+                totalScore += item.scoreValue; // Add the score value of the occupied DropArea
             }
         }
 
-        UpdateStatusText(foundSignsCount);
+        score = totalScore; // Update the score
+        UpdateStatusText();
         UpdateGMData(); // Update GMData with the current score
     }
 
-    private void UpdateStatusText(int foundSignsCount)
+    private void UpdateStatusText()
     {
-        switch (foundSignsCount)
-        {
-            case 0:
-                score = 0; // Set score to 0
-                break;
-            case 1:
-                score = 1; // Set score to 1
-                break;
-            case 2:
-                score = 2; // Set score to 2
-                break;
-            case 3:
-                score = 3; // Set score to 3
-                break;
-        }
+        // Implement any UI update logic here based on the score
     }
 
     private void UpdateGMData()
