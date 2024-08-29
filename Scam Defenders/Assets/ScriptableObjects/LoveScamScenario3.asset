@@ -15,12 +15,13 @@ MonoBehaviour:
   scenarioName: Scenario3
   messages:
   - messageTexts:
-    - Hey, I noticed you liked one of my posts about photography.
-    - "I\u2019m always looking to connect with fellow enthusiasts."
-    - Would you be interested in chatting about our favorite shots and techniques?
+    - "Hey, I noticed you liked one \nof my posts about photography."
+    - "I\u2019m always looking to connect \nwith fellow enthusiasts."
+    - "Would you be interested in chatting \nabout our favorite shots and techniques?"
     responses:
     - responseTexts:
-      - "Sure, I\u2019d love to chat! What\u2019s your favorite photography subject?"
+      - "Sure, I\u2019d love to chat!"
+      - "What\u2019s your favorite photography subject?"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -35,8 +36,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 1
     - responseTexts:
-      - "I\u2019m interested, but I\u2019d like to know more about your photography
-        experience first."
+      - "I\u2019d like to know more about your \nphotography experience first."
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 5
     - responseTexts:
-      - "I\u2019m cautious about online interactions and prefer not to chat. "
+      - "I\u2019m cautious about online interactions \nand prefer not to chat. "
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -66,10 +66,12 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 8
   - messageTexts:
-    - 'Great! I love capturing nature and wildlife. How about you? '
+    - Great! I love capturing nature and wildlife.
+    - 'How about you? '
     responses:
     - responseTexts:
-      - 'I enjoy landscapes too! Do you have any tips for getting the perfect shot? '
+      - 'I enjoy landscapes too! '
+      - "Do you have any tips for \ngetting the perfect shot? "
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -135,7 +137,7 @@ MonoBehaviour:
     - '*Starts yapping*'
     responses:
     - responseTexts:
-      - Awesome! I can recommend some resources to help you get started.
+      - "Awesome! I can recommend some \nresources to help you get started."
       winScreen1: 0
       winScreen2: 1
       winScreen3: 0
@@ -168,7 +170,7 @@ MonoBehaviour:
     - '*Starts yapping*'
     responses:
     - responseTexts:
-      - Awesome! I can recommend some resources to help you get started.
+      - "Awesome! I can recommend some \nresources to help you get started."
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -198,11 +200,12 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "I\u2019ve been photographing urban scenes and landscapes for a few years.
-      What do you like to capture?"
+    - "I\u2019ve been photographing urban scenes \nand landscapes for a few years."
+    - What do you like to capture?
     responses:
     - responseTexts:
-      - Cityscapes are fascinating. Do you have any favorite cities to photograph?
+      - Cityscapes are fascinating.
+      - Do you have any favorite cities to photograph?
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -217,7 +220,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 6
     - responseTexts:
-      - "I\u2019m not sure yet. Still exploring different subjects."
+      - "I\u2019m not sure yet. Still exploring \ndifferent subjects."
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -268,7 +271,7 @@ MonoBehaviour:
     - '*Yapping*'
     responses:
     - responseTexts:
-      - "No worries! Let\u2019s discover new interests together. "
+      - "No worries! Let\u2019s discover \nnew interests together. "
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -283,7 +286,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
-      - "I\u2019ll let you know when I have more time to explore."
+      - "I\u2019ll let you know when I have \nmore time to explore."
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -298,8 +301,8 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - 'I understand. I just wanted to connect with someone who shares my passion
-      for photography. '
+    - I understand.
+    - "I just wanted to connect with someone \nwho shares my passion for photography. "
     responses:
     - responseTexts:
       - "I\u2019m not comfortable sharing details online."

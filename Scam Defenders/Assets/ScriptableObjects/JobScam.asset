@@ -15,12 +15,14 @@ MonoBehaviour:
   scenarioName: Scenario1
   messages:
   - messageTexts:
-    - '<color=green>John</color>: Welcome to Easy Money Opportunities. Everyone here
-      is making good money with our side-hustle.'
-    - "<color=orange>Sarah</color>: I\u2019m making $500 a week. Thanks, John."
-    - "<color=yellow>Alex</color>: I\u2019ve already made $200. This really helps."
-    - "<color=green>John</color>: We\u2019re accepting a few more people today. Secure
-      your spot with a $50 deposit. You\u2019ll start earning right away."
+    - "<color=green>John</color> \nWelcome to Easy Money \nOpportunities."
+    - "<color=green>John</color> \nEveryone here is making \ngood money with our
+      \nside-hustle.."
+    - "<color=orange>Sarah</color>\nI\u2019m making $500 a week. \nThanks, John."
+    - "<color=yellow>Alex</color>\nI\u2019ve already made $200. \nThis really helps."
+    - "<color=green>John</color> \nWe\u2019re accepting a few more \npeople today."
+    - "<color=green>John</color> \nSecure your spot with \na $50 deposit."
+    - "<color=green>John</color> \nYou\u2019ll start earning right away."
     responses:
     - responseTexts:
       - "What\u2019s the deposit for?"
@@ -53,7 +55,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 3
     - responseTexts:
-      - Why are the amounts so perfectly rounded?
+      - "Why are the amounts \nso perfectly rounded?"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -68,8 +70,9 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 2
   - messageTexts:
-    - "John: The deposit covers the starter kit, which includes all the resources
-      you need to get started. You\u2019ll make it back in no time."
+    - "John: \nThe deposit covers the starter kit, \nwhich includes all the resources
+      \nyou need to get started."
+    - "John: \nYou\u2019ll make it back in no time."
     responses:
     - responseTexts:
       - How quickly can I start earning?
@@ -102,11 +105,12 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "It\u2019s just how the system works. Our methods are efficient, so people
-      often hit those numbers."
+    - "John:\nIt\u2019s just how the system works."
+    - "John:\nOur methods are efficient, so \npeople often hit those numbers."
     responses:
     - responseTexts:
-      - That sounds reasonable. How do I get started?
+      - That sounds reasonable.
+      - How do I get started?
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -136,12 +140,12 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - 'Lisa: John only invites a few people at a time to keep the group small and
-      manageable. It helps us all succeed faster.'
-    - "Sarah: I was new just like you, but look at me now. It\u2019s legit."
+    - "Lisa: \nJohn only invites a few people at a \ntime to keep the group small
+      \nand manageable. It helps us \nall succeed faster."
+    - "Sarah: \nI was new just like you, but \nlook at me now. It\u2019s legit."
     responses:
     - responseTexts:
-      - "That makes sense. What\u2019s the next step?"
+      - "That makes sense. \nWhat\u2019s the next step?"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -171,8 +175,8 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "John: Most people start seeing money within a day or two. It\u2019s fast,
-      easy, and reliable."
+    - "John: \nMost people start seeing money \nwithin a day or two."
+    - "John: \nIt\u2019s fast, easy, and reliable."
     responses:
     - responseTexts:
       - "Sounds good. I\u2019ll think about it."
@@ -190,7 +194,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
-      - One or two days? Sorry, this is surely a scam.
+      - "One or two days? \nSorry, this is surely a scam."
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -205,8 +209,8 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "John: Just make the $50 deposit, and you\u2019ll be on your way to earning
-      like everyone else here."
+    - "John: \nJust make the $50 deposit, and \nyou\u2019ll be on your way to earning
+      \nlike everyone else here."
     responses:
     - responseTexts:
       - Okay, I'm depositing it now.
@@ -224,7 +228,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
-      - A deposit? That seems suspicious. I don't trust you.
+      - "A deposit? That seems suspicious. \nI don't trust you."
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -239,8 +243,8 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "Make the $50 deposit, and you\u2019ll get access to everything you need to
-      start earning."
+    - "John:\nMake the $50 deposit, and you\u2019ll \nget access to everything you
+      \nneed to start earning."
     responses:
     - responseTexts:
       - Okay! Depositing now.
@@ -258,7 +262,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
-      - A deposit? This seems suspicious. I'm leaving.
+      - "A deposit? This seems \nsuspicious. I'm leaving."
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0

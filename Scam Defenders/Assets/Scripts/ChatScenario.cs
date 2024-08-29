@@ -13,6 +13,7 @@ public class ChatScenario : ScriptableObject
 [System.Serializable]
 public class ChatMessage
 {
+    [TextArea(3, 10)]
     public List<string> messageTexts; // List of messages to be sent in a row
     public List<ChatResponse> responses; // Only used for NPC messages
 }
@@ -21,6 +22,7 @@ public class ChatMessage
 public class ChatResponse
 {
     //public string responseText;
+    [TextArea(3, 10)]
     public List<string> responseTexts; // List of player response messages
     public bool winScreen1;
     public bool winScreen2;

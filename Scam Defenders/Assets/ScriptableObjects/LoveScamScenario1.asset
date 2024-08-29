@@ -15,13 +15,13 @@ MonoBehaviour:
   scenarioName: Scenario1
   messages:
   - messageTexts:
-    - Hey... I see you liked one of my posts.
-    - I've been quite interested in you ever since...
+    - "Hey... I see you liked \none of my posts."
+    - "I've been quite interested \nin you ever since..."
     - Could we go on a date?
     responses:
     - responseTexts:
       - Sure, I'd love to!
-      - Where and when should we meet?
+      - "Where and when \nshould we meet?"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
       nextMessageIndex: 1
     - responseTexts:
       - I'm not sure.
-      - Could you tell me more about yourself first?
+      - "Could you tell me more \nabout yourself first?"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -68,7 +68,8 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 6
   - messageTexts:
-    - Great! Can you send me your number so we can plan this better?
+    - Great!
+    - "Can you send me your number \nso we can plan this better?"
     responses:
     - responseTexts:
       - Sure, here's my number.
@@ -87,7 +88,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
-      - Actually, I'm not comfortable with this.
+      - "Actually, I'm not \ncomfortable with this."
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -102,7 +103,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 2
   - messageTexts:
-    - cmon... I thought u were interested in me :(
+    - "cmon... I thought u \nwere interested in me :("
     responses:
     - responseTexts:
       - Continue the conversation.
@@ -135,12 +136,12 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - I'm an entrepreneur who loves traveling.
+    - "I'm an entrepreneur who \nloves traveling."
     - What about you?
     responses:
     - responseTexts:
       - That sounds interesting.
-      - What kind of business do you run?
+      - "What kind of business \ndo you run?"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -155,7 +156,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 4
     - responseTexts:
-      - How do I know you're telling the truth?
+      - "How do I know you're \ntelling the truth?"
       - This is too suspicious.
       winScreen1: 0
       winScreen2: 0
@@ -171,7 +172,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 5
   - messageTexts:
-    - '*Leads to vague answers and prompts for personal details*'
+    - "*Leads to vague answers and \nprompts for personal details*"
     responses:
     - responseTexts:
       - Continue the conversation.
@@ -204,7 +205,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - '*Reveals inconsistencies compared to what was previously said*'
+    - "*Reveals inconsistencies compared \nto what was previously said*"
     responses:
     - responseTexts:
       - Continue the conversation.
@@ -238,7 +239,7 @@ MonoBehaviour:
       nextMessageIndex: 0
   - messageTexts:
     - I understand your concern.
-    - I'll send a picture of myself if you share yours too!
+    - "I'll send a picture of myself \nif you share yours too!"
     - You go first :)
     responses:
     - responseTexts:
@@ -257,7 +258,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
-      - No, I don't share pictures online. This feels off. I'm reporting you.
+      - No, I don't share pictures online.
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
