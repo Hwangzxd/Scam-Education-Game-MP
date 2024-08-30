@@ -79,6 +79,10 @@ public class ScamCallManager : MonoBehaviour
 
     IEnumerator PlayDialogueSegment(int segmentIndex)
     {
+        // Add a delay before starting the dialogue segment
+        float delayBeforeStart = 1.0f; // Adjust this value to set the delay duration
+        yield return new WaitForSeconds(delayBeforeStart);
+
         scamText.gameObject.SetActive(true);
 
         string[] lines = currentScenario.dialogueSegments[segmentIndex].lines;
