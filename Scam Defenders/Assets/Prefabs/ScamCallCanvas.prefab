@@ -10337,61 +10337,7 @@ MonoBehaviour:
   yabberdata: {fileID: 11400000, guid: 9611f696bb1a6df4a9dbcb1c39180e51, type: 2}
   audioSource: {fileID: 8185955083425845294}
   scamText: {fileID: 7151488066869826161}
-  dialogueSegments:
-  - lines:
-    - This is an automated message from the Ministry of Finance.
-    - We have detected irregularities in your recent tax filings.
-    - If you did not authorize these filings, please press 1.
-    audioClips:
-    - {fileID: 8300000, guid: d45988e1e40a9bb46a2d78a8e7cb44c5, type: 3}
-    - {fileID: 8300000, guid: 4198ff8838e214e4f9eafeef4e2ac661, type: 3}
-    - {fileID: 8300000, guid: a25947be2de0f254ba6f11ad5f8b1845, type: 3}
-    lineDurations:
-    - 4
-    - 4
-    - 4
-    triggerButton: {fileID: 2720615451783643160}
-    objectsToActivate:
-    - {fileID: 2724596935148142317}
-    objectsToDeactivate:
-    - {fileID: 1951278515597695807}
-  - lines:
-    - Hello, this is Audit Officer Tan from the Monetary Authority of Singapore.
-    - It appears someone may have used your information for fraudulent purposes.
-    - To resolve this issue, we need to verify your identity. Please provide your
-      full name, NRIC, and bank account details.
-    audioClips:
-    - {fileID: 8300000, guid: 7538c521fa9ff1a47a6e33511fe8303e, type: 3}
-    - {fileID: 8300000, guid: 7d87d7bfd59a1df49b62a2bd69173327, type: 3}
-    - {fileID: 8300000, guid: 426d88ab48687e04aa0add0933a9308d, type: 3}
-    lineDurations:
-    - 5
-    - 5
-    - 8
-    triggerButton: {fileID: 5907821077214550856}
-    objectsToActivate:
-    - {fileID: 7395415793490086392}
-    objectsToDeactivate:
-    - {fileID: 2724596935148142317}
-  - lines:
-    - We need to conduct a thorough inspection of your financial records.
-    - Please transfer $90,000 to a safety account to protect your funds during the
-      audit.
-    audioClips:
-    - {fileID: 8300000, guid: 77217f3a607a13648859433db7cd456f, type: 3}
-    - {fileID: 8300000, guid: 2545f570cada8204db357360f2f00623, type: 3}
-    lineDurations:
-    - 5
-    - 6
-    triggerButton: {fileID: 7470613933987830834}
-    objectsToActivate:
-    - {fileID: 6525384894403625688}
-    objectsToDeactivate: []
-  loseScreen: {fileID: 5787382551231496543}
-  winScreen: {fileID: 3090760753818860722}
-  scamCall: {fileID: 7388712281340636284}
-  declineNotification: {fileID: 0}
-  YabberPing: {fileID: 0}
+  scenarios: []
 --- !u!1 &5330296087678295638
 GameObject:
   m_ObjectHideFlags: 0
@@ -14063,6 +14009,7 @@ GameObject:
   - component: {fileID: 3837884429230692332}
   - component: {fileID: 3630098605412889004}
   - component: {fileID: 8185955083425845294}
+  - component: {fileID: 2486566303749968056}
   m_Layer: 5
   m_Name: ScamCallCanvas
   m_TagString: Untagged
@@ -14167,7 +14114,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -14249,6 +14196,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2486566303749968056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7388712281340636284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0100bdc600b5a984d92a009ea67c8a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 8185955083425845294}
+  audioClip: {fileID: 8300000, guid: a46c8f387ed7fd14c98aab954b971fe9, type: 3}
+  stopButtons: []
 --- !u!1 &7395415793490086392
 GameObject:
   m_ObjectHideFlags: 0
