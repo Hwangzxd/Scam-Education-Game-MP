@@ -70,9 +70,9 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 2
   - messageTexts:
-    - "John: \nThe deposit covers the starter kit, \nwhich includes all the resources
-      \nyou need to get started."
-    - "John: \nYou\u2019ll make it back in no time."
+    - "<color=green>John</color> \nThe deposit covers the starter kit, \nwhich includes
+      all the resources \nyou need to get started."
+    - "<color=green>John</color> \nYou\u2019ll make it back in no time."
     responses:
     - responseTexts:
       - How quickly can I start earning?
@@ -105,8 +105,9 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "John:\nIt\u2019s just how the system works."
-    - "John:\nOur methods are efficient, so \npeople often hit those numbers."
+    - "<color=green>John</color>\nIt\u2019s just how the system works."
+    - "<color=green>John</color>\nOur methods are efficient, so \npeople often hit
+      those numbers."
     responses:
     - responseTexts:
       - That sounds reasonable.
@@ -140,9 +141,10 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "Lisa: \nJohn only invites a few people at a \ntime to keep the group small
-      \nand manageable. It helps us \nall succeed faster."
-    - "Sarah: \nI was new just like you, but \nlook at me now. It\u2019s legit."
+    - "<color=orange>Sarah</color>\nJohn only invites a few people at a \ntime to
+      keep the group small \nand manageable. It helps us \nall succeed faster."
+    - "<color=orange>Sarah</color> \nI was new just like you, but \nlook at me now.
+      It\u2019s legit."
     responses:
     - responseTexts:
       - "That makes sense. \nWhat\u2019s the next step?"
@@ -175,8 +177,9 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "John: \nMost people start seeing money \nwithin a day or two."
-    - "John: \nIt\u2019s fast, easy, and reliable."
+    - "<color=green>John</color>\nMost people start seeing money \nwithin a day or
+      two."
+    - "<color=green>John</color> \nIt\u2019s fast, easy, and reliable."
     responses:
     - responseTexts:
       - "Sounds good. I\u2019ll think about it."
@@ -209,8 +212,8 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "John: \nJust make the $50 deposit, and \nyou\u2019ll be on your way to earning
-      \nlike everyone else here."
+    - "<color=green>John</color> \nJust make the $50 deposit, and \nyou\u2019ll be
+      on your way to earning \nlike everyone else here."
     responses:
     - responseTexts:
       - Okay, I'm depositing it now.
@@ -243,8 +246,8 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "John:\nMake the $50 deposit, and you\u2019ll \nget access to everything you
-      \nneed to start earning."
+    - "<color=green>John</color>\nMake the $50 deposit, and you\u2019ll \nget access
+      to everything you \nneed to start earning."
     responses:
     - responseTexts:
       - Okay! Depositing now.

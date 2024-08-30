@@ -36,13 +36,11 @@ public class BatteryData : MonoBehaviour
             elapsedTime += Time.deltaTime;
             batteryValue = Mathf.Lerp(100, 0, elapsedTime / totalTime);
         }
-        else
+        else if (!isGameOver)
         {
-            if (SceneManager.GetActiveScene().name != "End" && !isGameOver)
-            {
-                isGameOver = true; // Set the flag to prevent reloading
-                SceneManager.LoadScene("End");
-            }
+            isGameOver = true; // Set the flag to prevent reloading
+            SceneManager.LoadScene("End");
+            enabled = false; // Disable this script to prevent further updates
         }
     }
 
