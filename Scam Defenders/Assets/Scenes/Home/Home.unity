@@ -1789,7 +1789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 3.1438, y: -2.5}
+  m_AnchoredPosition: {x: 3.1437988, y: -2.5000038}
   m_SizeDelta: {x: -3.995, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &214623398
@@ -9510,7 +9510,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.32873535, y: -2.848999}
+  m_AnchoredPosition: {x: 0.32873535, y: -2.8490067}
   m_SizeDelta: {x: 10.6575, y: 5.698}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1152663300
@@ -11768,8 +11768,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000085831, y: -78}
-  m_SizeDelta: {x: 766.1476, y: 132.12}
+  m_AnchoredPosition: {x: 0.0000085831, y: -90.274}
+  m_SizeDelta: {x: 766.1476, y: 255.3275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1338308108
 MonoBehaviour:
@@ -11837,7 +11837,7 @@ MonoBehaviour:
   reputationSlider: {fileID: 1338308108}
   reputationSprite: {fileID: 1627044655}
   reputationSprites:
-  - {fileID: 21300000, guid: dd1799efecc0cb34aad7019ef2627bac, type: 3}
+  - {fileID: 21300000, guid: 5fd479277f2f8d948945a6e4878209ad, type: 3}
   - {fileID: 21300000, guid: dd1799efecc0cb34aad7019ef2627bac, type: 3}
   - {fileID: 21300000, guid: b98b209c93ab80e44984ef69f59d25be, type: 3}
   - {fileID: 21300000, guid: 1416836334a46a44797da83fb9c01110, type: 3}
@@ -14540,7 +14540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 3.6012878, y: -5.2959995}
+  m_AnchoredPosition: {x: 3.6012573, y: -5.2959976}
   m_SizeDelta: {x: 7.2026, y: 10.592}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1627044655
