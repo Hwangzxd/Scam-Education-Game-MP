@@ -15090,16 +15090,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winScreens:
   - {fileID: 1189321189}
-  - {fileID: 1189321188}
-  - {fileID: 1189321187}
-  - {fileID: 1189321186}
-  - {fileID: 908948373}
   loseScreens:
   - {fileID: 8143572888103588080}
-  - {fileID: 2929876790720455923}
-  - {fileID: 8995889070559152012}
-  - {fileID: 535783470452712685}
-  - {fileID: 4960823263013316446}
 --- !u!4 &1771460688
 Transform:
   m_ObjectHideFlags: 0

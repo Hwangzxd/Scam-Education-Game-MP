@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: -475}
+  m_AnchoredPosition: {x: 0, y: -475}
   m_SizeDelta: {x: 372, y: 119}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7427550103936971513
@@ -1168,8 +1168,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: 0}
-  m_SizeDelta: {x: 824.7664, y: 380.392}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 850, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1465024333376441200
 CanvasRenderer:
@@ -1199,11 +1199,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Be wary of unsolicited requests for help or donations online.
-
-
-    -
-    Always verify the legitimacy of causes first.'
+  m_text: "Be wary of unsolicited requests for money from someone you just met online.
+    \n\nAlways check with official sources before sending money to anyone/organisations
+    including requests from government officials.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -1230,8 +1228,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65
-  m_fontSizeBase: 65
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1880,7 +1878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4652611332496277621}
   m_Layer: 5
-  m_Name: Lose - Number
+  m_Name: Lose1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2262,7 +2260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.6777954, y: 475}
+  m_AnchoredPosition: {x: 0, y: 475}
   m_SizeDelta: {x: 833.8508, y: 329.3445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5447979088669758390
@@ -2293,7 +2291,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SHARING ISN'T CARING!
+  m_text: OH NO!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -3475,7 +3473,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: 23.0288}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1078.7261, y: 2387.5332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2859106103551919424
@@ -5190,7 +5188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: 23.0288}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1078.7261, y: 2387.5332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4104095984238218019
@@ -5305,8 +5303,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: 0}
-  m_SizeDelta: {x: 824.7664, y: 380.392}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 850, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &735736440077074026
 CanvasRenderer:
@@ -5336,11 +5334,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Never share your phone number or personal information with strangers
-    online.
-
-
-    - Protect yourself by verifying identities first.'
+  m_text: "Never share your phone number or personal information with strangers online.
+    \r\r\nSometimes, your \"friend\" may want to video call.  \n\nBe cautious as
+    they might be recording without permission and may use intimate moments from
+    the video call to blackmail you. \r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -5367,8 +5364,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65
-  m_fontSizeBase: 65
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5664,7 +5661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: 23.0288}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1078.7261, y: 2387.5332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7493379845308169828
@@ -6719,7 +6716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 113980208187938138}
   m_Layer: 5
-  m_Name: Lose - Persuade
+  m_Name: Lose2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6917,8 +6914,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: 0}
-  m_SizeDelta: {x: 824.7664, y: 380.392}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 850, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5664245927356717268
 CanvasRenderer:
@@ -6948,13 +6945,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Scammers often target those willing to help.
-
-
-    - Verify charities
-    and organizations through official sources.
-
-'
+  m_text: "Be wary of those who keep pushing for money or personal information. \n\nTrustworthy
+    people respect your boundaries.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -7517,7 +7509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.6777954, y: 475}
+  m_AnchoredPosition: {x: 0, y: 475}
   m_SizeDelta: {x: 833.8508, y: 329.3445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7393959076030517048
@@ -7548,7 +7540,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SHARING ISN'T CARING!
+  m_text: OH NO!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -7797,7 +7789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: 23.029}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1456, y: 2048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6095911157798270459
@@ -8008,7 +8000,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.9190674, y: -475}
+  m_AnchoredPosition: {x: 0, y: -475}
   m_SizeDelta: {x: 372, y: 119}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9127474975821564821
@@ -8726,7 +8718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: 23.029}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1456, y: 2048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7010630632769437201
@@ -8852,7 +8844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6569036601744084072}
   m_Layer: 5
-  m_Name: Lose - Number
+  m_Name: Lose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8916,7 +8908,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.6777954, y: 475}
+  m_AnchoredPosition: {x: 0, y: 475}
   m_SizeDelta: {x: 833.8508, y: 329.3445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6144971831043827561
@@ -8947,7 +8939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: YOU FELL FOR IT!
+  m_text: OH NO!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -9483,7 +9475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: -475}
+  m_AnchoredPosition: {x: 0, y: -475}
   m_SizeDelta: {x: 372, y: 119}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3618301332679508926
@@ -9627,7 +9619,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: 23.029}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1456, y: 2048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3681687121782081958

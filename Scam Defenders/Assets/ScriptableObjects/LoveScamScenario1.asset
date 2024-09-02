@@ -21,7 +21,7 @@ MonoBehaviour:
     responses:
     - responseTexts:
       - Sure, I'd love to!
-      - "Where and when \nshould we meet?"
+      - "Let's chat over text \nmessage/video call?"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 1
     - responseTexts:
-      - I'm not sure.
+      - "Let's get to know \neach other more."
       - "Could you tell me more \nabout yourself first?"
       winScreen1: 0
       winScreen2: 0
@@ -50,10 +50,10 @@ MonoBehaviour:
       loseScreen4: 0
       loseScreen5: 0
       loseScreen6: 0
-      nextMessageIndex: 3
+      nextMessageIndex: 2
     - responseTexts:
-      - 'This seems suspicious. '
-      - How do I know you're real?
+      - "Can't really see your \nface in the photos."
+      - Can share a pic?
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -66,14 +66,13 @@ MonoBehaviour:
       loseScreen4: 0
       loseScreen5: 0
       loseScreen6: 0
-      nextMessageIndex: 6
+      nextMessageIndex: 4
   - messageTexts:
     - Great!
-    - "Can you send me your number \nso we can plan this better?"
+    - "Can you give me your \nnumber? Let's text!"
     responses:
     - responseTexts:
       - Sure, here's my number.
-      - '*Sends number*'
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -88,40 +87,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
-      - "Actually, I'm not \ncomfortable with this."
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
-      loseScreen1: 0
-      loseScreen2: 0
-      loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
-      nextMessageIndex: 2
-  - messageTexts:
-    - "cmon... I thought u \nwere interested in me :("
-    responses:
-    - responseTexts:
-      - Continue the conversation.
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
-      loseScreen1: 0
-      loseScreen2: 1
-      loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
-      nextMessageIndex: 0
-    - responseTexts:
-      - End the conversation.
+      - "Actually, let's continue on \nChatterNet instead!"
       winScreen1: 1
       winScreen2: 0
       winScreen3: 0
@@ -140,8 +106,7 @@ MonoBehaviour:
     - What about you?
     responses:
     - responseTexts:
-      - That sounds interesting.
-      - "What kind of business \ndo you run?"
+      - "That sounds interesting. What \nkind of business do you run?"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -154,45 +119,30 @@ MonoBehaviour:
       loseScreen4: 0
       loseScreen5: 0
       loseScreen6: 0
-      nextMessageIndex: 4
-    - responseTexts:
-      - "How do I know you're \ntelling the truth?"
-      - This is too suspicious.
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
-      loseScreen1: 0
-      loseScreen2: 0
-      loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
-      nextMessageIndex: 5
+      nextMessageIndex: 3
   - messageTexts:
-    - "*Leads to vague answers and \nprompts for personal details*"
+    - I run an online business.
+    - "Let's text and I'll share \nwith you more."
     responses:
     - responseTexts:
-      - Continue the conversation.
+      - Share Mobile Number
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
       winScreen5: 0
       winScreen6: 0
-      loseScreen1: 0
+      loseScreen1: 1
       loseScreen2: 0
-      loseScreen3: 1
+      loseScreen3: 0
       loseScreen4: 0
       loseScreen5: 0
       loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
-      - End the conversation.
-      winScreen1: 0
-      winScreen2: 1
+      - Continue conversation on platform
+      winScreen1: 1
+      winScreen2: 0
       winScreen3: 0
       winScreen4: 0
       winScreen5: 0
@@ -205,65 +155,31 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "*Reveals inconsistencies compared \nto what was previously said*"
+    - "Haha would love to but ChatterNet \ndoesn't allow me to.\r"
+    - "Want to text instead? \r"
     responses:
     - responseTexts:
-      - Continue the conversation.
+      - Share Mobile Number
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
       winScreen5: 0
       winScreen6: 0
-      loseScreen1: 0
-      loseScreen2: 0
-      loseScreen3: 0
-      loseScreen4: 1
-      loseScreen5: 0
-      loseScreen6: 0
-      nextMessageIndex: 0
-    - responseTexts:
-      - End the conversation.
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 1
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
-      loseScreen1: 0
+      loseScreen1: 1
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
       loseScreen5: 0
       loseScreen6: 0
       nextMessageIndex: 0
-  - messageTexts:
-    - I understand your concern.
-    - "I'll send a picture of myself \nif you share yours too!"
-    - You go first :)
-    responses:
     - responseTexts:
-      - Ok... here's my picture.
-      winScreen1: 0
+      - Continue conversation on platform
+      winScreen1: 1
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
       winScreen5: 0
-      winScreen6: 0
-      loseScreen1: 0
-      loseScreen2: 0
-      loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 1
-      loseScreen6: 0
-      nextMessageIndex: 0
-    - responseTexts:
-      - No, I don't share pictures online.
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 0
-      winScreen4: 0
-      winScreen5: 1
       winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0

@@ -17,8 +17,7 @@ MonoBehaviour:
   - messageTexts:
     - "Hey\u2026 I noticed you liked my \npost about a charity event."
     - "I\u2019m really passionate about \nhelping others."
-    - "Could we chat more about \nour interests and maybe \nsupport each other\u2019s
-      causes?"
+    - "Could we chat more about \nour shared interests?"
     responses:
     - responseTexts:
       - "Sure, I\u2019d love to!"
@@ -37,7 +36,8 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 1
     - responseTexts:
-      - "I\u2019d like to know more \nabout you first"
+      - "I\u2019m curious, but I\u2019d like to know \nmore about you before \ndiscussing
+        any causes.\r\n"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
       nextMessageIndex: 4
     - responseTexts:
       - "I\u2019m a bit skeptical."
-      - "How do I know this isn\u2019t just a way to get money from me?"
+      - "How do I know this isn\u2019t just \na way to get money from me?"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -68,13 +68,12 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 7
   - messageTexts:
-    - "I\u2019m involved with a organization \nthat supports children in need."
-    - "I\u2019ve been doing fundraising events."
-    - How about you?
+    - "I\u2019m involved with an organization \nthat supports children in need."
+    - "I\u2019ve been doing \nfundraising events."
+    - "Have you volunteered in \nsuch events before?\r"
     responses:
     - responseTexts:
-      - "That\u2019s wonderful! I\u2019m also involved \nin community service."
-      - 'How can I help with your events? '
+      - "Yes, I like volunteering.\r"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -89,8 +88,7 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 2
     - responseTexts:
-      - "I\u2019m not currently involved in any causes."
-      - 'Can you tell me more about your events? '
+      - No, but I want to try!
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -103,14 +101,15 @@ MonoBehaviour:
       loseScreen4: 0
       loseScreen5: 0
       loseScreen6: 0
-      nextMessageIndex: 3
+      nextMessageIndex: 2
   - messageTexts:
-    - "That\u2019s amazing! We could use some \nsupport for our next event."
-    - "We're trying to reach our goal, \nand any donation would help a lot."
-    - "You can transfer the money \ndirectly to our account!"
+    - "That\u2019s amazing!\r"
+    - "I'm actually volunteering overseas \nnow and we could use some support."
+    - Any donation would help the children.
+    - "If you want to help, you can transfer \nthe money directly to our account. "
     responses:
     - responseTexts:
-      - Continue the conversation.
+      - "Sign me up! What's the account number?\r"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -125,7 +124,26 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
-      - End the conversation.
+      - "Can I contribute my time instead?\r"
+      winScreen1: 0
+      winScreen2: 0
+      winScreen3: 0
+      winScreen4: 0
+      winScreen5: 0
+      winScreen6: 0
+      loseScreen1: 0
+      loseScreen2: 0
+      loseScreen3: 0
+      loseScreen4: 0
+      loseScreen5: 0
+      loseScreen6: 0
+      nextMessageIndex: 3
+  - messageTexts:
+    - "I guess it is hard as we \nare overseas. \r\n"
+    - "Donations would mean so \nmuch to the children."
+    responses:
+    - responseTexts:
+      - End the conversation
       winScreen1: 1
       winScreen2: 0
       winScreen3: 0
@@ -139,40 +157,15 @@ MonoBehaviour:
       loseScreen5: 0
       loseScreen6: 0
       nextMessageIndex: 0
-  - messageTexts:
-    - "Of course! We\u2019re hosting a \nfundraiser next weekend to \nhelp children
-      in need."
-    - "Our goal is $2000, but we need \na little more help, we're only \nhalfway
-      there."
-    - "If you could donate the remaining, \nit would mean the world \nto these kids."
-    - 'You can send the money
-
-      directly to our account!'
-    responses:
     - responseTexts:
-      - Continue the conversation.
+      - Ok then. What's the account number?
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
       winScreen5: 0
       winScreen6: 0
-      loseScreen1: 0
-      loseScreen2: 1
-      loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
-      nextMessageIndex: 0
-    - responseTexts:
-      - End the conversation.
-      winScreen1: 0
-      winScreen2: 1
-      winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
-      loseScreen1: 0
+      loseScreen1: 1
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
@@ -180,13 +173,12 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "I\u2019m a volunteer who loves \ngiving back to the community."
+    - "I\u2019m a volunteer who loves giving \nback to the community.\r\n"
     - "I\u2019ve had some personal experiences \nthat motivate me to help others."
     - What are your passions?
     responses:
     - responseTexts:
-      - "That\u2019s inspiring. I\u2019m passionate \nabout education on scams."
-      - "Do you have any specific \nupcoming events?"
+      - "This sounds a bit vague. Can you share \nmore details about your organization?\r"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -201,8 +193,8 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 5
     - responseTexts:
-      - This sounds a bit vague.
-      - "Can you share more details \nabout your organization?"
+      - "That\u2019s inspiring. I\u2019m passionate \nabout education on scams.\r"
+      - "Do you have any specific \nupcoming events?\r"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -217,30 +209,31 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 6
   - messageTexts:
-    - "We\u2019re hosting a fundraiser \nnext weekend to help \nelderly in need."
-    - "We are really close to \nreaching our goal!"
-    - "If you could donate, it \nwould help out a lot! :)"
+    - "Um sure, we help children \nthat need help.\r\n"
+    - "We are currently halfway \nthrough our goal of $2000."
+    - "If you can donate the remaining \nhalf, you would be helping out\nthese children
+      a lot!"
     responses:
     - responseTexts:
-      - Continue the conversation.
+      - Ok then. What's the account number?
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
       winScreen5: 0
       winScreen6: 0
-      loseScreen1: 0
+      loseScreen1: 1
       loseScreen2: 0
-      loseScreen3: 1
+      loseScreen3: 0
       loseScreen4: 0
       loseScreen5: 0
       loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
-      - End the conversation.
-      winScreen1: 0
+      - End the conversation
+      winScreen1: 1
       winScreen2: 0
-      winScreen3: 1
+      winScreen3: 0
       winScreen4: 0
       winScreen5: 0
       winScreen6: 0
@@ -252,32 +245,31 @@ MonoBehaviour:
       loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "Um sure, we help children \nthat need help."
-    - "We are currently halfway through \nour goal of $2000."
-    - "If you can donate the remaining half, \nyou would be helping out these \nchildren
-      a lot!"
+    - "Yes, we\u2019re hosting a fundraiser next \nweekend to help elderly in need.\r\n"
+    - "We are really close to \nreaching our goal!"
+    - "If you could donate, it \nwould help out a lot! :)"
     responses:
     - responseTexts:
-      - Continue the conversation.
+      - Ok then. What's the account number?
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
       winScreen5: 0
       winScreen6: 0
-      loseScreen1: 0
+      loseScreen1: 1
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 1
+      loseScreen4: 0
       loseScreen5: 0
       loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
-      - End the conversation.
-      winScreen1: 0
+      - End the conversation
+      winScreen1: 1
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 1
+      winScreen4: 0
       winScreen5: 0
       winScreen6: 0
       loseScreen1: 0
@@ -310,10 +302,10 @@ MonoBehaviour:
     - responseTexts:
       - "I\u2019m not comfortable continuing \nthis conversation."
       winScreen1: 0
-      winScreen2: 0
+      winScreen2: 1
       winScreen3: 0
       winScreen4: 0
-      winScreen5: 1
+      winScreen5: 0
       winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
@@ -324,11 +316,11 @@ MonoBehaviour:
       nextMessageIndex: 0
   - messageTexts:
     - Sure! You can trust me.
-    - "We can talk for a bit, but maybe \nyou can support my cause and\nI can support
-      yours too? :)"
+    - "I mean we can talk for a bit, but maybe \nin the future you can support my
+      cause \nand I can support yours too? :)\r"
     responses:
     - responseTexts:
-      - Continue the conversation.
+      - Continue the conversation
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -336,19 +328,19 @@ MonoBehaviour:
       winScreen5: 0
       winScreen6: 0
       loseScreen1: 0
-      loseScreen2: 0
+      loseScreen2: 1
       loseScreen3: 0
       loseScreen4: 0
-      loseScreen5: 1
+      loseScreen5: 0
       loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
-      - End the conversation.
+      - End the conversation
       winScreen1: 0
       winScreen2: 0
-      winScreen3: 0
+      winScreen3: 1
       winScreen4: 0
-      winScreen5: 1
+      winScreen5: 0
       winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
