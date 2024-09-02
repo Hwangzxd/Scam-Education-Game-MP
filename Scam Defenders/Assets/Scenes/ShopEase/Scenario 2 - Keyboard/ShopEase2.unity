@@ -13393,6 +13393,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopEaseTutorials
       objectReference: {fileID: 0}
+    - target: {fileID: 9181321311694481218, guid: 0fcaf547d7d13ea4490bdba53bf0e617, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 626575743}
+    - target: {fileID: 9181321311694481218, guid: 0fcaf547d7d13ea4490bdba53bf0e617, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 626575744}
+    - target: {fileID: 9181321311694481218, guid: 0fcaf547d7d13ea4490bdba53bf0e617, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1403391934}
+    - target: {fileID: 9181321311694481218, guid: 0fcaf547d7d13ea4490bdba53bf0e617, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181321311694481218, guid: 0fcaf547d7d13ea4490bdba53bf0e617, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181321311694481218, guid: 0fcaf547d7d13ea4490bdba53bf0e617, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
