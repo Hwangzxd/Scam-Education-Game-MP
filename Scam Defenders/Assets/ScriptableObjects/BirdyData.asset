@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bf3e375f2042e14cbeb3fef138e8621, type: 3}
   m_Name: BirdyData
   m_EditorClassIdentifier: 
-  girlAvatar1: {fileID: 21300000, guid: b0bd38fdac923c7479d0441420bbb292, type: 3}
-  guyAvatar1: {fileID: 21300000, guid: 0e7d4d3b6483809419dbd4632d6a52aa, type: 3}
-  girlName1: Jennifer
-  guyName1: Jonathan
-  girlAvatar2: {fileID: 0}
-  guyAvatar2: {fileID: 0}
-  girlName2: 
-  guyName2: 
-  girlAvatar3: {fileID: 0}
-  guyAvatar3: {fileID: 0}
-  girlName3: 
-  guyName3: 
+  girlAvatar1: {fileID: 21300000, guid: 0340900ac3785564daf54d40e9d55e39, type: 3}
+  guyAvatar1: {fileID: 21300000, guid: 0562bd2c0835d644583010089a0fa83e, type: 3}
+  girlName1: Jenny
+  guyName1: Daxton
+  girlAvatar2: {fileID: 21300000, guid: 4faeea5286ac70c40a8941781d302de4, type: 3}
+  guyAvatar2: {fileID: 21300000, guid: 17227da32b6300041b31090e66fa3984, type: 3}
+  girlName2: Jennifer
+  guyName2: Jonathan
+  girlAvatar3: {fileID: 21300000, guid: 1a65c6c866fb46e42b5fab81d1a166e1, type: 3}
+  guyAvatar3: {fileID: 21300000, guid: 1a65c6c866fb46e42b5fab81d1a166e1, type: 3}
+  girlName3: Ethan
+  guyName3: Ethan
