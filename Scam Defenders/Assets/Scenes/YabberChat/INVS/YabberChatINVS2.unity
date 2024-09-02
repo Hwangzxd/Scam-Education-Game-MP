@@ -10558,6 +10558,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 143243029}
     m_Modifications:
+    - target: {fileID: 18741888907522244, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4545697501741322982, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
       propertyPath: m_Name
       value: Win
@@ -10581,16 +10585,29 @@ PrefabInstance:
     - target: {fileID: 6781125565301093269, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
       propertyPath: m_text
       value: "You recognized a legitimate investment offer by verifying the advisor's
-        credentials and the company's reputation. \n\nRemember to always do your
-        research before proceeding.\r\n"
+        credentials and the company's reputation.\n\n Remember to always check the
+        MAS website on whether the company offering the investment opportunity is
+        regulated. \r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 6781125565301093269, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
       propertyPath: m_fontSize
-      value: 70
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6781125565301093269, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
       propertyPath: m_fontSizeBase
-      value: 70
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027856301758688974, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 894.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027856301758688974, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027856301758688974, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8702515811508011500, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
       propertyPath: m_Pivot.x
@@ -10772,21 +10789,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4148216969575017463, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_text
-      value: "You missed recognizing a legitimate opportunity. \n\nAlways take time
-        to verify the credentials of the advisor and the investment firm's reputation
-        through official channels.\r\n"
+      value: "You missed recognizing a legitimate opportunity. Always take time to
+        verify the credentials of the advisor and the investment firm's reputation
+        through official channels. \n\nCheck the MAS website on whether the company
+        offering the investment opportunity is regulated.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 4148216969575017463, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_fontSize
-      value: 70
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4148216969575017463, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_fontSizeBase
-      value: 70
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4506914757673742265, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 882.7964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4506914757673742265, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4506914757673742265, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6685116448142720274, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_text
       value: 'Careful! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685116448142720274, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_fontSize
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685116448142720274, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8758486036666189231, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_Name

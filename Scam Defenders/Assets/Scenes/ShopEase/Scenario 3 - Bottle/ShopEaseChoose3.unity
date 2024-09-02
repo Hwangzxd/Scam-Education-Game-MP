@@ -7792,10 +7792,46 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3625879676431271821, guid: 880582dc686fb2e4bb76980ff4cfe570, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864872560892366671, guid: 880582dc686fb2e4bb76980ff4cfe570, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 915
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864872560892366671, guid: 880582dc686fb2e4bb76980ff4cfe570, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0000076293945
+      objectReference: {fileID: 0}
+    - target: {fileID: 7596936384754261291, guid: 880582dc686fb2e4bb76980ff4cfe570, type: 3}
+      propertyPath: m_text
+      value: 'Good choice!
+
+        You selected the legitimate offer.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7596936384754261291, guid: 880582dc686fb2e4bb76980ff4cfe570, type: 3}
+      propertyPath: m_fontSize
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7596936384754261291, guid: 880582dc686fb2e4bb76980ff4cfe570, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 8502212127336740773, guid: 880582dc686fb2e4bb76980ff4cfe570, type: 3}
       propertyPath: m_text
-      value: "- Verify the seller\u2019s identity on the platform \n \n- Use secure
-        in-platform payment options"
+      value: "Always check product details, seller history, and avoid deals that
+        seem too good to be true. \n\nShop online safely by shopping on well-established
+        e-commerce sites. Check the platform\u2019s Transaction Safety Rating at
+        <color=blue> go.gov.sg/mhatsr<color=#2C2C2C>."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502212127336740773, guid: 880582dc686fb2e4bb76980ff4cfe570, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502212127336740773, guid: 880582dc686fb2e4bb76980ff4cfe570, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7810,6 +7846,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 348661114880596331, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_text
+      value: 'Watch out!
+
+        You picked a scam offer. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 348661114880596331, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_fontSize
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 348661114880596331, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 430108632165612140, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -7898,10 +7948,48 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4360424929479932388, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 915
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360424929479932388, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360424929479932388, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226726804212429516, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226726804212429516, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226726804212429516, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706819830047822405, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8086739265950908158, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
       propertyPath: m_text
-      value: "- Verify the seller\u2019s identity on the platform \n \n- Be skeptical
-        of huge discount, low ratings with high sales, and generic reviews\n"
+      value: "Be skeptical of massive discounts and ensure the product name and details
+        are correct. \n\nShop online safely by shopping on well-established e-commerce
+        sites. Check the platform\u2019s Transaction Safety Rating at <color=blue>
+        go.gov.sg/mhatsr<color=#2C2C2C>.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086739265950908158, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086739265950908158, guid: 3396f799c0771cf429d4ee3fb8be60b9, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
