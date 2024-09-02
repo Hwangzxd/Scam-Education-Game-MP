@@ -26,7 +26,7 @@ public class GameOver : MonoBehaviour
         float shieldHeight = shield.GetComponent<SpriteRenderer>().bounds.size.y;
 
         // Adjust this value to control the distance the shield drops
-        float dropDistance = 1300f;
+        float dropDistance = 1330f;
 
         // Move the shield from the top to the target Y position quickly to simulate a high drop
         LeanTween.moveY(shield, shield.transform.position.y - dropDistance, 0.5f).setEase(LeanTweenType.easeInQuad).setOnComplete(() =>
