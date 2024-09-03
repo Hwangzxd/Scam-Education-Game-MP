@@ -5,7 +5,6 @@ using DentedPixel;
 
 public class CountdownTimer : MonoBehaviour
 {
-    //public static CountdownTimer instance;
     public GameObject bar;
     public GameObject timesUp;
     public int time;
@@ -13,26 +12,6 @@ public class CountdownTimer : MonoBehaviour
     public float delay = 2f;
 
     public LevelLoader levelLoader; // Reference to the LevelLoader script
-
-    //void Awake()
-    //{
-    //    // Singleton pattern to ensure only one instance exists
-    //    if (instance == null)
-    //    {
-    //        instance = this;
-    //        DontDestroyOnLoad(gameObject);
-
-    //        // Make sure timeText is not destroyed
-    //        if (bar != null)
-    //        {
-    //            DontDestroyOnLoad(bar.gameObject);
-    //        }
-    //    }
-    //    else
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
 
     public void Start()
     {

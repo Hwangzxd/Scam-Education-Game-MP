@@ -7,43 +7,11 @@ public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
 
-    //public static LevelLoader instance;
-    //public GameObject levelLoader;
-
     public float transitionTime = 1f;
     public string sceneToLoad;
 
-    //void Awake()
-    //{
-    //    // Singleton pattern to ensure only one instance exists
-    //    if (instance == null)
-    //    {
-    //        instance = this;
-    //        DontDestroyOnLoad(gameObject);
-
-    //        // Make sure timeText is not destroyed
-    //        if (levelLoader != null)
-    //        {
-    //            DontDestroyOnLoad(levelLoader.gameObject);
-    //        }
-    //    }
-    //    else
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
-
-    void Update()
-    {
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    LoadNextLevel();
-        //}
-    }
-
     public void LoadNextLevel()
     {
-        //SceneManager.LoadScene("ShopEaseSearch");
         StartCoroutine(LoadLevel());
     }
 
@@ -54,9 +22,5 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(sceneToLoad);
-
-        //yield return new WaitForSeconds(destroyDelay);
-        // Destroy the LevelLoader GameObject after the scene has loaded
-        //Destroy(levelLoader);
     }
 }
