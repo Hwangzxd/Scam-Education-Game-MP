@@ -756,7 +756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.6777954, y: 475}
+  m_AnchoredPosition: {x: 0, y: 575}
   m_SizeDelta: {x: 833.8508, y: 329.3445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137997328
@@ -779,7 +779,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INCORRECT!
+  m_text: Incorrect!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -806,8 +806,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 135
-  m_fontSizeBase: 135
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2101,7 +2101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &402314083
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3555,8 +3555,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: 0}
-  m_SizeDelta: {x: 824.7664, y: 380.392}
+  m_AnchoredPosition: {x: 0, y: 80}
+  m_SizeDelta: {x: 915, y: 380.392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &865185378
 MonoBehaviour:
@@ -3578,8 +3578,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Utility companies don\u2019t pressure for immediate payments over the
-    phone. \n\n- Always verify their contact details directly."
+  m_text: "You recognised a legitimate SMS from government agencies. \u2018gov.sg\u2019
+    is the SenderID the government uses to send SMSes. The SMS will begin with the
+    full name of the agency/service that sent the message.\n\nURLs from government
+    agencies will always begin with \u2018go.gov.sg\u2019. Be cautious about clickable
+    links sent via SMS as they may lead to phishing sites that steal your personal
+    or banking details to make unauthorised transactions."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -3606,8 +3610,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5191,8 +5195,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: 0}
-  m_SizeDelta: {x: 824.7664, y: 380.392}
+  m_AnchoredPosition: {x: 0, y: 90}
+  m_SizeDelta: {x: 885.67, y: 380.392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1158720793
 MonoBehaviour:
@@ -5214,8 +5218,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Utility companies don\u2019t pressure for immediate payments over the
-    phone. \n\n- Always verify their contact details directly."
+  m_text: "You reported a real SMS from the government. While it\u2019s important
+    to be cautious, \u2018gov.sg\u2019 is the only SenderID the government uses to
+    send SMSes. The SMS will begin with the full name of the agency/service that
+    sent the message.\n\r\nURLs from government agencies will always begin with \u2018go.gov.sg\u2019.
+    Be cautious about clickable links sent via SMS as they may lead to phishing sites
+    that steal your personal or banking details to make unauthorised transactions."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -5242,8 +5250,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8620,7 +8628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1852649041
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8909,7 +8917,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.6777954, y: 475}
+  m_AnchoredPosition: {x: 0, y: 575}
   m_SizeDelta: {x: 833.8508, y: 329.3445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899346544
@@ -8932,7 +8940,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Well Done!
+  m_text: Well done!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -8959,8 +8967,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 135
-  m_fontSizeBase: 135
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
