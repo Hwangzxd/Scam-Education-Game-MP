@@ -57,7 +57,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Settings.unity
     guid: e7c6daf3efd330b4e805d523d25b6b68
   - enabled: 1
-    path: Assets/Scenes/Geemail/GeemailEXP.unity
+    path: Assets/Scenes/Geemail/GMWinLose1.unity
     guid: 029acb4740298474993e3eacb350e56d
   - enabled: 1
     path: Assets/Scenes/Geemail/GeemailMG.unity
@@ -104,4 +104,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BirdyNet/LoveScamChatNew3.unity
     guid: 383ef9d3eeef5de4e860aa75c22278dd
+  - enabled: 1
+    path: Assets/Scenes/Geemail/Post2.unity
+    guid: 9e868b3f14a850d47935e355b8e9d35a
+  - enabled: 1
+    path: Assets/Scenes/Geemail/GMWinLose2.unity
+    guid: 4ed9e6bcb5a8d0947a7cd84cd9bfdf48
   m_configObjects: {}
