@@ -9341,6 +9341,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 976873564}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 4883234591794600406, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9472,6 +9480,11 @@ RectTransform:
 --- !u!1 &976873563 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2929319477848733730, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+  m_PrefabInstance: {fileID: 976873559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &976873564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7880952645421786745, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
   m_PrefabInstance: {fileID: 976873559}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &977161323

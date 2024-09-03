@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repValue: 0
-  initialRep: 10
+  initialRep: 50
   maxRep: 100
   minRep: 0
 --- !u!1 &21556196
@@ -17256,7 +17256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1967637104
 RectTransform:
   m_ObjectHideFlags: 0
