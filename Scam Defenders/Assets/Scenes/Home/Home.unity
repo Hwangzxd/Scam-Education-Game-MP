@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 17969857}
   m_Layer: 0
   m_Name: ReputationData
-  m_TagString: Untagged
+  m_TagString: Persistent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repValue: 0
-  initialRep: 50
+  initialRep: 10
   maxRep: 100
   minRep: 0
 --- !u!1 &21556196
@@ -6779,7 +6779,7 @@ GameObject:
   - component: {fileID: 790235916}
   m_Layer: 0
   m_Name: SceneHistory
-  m_TagString: Untagged
+  m_TagString: Persistent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11149,7 +11149,7 @@ GameObject:
   - component: {fileID: 1260199842}
   m_Layer: 0
   m_Name: GMData
-  m_TagString: Untagged
+  m_TagString: Persistent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13735,7 +13735,7 @@ GameObject:
   - component: {fileID: 1531408693}
   m_Layer: 0
   m_Name: NotifData
-  m_TagString: Untagged
+  m_TagString: Persistent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16945,7 +16945,7 @@ GameObject:
   - component: {fileID: 1893168455}
   m_Layer: 0
   m_Name: ScoreManager
-  m_TagString: Untagged
+  m_TagString: Persistent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

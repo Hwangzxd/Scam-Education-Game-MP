@@ -489,9 +489,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winScreens:
-  - {fileID: 8272418239265251306}
+  - {fileID: 665561495}
   loseScreens:
-  - {fileID: 8603877952913729615}
+  - {fileID: 1530763810}
 --- !u!4 &995843727
 Transform:
   m_ObjectHideFlags: 0
@@ -1198,11 +1198,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1548031241}
   m_SourcePrefab: {fileID: 100100000, guid: 37c63c78ffe746749a24f9f0c6c9b87a, type: 3}
---- !u!1 &8272418239265251306 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8574919379209418246, guid: 37c63c78ffe746749a24f9f0c6c9b87a, type: 3}
-  m_PrefabInstance: {fileID: 8272418239265251305}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8603877952913729614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1334,11 +1329,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2037666984}
   m_SourcePrefab: {fileID: 100100000, guid: d6065deddfe88234687483b77a7e31a5, type: 3}
---- !u!1 &8603877952913729615 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3676180817360255740, guid: d6065deddfe88234687483b77a7e31a5, type: 3}
-  m_PrefabInstance: {fileID: 8603877952913729614}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

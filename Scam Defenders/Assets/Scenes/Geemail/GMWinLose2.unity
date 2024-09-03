@@ -1272,9 +1272,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winScreens:
-  - {fileID: 1650610264}
+  - {fileID: 1289256165}
   loseScreens:
-  - {fileID: 2122415179}
+  - {fileID: 1337491650}
 --- !u!4 &995843727
 Transform:
   m_ObjectHideFlags: 0
@@ -1521,6 +1521,14 @@ PrefabInstance:
     - target: {fileID: 100051822291122331, guid: 37c63c78ffe746749a24f9f0c6c9b87a, type: 3}
       propertyPath: m_text
       value: CONGRATULATIONS!
+      objectReference: {fileID: 0}
+    - target: {fileID: 100051822291122331, guid: 37c63c78ffe746749a24f9f0c6c9b87a, type: 3}
+      propertyPath: m_fontSize
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 100051822291122331, guid: 37c63c78ffe746749a24f9f0c6c9b87a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 202992655620198472, guid: 37c63c78ffe746749a24f9f0c6c9b87a, type: 3}
       propertyPath: m_Name
@@ -1807,11 +1815,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1650610264 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8574919379209418246, guid: 37c63c78ffe746749a24f9f0c6c9b87a, type: 3}
-  m_PrefabInstance: {fileID: 1510793359}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1659505650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,11 +2124,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021227347}
   m_CullTransparentMesh: 1
---- !u!1 &2122415179 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3676180817360255740, guid: d6065deddfe88234687483b77a7e31a5, type: 3}
-  m_PrefabInstance: {fileID: 257579908}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
