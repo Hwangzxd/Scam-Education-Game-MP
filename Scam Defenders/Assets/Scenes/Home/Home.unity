@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repValue: 0
-  initialRep: 10
+  initialRep: 50
   maxRep: 100
   minRep: 0
 --- !u!1 &21556196
@@ -1771,7 +1771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &213791521
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1789,7 +1789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 3.1438, y: -2.5}
+  m_AnchoredPosition: {x: 3.1437988, y: -2.5000038}
   m_SizeDelta: {x: -3.995, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &214623398
@@ -5918,13 +5918,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yabberData: {fileID: 11400000, guid: 9611f696bb1a6df4a9dbcb1c39180e51, type: 2}
-  notifications:
-  - notification: {fileID: 1354772735}
-    ping: {fileID: 162438563}
-    blocker: {fileID: 1023109706}
+  youngNotifications:
   - notification: {fileID: 214623398}
     ping: {fileID: 1600713864}
     blocker: {fileID: 1342952604}
+  - notification: {fileID: 1354772735}
+    ping: {fileID: 162438563}
+    blocker: {fileID: 1023109706}
+  - notification: {fileID: 1402290340}
+    ping: {fileID: 1438111085}
+    blocker: {fileID: 1174237200}
+  oldNotifications:
+  - notification: {fileID: 214623398}
+    ping: {fileID: 1600713864}
+    blocker: {fileID: 1342952604}
+  - notification: {fileID: 286336188}
+    ping: {fileID: 900512354}
+    blocker: {fileID: 1466485905}
+  - notification: {fileID: 113932874}
+    ping: {fileID: 900512354}
+    blocker: {fileID: 1466485905}
+  allNotifications:
+  - notification: {fileID: 214623398}
+    ping: {fileID: 1600713864}
+    blocker: {fileID: 1342952604}
+  - notification: {fileID: 1354772735}
+    ping: {fileID: 162438563}
+    blocker: {fileID: 1023109706}
   - notification: {fileID: 1402290340}
     ping: {fileID: 1438111085}
     blocker: {fileID: 1174237200}
@@ -6729,7 +6749,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780415565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6761759bc57f11d4da7ff8a7cb483853, type: 3}
   m_Name: 
@@ -9490,7 +9510,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.32873535, y: -2.848999}
+  m_AnchoredPosition: {x: 0.32873535, y: -2.8490067}
   m_SizeDelta: {x: 10.6575, y: 5.698}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1152663300
@@ -11748,8 +11768,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000085831, y: -78}
-  m_SizeDelta: {x: 766.1476, y: 132.12}
+  m_AnchoredPosition: {x: 0.0000085831, y: -90.274}
+  m_SizeDelta: {x: 766.1476, y: 255.3275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1338308108
 MonoBehaviour:
@@ -11815,6 +11835,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reputationSlider: {fileID: 1338308108}
+  reputationSprite: {fileID: 1627044655}
+  reputationSprites:
+  - {fileID: 21300000, guid: 5fd479277f2f8d948945a6e4878209ad, type: 3}
+  - {fileID: 21300000, guid: dd1799efecc0cb34aad7019ef2627bac, type: 3}
+  - {fileID: 21300000, guid: b98b209c93ab80e44984ef69f59d25be, type: 3}
+  - {fileID: 21300000, guid: 1416836334a46a44797da83fb9c01110, type: 3}
+  - {fileID: 21300000, guid: ccbd74b09777fcd41a7db19a2c882e49, type: 3}
+  - {fileID: 21300000, guid: 0b9ebfc67e7b0be42912c24117834aee, type: 3}
+  - {fileID: 21300000, guid: d6d5b586fe5d46d479f3b17578e10154, type: 3}
+  - {fileID: 21300000, guid: dd305760606809846b6f8c2b9dd0aab2, type: 3}
+  - {fileID: 21300000, guid: cfed56b8477ffb5429ef1ea5ef6c1715, type: 3}
+  - {fileID: 21300000, guid: 8b284b8eedacad84984fa1b1231f8ca1, type: 3}
+  - {fileID: 21300000, guid: 85a299b32da14a448a9ffb56e62568f8, type: 3}
 --- !u!1 &1342952604
 GameObject:
   m_ObjectHideFlags: 0
@@ -14507,7 +14540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 3.6012878, y: -5.2959995}
+  m_AnchoredPosition: {x: 3.6012573, y: -5.2959976}
   m_SizeDelta: {x: 7.2026, y: 10.592}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1627044655
@@ -14523,7 +14556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18280,9 +18313,9 @@ SceneRoots:
   - {fileID: 780415566}
   - {fileID: 140811090}
   - {fileID: 1724029753}
-  - {fileID: 1531408692}
-  - {fileID: 790235917}
   - {fileID: 1206509992}
+  - {fileID: 790235917}
+  - {fileID: 1531408692}
   - {fileID: 669583949}
   - {fileID: 17969856}
   - {fileID: 1260199843}

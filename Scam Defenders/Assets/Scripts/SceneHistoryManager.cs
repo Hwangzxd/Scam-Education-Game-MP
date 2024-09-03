@@ -14,7 +14,7 @@ public class SceneHistoryManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += OnSceneLoaded;  // Register the callback
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -37,7 +37,6 @@ public class SceneHistoryManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Push current scene to stack if it's not already in history
         string currentSceneName = scene.name;
         if (sceneHistory.Count == 0 || sceneHistory.Peek() != currentSceneName)
         {
@@ -47,11 +46,9 @@ public class SceneHistoryManager : MonoBehaviour
 
     public void Back()
     {
-        if (sceneHistory.Count > 1)  // Ensure there's a previous scene to go back to
+        if (sceneHistory.Count > 1)
         {
-            // Pop the current scene
             sceneHistory.Pop();
-            // Load the previous scene
             string previousScene = sceneHistory.Peek();
             SceneManager.LoadScene(previousScene);
         }
@@ -59,5 +56,14 @@ public class SceneHistoryManager : MonoBehaviour
         {
             Debug.LogWarning("No previous scene in history.");
         }
+    }
+
+    public void ResetHistory()
+    {
+        sceneHistory.Clear();
+
+        // Add the current scene to the history after reset
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        sceneHistory.Push(currentSceneName);
     }
 }

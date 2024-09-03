@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BackButton : MonoBehaviour
 {
@@ -8,6 +9,20 @@ public class BackButton : MonoBehaviour
     public void Start()
     {
         backButton = GetComponent<Button>();
-        backButton.onClick.AddListener(SceneHistoryManager.Instance.Back);
+        backButton.onClick.AddListener(OnBackButtonPressed);
+    }
+
+    private void OnBackButtonPressed()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        if (currentSceneName == "Home")
+        {
+            SceneHistoryManager.Instance.ResetHistory();
+        }
+        else
+        {
+            SceneHistoryManager.Instance.Back();
+        }
     }
 }

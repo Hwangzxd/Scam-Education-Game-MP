@@ -6,11 +6,15 @@ using UnityEngine.SceneManagement;
 public class NotificationManager : MonoBehaviour
 {
     public YabberData yabberData;
-    public Notification[] notifications; // Array of Notification objects
+    public Notification[] youngNotifications; // Array for young notifications
+    public Notification[] oldNotifications;   // Array for old notifications
+    public Notification[] allNotifications;   // Array for all notifications
     public GameObject INVS;
     public GameObject scamCall;
 
     private bool isNotificationActive = false;
+    private List<Notification> currentNotifications; // Array to use based on age
+    private bool allNotificationsUsed = false; // Flag to check if all notifications have been used
 
     private void Start()
     {
@@ -18,17 +22,6 @@ public class NotificationManager : MonoBehaviour
         ResetBlockedApps(); // Reset blocked apps when the scene starts
         UpdateNotifs();
     }
-
-    void Update()
-    {
-
-        if (INVS != null && INVS.activeInHierarchy)
-        {
-            yabberData.isINVSClicked = true;
-            //Debug.Log("INVS is active and isINVSClicked set to true."); // Debug log to confirm the condition is met
-        }
-    }
-
 
     private void OnDestroy()
     {
@@ -43,25 +36,36 @@ public class NotificationManager : MonoBehaviour
     private void UpdateNotifs()
     {
         string currentScene = SceneManager.GetActiveScene().name;
-
-        NotifData data = NotifData.Instance;
-
-        if (data == null)
+        if (NotifData.Instance == null)
         {
             Debug.LogError("NotifData instance is missing.");
             return;
         }
 
+        // Get the player's age index from SelectionManager
+        SelectionManager selectionManager = FindObjectOfType<SelectionManager>();
+        if (selectionManager == null)
+        {
+            Debug.LogError("SelectionManager instance is missing.");
+            return;
+        }
+
+        int playerScenario = selectionManager.GetPlayerScenario();
+
+        // Select notifications based on age
+        currentNotifications = playerScenario == 1 ? new List<Notification>(youngNotifications) : new List<Notification>(oldNotifications);
+        allNotificationsUsed = false; // Reset the flag
+
         if (currentScene == "Home")
         {
-            if (!isNotificationActive && !IsScamCallActive()) // Check if the scam call is active
+            if (!isNotificationActive && !IsScamCallActive())
             {
-                StartCoroutine(ShowRandomNotifWithDelay()); // Add delay before showing notification
+                StartCoroutine(ShowRandomNotifWithDelay());
             }
         }
         else
         {
-            HideAllNotifs(); // Hide all notifications in non-Home scenes
+            HideAllNotifs();
         }
     }
 
@@ -79,19 +83,20 @@ public class NotificationManager : MonoBehaviour
         return isActive;
     }
 
-
     private IEnumerator ShowRandomNotifWithDelay()
     {
-        yield return new WaitForSeconds(2f); // Wait for 2 seconds before showing the notification
+        yield return new WaitForSeconds(2f);
         ShowRandomNotif();
     }
 
     private void ShowRandomNotif()
     {
-        if (notifications.Length == 0)
+        // Check if we need to switch to all notifications
+        if (currentNotifications.Count == 0 || allNotificationsUsed)
         {
-            Debug.LogWarning("No notifications assigned.");
-            return;
+            Debug.Log("Switching to all notifications.");
+            currentNotifications = new List<Notification>(allNotifications);
+            allNotificationsUsed = true; // Mark that we've started showing all notifications
         }
 
         List<int> availableNotifs = GetAvailableNotifs();
@@ -119,10 +124,9 @@ public class NotificationManager : MonoBehaviour
     {
         List<int> availableNotifs = new List<int>();
 
-        for (int i = 0; i < notifications.Length; i++)
+        for (int i = 0; i < currentNotifications.Count; i++)
         {
-            // Check if the notif is inactive & not blocked by NotifData
-            if (!NotifData.Instance.shownNotifs.Contains(i) && !notifications[i].notification.activeSelf)
+            if (!NotifData.Instance.shownNotifs.Contains(i) && !currentNotifications[i].notification.activeSelf)
             {
                 availableNotifs.Add(i);
             }
@@ -133,53 +137,49 @@ public class NotificationManager : MonoBehaviour
 
     private void ActivateNotification(int index)
     {
-        if (notifications[index].notification != null)
+        if (currentNotifications[index].notification != null)
         {
-            notifications[index].notification.SetActive(true);
-            isNotificationActive = true; // Indicate that a notification is currently active
+            currentNotifications[index].notification.SetActive(true);
+            isNotificationActive = true;
         }
 
-        BlockAppsExcept(index); // Block all apps except the chosen one
+        BlockAppsExcept(index);
 
-        if (notifications[index].ping != null)
+        if (currentNotifications[index].ping != null)
         {
-            notifications[index].ping.SetActive(true);
+            currentNotifications[index].ping.SetActive(true);
         }
 
-        if (notifications[index].blocker != null)
+        if (currentNotifications[index].blocker != null)
         {
-            notifications[index].blocker.SetActive(false); // Disable the blocker for the randomly chosen notification
+            currentNotifications[index].blocker.SetActive(false);
         }
 
-        StartCoroutine(DeactivateNotificationAfterDelay(index)); // Ensure the notification is deactivated after a period
+        StartCoroutine(DeactivateNotificationAfterDelay(index));
     }
 
     private IEnumerator DeactivateNotificationAfterDelay(int index)
     {
-        // Check if the notification is related to a scam call
-        if (notifications[index].notification == scamCall)
+        if (currentNotifications[index].notification == scamCall)
         {
-            // If it's a scam call, do not apply the delay or deactivate
             Debug.Log("Scam call notification detected. Skipping deactivation delay.");
-            yield break; // Exit the coroutine early without deactivating
+            yield break;
         }
 
-        // Apply delay for non-scam call notifications
-        yield return new WaitForSeconds(10f); // Adjust the delay as needed
+        yield return new WaitForSeconds(10f);
 
-        if (notifications[index].notification != null)
+        if (currentNotifications[index].notification != null)
         {
-            notifications[index].notification.SetActive(false);
+            currentNotifications[index].notification.SetActive(false);
         }
 
-        isNotificationActive = false; // Indicate that no notification is currently active
-        UpdateNotifs(); // Check for the next notification
+        isNotificationActive = false;
+        UpdateNotifs();
     }
-
 
     private void HideAllNotifs()
     {
-        foreach (var notif in notifications)
+        foreach (var notif in currentNotifications)
         {
             if (notif.notification != null)
             {
@@ -200,17 +200,17 @@ public class NotificationManager : MonoBehaviour
 
     private void BlockAppsExcept(int indexToKeep)
     {
-        for (int i = 0; i < notifications.Length; i++)
+        for (int i = 0; i < currentNotifications.Count; i++)
         {
             if (i != indexToKeep)
             {
-                if (notifications[i].ping != null)
+                if (currentNotifications[i].ping != null)
                 {
-                    notifications[i].ping.SetActive(false); // Block the app by deactivating its ping
+                    currentNotifications[i].ping.SetActive(false);
                 }
-                if (notifications[i].blocker != null)
+                if (currentNotifications[i].blocker != null)
                 {
-                    notifications[i].blocker.SetActive(true); // Activate blocker for other apps
+                    currentNotifications[i].blocker.SetActive(true);
                 }
             }
         }
@@ -218,23 +218,22 @@ public class NotificationManager : MonoBehaviour
 
     private void ResetBlockedApps()
     {
-        // Reset all blockers
-        for (int i = 0; i < notifications.Length; i++)
+        for (int i = 0; i < allNotifications.Length; i++)
         {
-            if (notifications[i].blocker != null)
+            if (allNotifications[i].blocker != null)
             {
-                notifications[i].blocker.SetActive(true);
+                allNotifications[i].blocker.SetActive(true);
             }
         }
     }
 
     public void OnAppClicked(int appIndex)
     {
-        if (appIndex >= 0 && appIndex < notifications.Length)
+        if (appIndex >= 0 && appIndex < currentNotifications.Count)
         {
-            if (notifications[appIndex].ping != null)
+            if (currentNotifications[appIndex].ping != null)
             {
-                notifications[appIndex].ping.SetActive(false); // Deactivate the ping when the app is clicked
+                currentNotifications[appIndex].ping.SetActive(false);
             }
         }
     }
@@ -247,7 +246,7 @@ public class NotificationManager : MonoBehaviour
             return;
         }
 
-        yabberData.isINVSClicked = true; // Update the GOISClicked boolean
+        yabberData.isINVSClicked = true;
         Debug.Log("INVS notification clicked.");
     }
 
@@ -259,7 +258,7 @@ public class NotificationManager : MonoBehaviour
             return;
         }
 
-        yabberData.isGOISClicked = true; // Update the GOISClicked boolean
+        yabberData.isGOISClicked = true;
         Debug.Log("GOIS notification clicked.");
     }
 }

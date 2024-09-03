@@ -2980,6 +2980,8 @@ MonoBehaviour:
   guides:
   - {fileID: 1658148728}
   - {fileID: 1004925965}
+  shopeaseSkipBtn: {fileID: 0}
+  shopeaseScenes: []
 --- !u!4 &590755862
 Transform:
   m_ObjectHideFlags: 0
@@ -4984,7 +4986,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f312684242cf5d14791fe370a7518183, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 33d8688c4c567fd4abd0dea7c4d3ff5d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8711,15 +8713,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444956920}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 540, y: 1200, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 994236484}
   - {fileID: 10723812}
   - {fileID: 590755862}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1614238257}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1451561283
 GameObject:
@@ -9537,6 +9539,7 @@ RectTransform:
   - {fileID: 170816956}
   - {fileID: 318773581}
   - {fileID: 1994731107}
+  - {fileID: 1444956921}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -12205,6 +12208,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1704442320}
     m_Modifications:
+    - target: {fileID: 18741888907522244, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4545697501741322982, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
       propertyPath: m_Name
       value: Win
@@ -12217,11 +12224,20 @@ PrefabInstance:
       propertyPath: m_text
       value: You did well!
       objectReference: {fileID: 0}
+    - target: {fileID: 5693812210292863933, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_fontSize
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5693812210292863933, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 6781125565301093269, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
       propertyPath: m_text
       value: "By verifying the investment's legitimacy, you protected yourself from
         a scam. \n\nAlways check with trusted financial advisors and official sources
-        before investing.\r\n"
+        before investing. \n\nCheck the MAS website on whether the company offering
+        the investment opportunity is regulated. "
       objectReference: {fileID: 0}
     - target: {fileID: 6781125565301093269, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
       propertyPath: m_fontSize
@@ -12230,6 +12246,18 @@ PrefabInstance:
     - target: {fileID: 6781125565301093269, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
       propertyPath: m_fontSizeBase
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027856301758688974, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 861.9789
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027856301758688974, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027856301758688974, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8702515811508011500, guid: 2aec807e42439234e8ab33724c360bd0, type: 3}
       propertyPath: m_Pivot.x
@@ -12412,8 +12440,9 @@ PrefabInstance:
     - target: {fileID: 4148216969575017463, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_text
       value: "You missed signs of a scam and risked losing money. Unrealistic returns
-        and lack of transparency are major red flags.\n \nAlways verify investment
-        offers with trusted sources.\r\n"
+        and lack of transparency are major red flags. Always verify investment offers
+        with trusted sources.\n\nCheck the MAS website on whether the company offering
+        the investment opportunity is regulated. \n"
       objectReference: {fileID: 0}
     - target: {fileID: 4148216969575017463, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_fontSize
@@ -12423,9 +12452,29 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 4506914757673742265, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 868.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4506914757673742265, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4506914757673742265, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6685116448142720274, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_text
       value: 'Be cautious! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685116448142720274, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_fontSize
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685116448142720274, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8758486036666189231, guid: afc4f41a84f0b4b4fb17ba7fc9a0de55, type: 3}
       propertyPath: m_Name
@@ -12452,6 +12501,5 @@ SceneRoots:
   - {fileID: 73479316}
   - {fileID: 1912219737}
   - {fileID: 1614238257}
-  - {fileID: 1444956921}
   - {fileID: 312095368}
   - {fileID: 59163404}
