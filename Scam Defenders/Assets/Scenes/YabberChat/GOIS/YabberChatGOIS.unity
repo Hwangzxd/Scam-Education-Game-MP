@@ -2563,8 +2563,14 @@ MonoBehaviour:
   guides:
   - {fileID: 1834379042}
   - {fileID: 1563801523}
-  shopeaseSkipBtn: {fileID: 0}
-  shopeaseScenes: []
+  shopeaseSkipBtn: {fileID: 1478920738}
+  shopeaseScenes:
+  - YabberChatGOIS
+  - YabberChatGOIS1
+  - YabberChatGOIS2
+  - YabberChatINVS
+  - YabberChatINVS1
+  - YabberChatINVS2
 --- !u!4 &505640262
 Transform:
   m_ObjectHideFlags: 0
@@ -6763,6 +6769,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473484859}
   m_CullTransparentMesh: 1
+--- !u!1 &1478920738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6612482399878192436, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+  m_PrefabInstance: {fileID: 3485390252635160349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1480404637
 GameObject:
   m_ObjectHideFlags: 0
@@ -10068,6 +10079,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1614238257}
     m_Modifications:
+    - target: {fileID: 2220357752012849474, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220357752012849474, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220357752012849474, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220357752012849474, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220357752012849474, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891231620237910692, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891231620237910692, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982832259373428163, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982832259373428163, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982832259373428163, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982832259373428163, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982832259373428163, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982832259373428163, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4961017187248399881, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10160,6 +10223,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 505640261}
+    - target: {fileID: 8728793010874742847, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

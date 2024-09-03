@@ -440,6 +440,8 @@ MonoBehaviour:
   - {fileID: 2000182258}
   - {fileID: 695413179}
   - {fileID: 1326077315}
+  shopeaseSkipBtn: {fileID: 0}
+  shopeaseScenes: []
 --- !u!1 &135692975
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,7 +2602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &695413180
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4836,7 +4838,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1221464196
 MonoBehaviour:
   m_ObjectHideFlags: 0

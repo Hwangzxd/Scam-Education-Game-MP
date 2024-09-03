@@ -1426,6 +1426,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6821800121823833918, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
   m_PrefabInstance: {fileID: 493903167}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &493903169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2929319477848733730, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+  m_PrefabInstance: {fileID: 493903167}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &527174236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,8 +1463,11 @@ MonoBehaviour:
   guides:
   - {fileID: 1010234507}
   - {fileID: 774945322}
-  shopeaseSkipBtn: {fileID: 0}
-  shopeaseScenes: []
+  shopeaseSkipBtn: {fileID: 493903169}
+  shopeaseScenes:
+  - GeemailMG
+  - Post2
+  - JobScamGroup
 --- !u!4 &527174238
 Transform:
   m_ObjectHideFlags: 0

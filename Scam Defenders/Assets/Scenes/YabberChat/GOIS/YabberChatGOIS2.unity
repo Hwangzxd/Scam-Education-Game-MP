@@ -1385,55 +1385,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260479895}
   m_CullTransparentMesh: 1
---- !u!1 &265198526
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 265198528}
-  - component: {fileID: 265198527}
-  m_Layer: 0
-  m_Name: TutorialManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &265198527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 265198526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1cd6f6ee70bf5f4e9f4684cd977756b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guides:
-  - {fileID: 506950304}
-  - {fileID: 177832894}
-  shopeaseSkipBtn: {fileID: 0}
-  shopeaseScenes: []
---- !u!4 &265198528
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 265198526}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &285698829
 GameObject:
   m_ObjectHideFlags: 0
@@ -3714,7 +3665,7 @@ PrefabInstance:
     - target: {fileID: 4961017187248399881, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 265198527}
+      objectReference: {fileID: 0}
     - target: {fileID: 4961017187248399881, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnableNextGuide
@@ -3806,7 +3757,7 @@ PrefabInstance:
     - target: {fileID: 6443747032735923928, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 265198527}
+      objectReference: {fileID: 0}
     - target: {fileID: 6443747032735923928, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnableNextGuide
@@ -3819,6 +3770,11 @@ PrefabInstance:
 --- !u!224 &845639968 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5992448966245022842, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+  m_PrefabInstance: {fileID: 845639967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &845639969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6612482399878192436, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
   m_PrefabInstance: {fileID: 845639967}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &865185376
@@ -8983,6 +8939,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899346542}
   m_CullTransparentMesh: 1
+--- !u!1 &1951204156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1951204158}
+  - component: {fileID: 1951204157}
+  m_Layer: 0
+  m_Name: TutorialManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1951204157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951204156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1cd6f6ee70bf5f4e9f4684cd977756b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guides:
+  - {fileID: 506950304}
+  - {fileID: 177832894}
+  shopeaseSkipBtn: {fileID: 845639969}
+  shopeaseScenes:
+  - YabberChatGOIS
+  - YabberChatGOIS1
+  - YabberChatGOIS2
+  - YabberChatINVS
+  - YabberChatINVS1
+  - YabberChatINVS2
+--- !u!4 &1951204158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951204156}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1957823594
 GameObject:
   m_ObjectHideFlags: 0
@@ -10169,4 +10180,4 @@ SceneRoots:
   - {fileID: 10723812}
   - {fileID: 59163404}
   - {fileID: 80914911}
-  - {fileID: 265198528}
+  - {fileID: 1951204158}

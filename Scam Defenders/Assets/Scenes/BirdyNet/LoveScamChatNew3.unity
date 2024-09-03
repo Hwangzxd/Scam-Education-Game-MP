@@ -9469,6 +9469,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6821800121823833918, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
   m_PrefabInstance: {fileID: 976873559}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &976873563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2929319477848733730, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+  m_PrefabInstance: {fileID: 976873559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &977161323
 GameObject:
   m_ObjectHideFlags: 0
@@ -18778,8 +18783,11 @@ MonoBehaviour:
   guides:
   - {fileID: 976873561}
   - {fileID: 976873560}
-  shopeaseSkipBtn: {fileID: 0}
-  shopeaseScenes: []
+  shopeaseSkipBtn: {fileID: 976873563}
+  shopeaseScenes:
+  - LoveScamChatNew1
+  - LoveScamChatNew2
+  - LoveScamChatNew3
 --- !u!4 &1991884259
 Transform:
   m_ObjectHideFlags: 0
