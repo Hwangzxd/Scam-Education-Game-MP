@@ -8735,6 +8735,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605615767}
   m_CullTransparentMesh: 1
+--- !u!1 &624375891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1143656566864025738, guid: 0fcaf547d7d13ea4490bdba53bf0e617, type: 3}
+  m_PrefabInstance: {fileID: 1072711509}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &626575743 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6620905875345845892, guid: 50e7c4bd207bb594bbb6103726364584, type: 3}
@@ -17874,7 +17879,7 @@ MonoBehaviour:
   - {fileID: 1072711513}
   - {fileID: 1072711512}
   - {fileID: 1072711511}
-  shopeaseSkipBtn: {fileID: 1838382399}
+  shopeaseSkipBtn: {fileID: 624375891}
   shopeaseScenes:
   - ShopEase
   - ShopEase2

@@ -17944,7 +17944,7 @@ MonoBehaviour:
   - {fileID: 1124831204}
   - {fileID: 1124831203}
   - {fileID: 1124831202}
-  shopeaseSkipBtn: {fileID: 1822250830}
+  shopeaseSkipBtn: {fileID: 1932013736}
   shopeaseScenes:
   - ShopEase
   - ShopEase2
@@ -25780,6 +25780,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925875661}
   m_CullTransparentMesh: 1
+--- !u!1 &1932013736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1143656566864025738, guid: 0fcaf547d7d13ea4490bdba53bf0e617, type: 3}
+  m_PrefabInstance: {fileID: 1124831200}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1932254552
 GameObject:
   m_ObjectHideFlags: 0
