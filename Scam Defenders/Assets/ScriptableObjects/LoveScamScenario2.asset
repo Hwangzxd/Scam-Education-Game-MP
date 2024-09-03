@@ -25,31 +25,18 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 1
     - responseTexts:
-      - "I\u2019m curious, but I\u2019d like to know \nmore about you before \ndiscussing
-        any causes.\r\n"
+      - "I\u2019d like to know more about you \nbefore discussing any causes.\r\n"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 4
     - responseTexts:
       - "I\u2019m a bit skeptical."
@@ -57,15 +44,9 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 7
   - messageTexts:
     - "I\u2019m involved with an organization \nthat supports children in need."
@@ -77,30 +58,18 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 2
     - responseTexts:
       - No, but I want to try!
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 2
   - messageTexts:
     - "That\u2019s amazing!\r"
@@ -113,30 +82,18 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 1
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - "Can I contribute my time instead?\r"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 3
   - messageTexts:
     - "I guess it is hard as we \nare overseas. \r\n"
@@ -147,30 +104,18 @@ MonoBehaviour:
       winScreen1: 1
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - Ok then. What's the account number?
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 1
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - "I\u2019m a volunteer who loves giving \nback to the community.\r\n"
@@ -178,19 +123,14 @@ MonoBehaviour:
     - What are your passions?
     responses:
     - responseTexts:
-      - "This sounds a bit vague. Can you share \nmore details about your organization?\r"
+      - "This sounds a bit vague.\r"
+      - "Can you share more details \nabout your organization?\r"
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 5
     - responseTexts:
       - "That\u2019s inspiring. I\u2019m passionate \nabout education on scams.\r"
@@ -198,15 +138,9 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 6
   - messageTexts:
     - "Um sure, we help children \nthat need help.\r\n"
@@ -219,33 +153,21 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 1
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - End the conversation
       winScreen1: 1
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "Yes, we\u2019re hosting a fundraiser next \nweekend to help elderly in need.\r\n"
+    - "Yes, we\u2019re hosting a fundraiser \nnext weekend to help elderly \nin need.\r\n"
     - "We are really close to \nreaching our goal!"
     - "If you could donate, it \nwould help out a lot! :)"
     responses:
@@ -254,30 +176,18 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 1
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - End the conversation
       winScreen1: 1
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - I understand your concern.
@@ -289,30 +199,18 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 8
     - responseTexts:
       - "I\u2019m not comfortable continuing \nthis conversation."
       winScreen1: 0
       winScreen2: 1
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - Sure! You can trust me.
@@ -324,28 +222,16 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 1
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - End the conversation
       winScreen1: 0
       winScreen2: 0
       winScreen3: 1
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0

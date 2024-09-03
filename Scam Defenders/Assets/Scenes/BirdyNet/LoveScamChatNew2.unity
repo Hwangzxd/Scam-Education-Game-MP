@@ -8742,14 +8742,9 @@ MonoBehaviour:
   - {fileID: 1189321190}
   - {fileID: 1189321189}
   - {fileID: 1189321188}
-  - {fileID: 1189321187}
-  - {fileID: 1189321186}
   loseScreens:
   - {fileID: 1946028947}
   - {fileID: 1946028946}
-  - {fileID: 1946028945}
-  - {fileID: 1946028944}
-  - {fileID: 1946028943}
 --- !u!1 &858079664
 GameObject:
   m_ObjectHideFlags: 0

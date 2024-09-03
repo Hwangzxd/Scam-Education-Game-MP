@@ -25,15 +25,9 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 1
     - responseTexts:
       - "Let's get to know \neach other more."
@@ -41,15 +35,9 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 2
     - responseTexts:
       - "Can't really see your \nface in the photos."
@@ -57,15 +45,9 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 4
   - messageTexts:
     - Great!
@@ -76,30 +58,18 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 1
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - "Actually, let's continue on \nChatterNet instead!"
       winScreen1: 1
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
     - "I'm an entrepreneur who \nloves traveling."
@@ -110,15 +80,9 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 3
   - messageTexts:
     - I run an online business.
@@ -129,33 +93,21 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 1
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - Continue conversation on platform
       winScreen1: 1
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0
   - messageTexts:
-    - "Haha would love to but ChatterNet \ndoesn't allow me to.\r"
+    - "Haha would love to but \nChatterNet doesn't allow me to.\r"
     - "Want to text instead? \r"
     responses:
     - responseTexts:
@@ -163,28 +115,16 @@ MonoBehaviour:
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 1
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0
     - responseTexts:
       - Continue conversation on platform
       winScreen1: 1
       winScreen2: 0
       winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
       loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
       nextMessageIndex: 0

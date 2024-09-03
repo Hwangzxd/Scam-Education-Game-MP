@@ -27,14 +27,8 @@ public class ChatResponse
     public bool winScreen1;
     public bool winScreen2;
     public bool winScreen3;
-    public bool winScreen4;
-    public bool winScreen5;
-    public bool winScreen6;
     public bool loseScreen1;
     public bool loseScreen2;
     public bool loseScreen3;
-    public bool loseScreen4;
-    public bool loseScreen5;
-    public bool loseScreen6;
     public int nextMessageIndex; // Index of the next message in the scenario
 }

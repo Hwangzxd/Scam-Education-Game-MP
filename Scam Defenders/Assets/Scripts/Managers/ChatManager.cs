@@ -88,42 +88,6 @@ public class ChatManager : MonoBehaviour
                 break;
         }
     }
-    //void DisplayMessage(int messageIndex)
-    //{
-    //    if (messageIndex >= currentScenario.messages.Count)
-    //    {
-    //        // End of scenario
-    //        return;
-    //    }
-
-    //    ChatMessage message = currentScenario.messages[messageIndex];
-    //    GameObject messageGO = Instantiate(scammerMessagePrefab, chatContent);
-    //    TMP_Text messageText = messageGO.GetComponentInChildren<TMP_Text>();
-    //    messageText.text = message.messageText;
-
-    //    // LeanTween animation
-    //    messageGO.transform.localScale = Vector3.zero;
-    //    LeanTween.scale(messageGO, Vector3.one, 0.5f).setEaseOutBounce();
-
-    //    // Force layout rebuild
-    //    LayoutRebuilder.ForceRebuildLayoutImmediate(chatContent.GetComponent<RectTransform>());
-
-    //    // Scroll to bottom
-    //    StartCoroutine(ScrollToBottom());
-
-    //    foreach (ChatResponse response in message.responses)
-    //    {
-    //        GameObject responseGO = Instantiate(responseButtonPrefab, responseContent);
-    //        TMP_Text responseText = responseGO.GetComponentInChildren<TMP_Text>();
-    //        responseText.text = response.responseText;
-
-    //        Button responseButton = responseGO.GetComponentInChildren<Button>();
-    //        responseButton.onClick.AddListener(() => OnResponseSelected(response));
-    //        activeResponseButtons.Add(responseGO); // Track the active response button
-    //    }
-
-    //    currentMessageIndex++;
-    //}
 
     void DisplayMessage(int messageIndex)
     {
@@ -179,100 +143,6 @@ public class ChatManager : MonoBehaviour
         currentMessageIndex++;
     }
 
-    //void OnResponseSelected(ChatResponse response)
-    //{
-    //    // Clear old responses
-    //    foreach (GameObject button in activeResponseButtons)
-    //    {
-    //        Destroy(button);
-    //    }
-    //    activeResponseButtons.Clear();
-
-    //    // Add player message only if it's not a final choice
-    //    if (!response.winScreen1 && !response.winScreen2 && !response.winScreen3 && !response.winScreen4 
-    //        && !response.loseScreen1 && !response.loseScreen2 && !response.loseScreen3 && !response.loseScreen4)
-    //    {
-    //        // Add player message
-    //        GameObject playerMessageGO = Instantiate(playerMessagePrefab, chatContent);
-    //        TMP_Text playerMessageText = playerMessageGO.GetComponentInChildren<TMP_Text>();
-    //        playerMessageText.text = response.responseText;
-
-    //        // Force layout rebuild
-    //        LayoutRebuilder.ForceRebuildLayoutImmediate(chatContent.GetComponent<RectTransform>());
-
-    //        // LeanTween animation
-    //        playerMessageGO.transform.localScale = Vector3.zero;
-    //        LeanTween.scale(playerMessageGO, Vector3.one, 0.5f).setEaseOutBounce();
-
-    //        // Force layout rebuild
-    //        LayoutRebuilder.ForceRebuildLayoutImmediate(chatContent.GetComponent<RectTransform>());
-
-    //        // Scroll to bottom
-    //        StartCoroutine(ScrollToBottom());
-    //    }
-
-    //    if (response.winScreen1)
-    //    {
-    //        // Display winning screen
-    //        Debug.Log("Correct choice");
-    //        winScreens[0].SetActive(true);
-    //    }
-    //    else if (response.winScreen2)
-    //    {
-    //        // Display losing screen
-    //        Debug.Log("Wrong choice");
-    //        winScreens[1].SetActive(true);
-    //    }
-    //    else if (response.winScreen3)
-    //    {
-    //        // Display losing screen
-    //        Debug.Log("Wrong choice");
-    //        winScreens[2].SetActive(true);
-    //    }
-    //    else if (response.winScreen4)
-    //    {
-    //        // Display losing screen
-    //        Debug.Log("Wrong choice");
-    //        winScreens[3].SetActive(true);
-    //    }
-    //    else if (response.loseScreen1)
-    //    {
-    //        // Display losing screen
-    //        Debug.Log("Wrong choice");
-    //        loseScreens[0].SetActive(true);
-    //    }
-    //    else if (response.loseScreen2)
-    //    {
-    //        // Display losing screen
-    //        Debug.Log("Wrong choice");
-    //        loseScreens[1].SetActive(true);
-    //    }
-    //    else if (response.loseScreen3)
-    //    {
-    //        // Display losing screen
-    //        Debug.Log("Wrong choice");
-    //        loseScreens[2].SetActive(true);
-    //    }
-    //    else if (response.loseScreen4)
-    //    {
-    //        // Display losing screen
-    //        Debug.Log("Wrong choice");
-    //        loseScreens[3].SetActive(true);
-    //    }
-    //    else
-    //    {
-    //        // Start coroutine to display the NPC message after a delay
-    //        if (currentMessageIndex > 0) // Skip typing animation for the first message
-    //        {
-    //            StartCoroutine(DisplayTypingAnimationThenMessage(response.nextMessageIndex, 1.5f)); // 1.5 seconds delay
-    //        }
-    //        else
-    //        {
-    //            StartCoroutine(DisplayNextMessageWithDelay(response.nextMessageIndex, 1.5f)); // 1.5 seconds delay
-    //        }
-    //    }        
-    //}
-
     void OnResponseSelected(ChatResponse response)
     {
         // Clear old responses
@@ -295,15 +165,15 @@ public class ChatManager : MonoBehaviour
         if (response.winScreen1) winScreens[0].SetActive(true);
         else if (response.winScreen2) winScreens[1].SetActive(true);
         else if (response.winScreen3) winScreens[2].SetActive(true);
-        else if (response.winScreen4) winScreens[3].SetActive(true);
-        else if (response.winScreen5) winScreens[4].SetActive(true);
-        else if (response.winScreen6) winScreens[5].SetActive(true);
+        //else if (response.winScreen4) winScreens[3].SetActive(true);
+        //else if (response.winScreen5) winScreens[4].SetActive(true);
+        //else if (response.winScreen6) winScreens[5].SetActive(true);
         else if (response.loseScreen1) loseScreens[0].SetActive(true);
         else if (response.loseScreen2) loseScreens[1].SetActive(true);
         else if (response.loseScreen3) loseScreens[2].SetActive(true);
-        else if (response.loseScreen4) loseScreens[3].SetActive(true);
-        else if (response.loseScreen5) loseScreens[4].SetActive(true);
-        else if (response.loseScreen6) loseScreens[5].SetActive(true);
+        //else if (response.loseScreen4) loseScreens[3].SetActive(true);
+        //else if (response.loseScreen5) loseScreens[4].SetActive(true);
+        //else if (response.loseScreen6) loseScreens[5].SetActive(true);
         else
             return false; // No ending screen displayed, continue normally
 
