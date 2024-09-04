@@ -6221,13 +6221,45 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4152929451281290368, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_text
+      value: Tap to start
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 634707277}
     - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1991884258}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnTutorialSkipped
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TutorialManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4883234591794600406, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -8768,6 +8800,7 @@ MonoBehaviour:
   - {fileID: 1946028945}
   - {fileID: 1946028944}
   - {fileID: 1946028943}
+  isPaused: 0
 --- !u!1 &858079664
 GameObject:
   m_ObjectHideFlags: 0
@@ -18794,6 +18827,7 @@ MonoBehaviour:
   - LoveScamChatNew1
   - LoveScamChatNew2
   - LoveScamChatNew3
+  chatManager: {fileID: 843664558}
 --- !u!4 &1991884259
 Transform:
   m_ObjectHideFlags: 0

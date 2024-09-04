@@ -9,8 +9,12 @@ public class TutorialManager : MonoBehaviour
     public GameObject shopeaseSkipBtn;
     public string[] shopeaseScenes;
 
+    public ChatManager chatManager;
+
     void Start()
     {
+        chatManager.PauseChat();
+
         Debug.Log("Start method called. isTutSeen: " + isTutSeen);
 
         string currentSceneName = SceneManager.GetActiveScene().name;
@@ -72,6 +76,15 @@ public class TutorialManager : MonoBehaviour
             {
                 guides[currentGuideIndex].SetActive(true);
             }
+            else
+            {
+                chatManager.ResumeChat();
+            }
         }
+    }
+
+    public void OnTutorialSkipped()
+    {
+        chatManager.ResumeChat();
     }
 }

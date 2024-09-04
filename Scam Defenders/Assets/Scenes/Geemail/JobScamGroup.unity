@@ -1304,13 +1304,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2087930695}
     m_Modifications:
+    - target: {fileID: 4152929451281290368, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_text
+      value: Tap to start
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 493903170}
     - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 527174237}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnTutorialSkipped
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TutorialManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436820397949296835, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4883234591794600406, guid: 9236491af5866ef4893ceec4cccbcba7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1481,6 +1513,7 @@ MonoBehaviour:
   - GeemailMG
   - Post2
   - JobScamGroup
+  chatManager: {fileID: 843664558}
 --- !u!4 &527174238
 Transform:
   m_ObjectHideFlags: 0
@@ -2088,6 +2121,7 @@ MonoBehaviour:
   - {fileID: 8143572889201755644}
   - {fileID: 0}
   - {fileID: 0}
+  isPaused: 0
 --- !u!1 &958460765
 GameObject:
   m_ObjectHideFlags: 0

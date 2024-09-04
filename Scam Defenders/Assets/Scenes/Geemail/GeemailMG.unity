@@ -437,6 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cd6f6ee70bf5f4e9f4684cd977756b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minigameObjects: []
   guides:
   - {fileID: 519716010}
   - {fileID: 234248080}
@@ -5288,6 +5289,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1232795163}
     - target: {fileID: 5772364371427007886, guid: 769a279e358081f498b7b038ebc32187, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772364371427007886, guid: 769a279e358081f498b7b038ebc32187, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
       objectReference: {fileID: 0}
@@ -5297,6 +5302,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5772364371427007886, guid: 769a279e358081f498b7b038ebc32187, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772364371427007886, guid: 769a279e358081f498b7b038ebc32187, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5772364371427007886, guid: 769a279e358081f498b7b038ebc32187, type: 3}
@@ -5311,6 +5320,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1755470378}
+    - target: {fileID: 5772364371427007886, guid: 769a279e358081f498b7b038ebc32187, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 212022895}
+    - target: {fileID: 5772364371427007886, guid: 769a279e358081f498b7b038ebc32187, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5772364371427007886, guid: 769a279e358081f498b7b038ebc32187, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
@@ -5336,6 +5353,10 @@ PrefabInstance:
       value: CountdownTimer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5772364371427007886, guid: 769a279e358081f498b7b038ebc32187, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: CountdownTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772364371427007886, guid: 769a279e358081f498b7b038ebc32187, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
@@ -5345,6 +5366,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5772364371427007886, guid: 769a279e358081f498b7b038ebc32187, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772364371427007886, guid: 769a279e358081f498b7b038ebc32187, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5782989908028918438, guid: 769a279e358081f498b7b038ebc32187, type: 3}

@@ -25,10 +25,23 @@ public class ChatManager : MonoBehaviour
     private int currentMessageIndex = 0;
     private List<GameObject> activeResponseButtons = new List<GameObject>();
 
+    public bool isPaused = false; // Flag to control the pause state
+
+
     void Start()
     {
         SetScenarioAvatarsAndNames(1);
         DisplayMessage(currentMessageIndex);
+    }
+
+    public void PauseChat()
+    {
+        isPaused = true;
+    }
+
+    public void ResumeChat()
+    {
+        isPaused = false;
     }
 
     //For saved data
@@ -143,6 +156,11 @@ public class ChatManager : MonoBehaviour
     {
         foreach (var text in messageTexts)
         {
+            while (isPaused)
+            {
+                yield return null; // Wait until the pause is lifted
+            }
+
             GameObject messageGO = Instantiate(scammerMessagePrefab, chatContent);
             TMP_Text messageText = messageGO.GetComponentInChildren<TMP_Text>();
             messageText.text = text;
@@ -167,6 +185,11 @@ public class ChatManager : MonoBehaviour
         // After all messages are displayed, show the response buttons if available
         foreach (ChatResponse response in responses)
         {
+            while (isPaused)
+            {
+                yield return null; // Wait until the pause is lifted
+            }
+
             GameObject responseGO = Instantiate(responseButtonPrefab, responseContent);
             TMP_Text responseText = responseGO.GetComponentInChildren<TMP_Text>();
             responseText.text = response.responseTexts[0];
