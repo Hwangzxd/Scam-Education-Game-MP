@@ -16,7 +16,7 @@ public class OptionsManagerGois : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "YabberChatGOIS")
         {
-            textName.text = "+65 9837 3949";
+            textName.text = "+65 9000 0000";
         }
         else if (SceneManager.GetActiveScene().name == "YabberChatGOIS1")
         {
