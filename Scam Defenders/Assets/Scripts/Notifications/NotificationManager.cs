@@ -141,6 +141,20 @@ public class NotificationManager : MonoBehaviour
         {
             currentNotifications[index].notification.SetActive(true);
             isNotificationActive = true;
+
+            // Check if the INVS notification is being activated
+            if (currentNotifications[index].notification == INVS)
+            {
+                yabberData.isINVSClicked = true;
+                Debug.Log("INVS notification appeared, setting isINVSClicked to true.");
+            }
+
+            // Check if the GOIS notification is being activated
+            if (currentNotifications[index].notification == scamCall)
+            {
+                yabberData.isGOISClicked = true;
+                Debug.Log("GOIS notification appeared, setting isGOISClicked to true.");
+            }
         }
 
         BlockAppsExcept(index);
@@ -157,6 +171,7 @@ public class NotificationManager : MonoBehaviour
 
         StartCoroutine(DeactivateNotificationAfterDelay(index));
     }
+
 
     private IEnumerator DeactivateNotificationAfterDelay(int index)
     {
@@ -236,29 +251,5 @@ public class NotificationManager : MonoBehaviour
                 currentNotifications[appIndex].ping.SetActive(false);
             }
         }
-    }
-
-    public void OnINVSNotificationClicked()
-    {
-        if (yabberData == null)
-        {
-            Debug.LogError("YabberData is not assigned");
-            return;
-        }
-
-        yabberData.isINVSClicked = true;
-        Debug.Log("INVS notification clicked.");
-    }
-
-    public void OnGOISNotificationClicked()
-    {
-        if (yabberData == null)
-        {
-            Debug.LogError("YabberData is not assigned");
-            return;
-        }
-
-        yabberData.isGOISClicked = true;
-        Debug.Log("GOIS notification clicked.");
     }
 }
