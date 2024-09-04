@@ -38,13 +38,9 @@ public class ScamCallManager : MonoBehaviour
 
     void Start()
     {
-        // Randomize the GOIS scenarios
-        int randomScenarioIndex = Random.Range(0, 3); // Selects an index between 0 and 2
-        SetScenario(randomScenarioIndex);
-
-        // Store the scenario index in YabberData
-        yabberdata.SetGOISScenarioIndex(randomScenarioIndex);
-        Debug.Log(randomScenarioIndex);
+        SetScenario(0);
+        //Store the scenario index in YabberData
+        yabberdata.SetGOISScenarioIndex(0);
     }
 
     // Method to set the current scenario
@@ -93,6 +89,7 @@ public class ScamCallManager : MonoBehaviour
         {
             scamText.text = lines[i];
             audioSource.clip = clips[i];
+            audioSource.loop = false;  // Ensure the audio does not loop
             audioSource.Play();
             yield return new WaitForSeconds(durations[i]);
         }
@@ -118,6 +115,7 @@ public class ScamCallManager : MonoBehaviour
             }
         }
     }
+
 
     // Method to handle call decline
     public void DeclineCall()

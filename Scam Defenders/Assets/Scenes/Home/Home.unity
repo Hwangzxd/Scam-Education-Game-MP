@@ -10091,7 +10091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7388712281340636284, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7513553803272517614, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -10147,7 +10147,7 @@ PrefabInstance:
       objectReference: {fileID: 1315090898}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].scamCall
@@ -10247,7 +10247,7 @@ PrefabInstance:
       objectReference: {fileID: 1315090898}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[1].dialogueSegments.Array.size
@@ -10295,7 +10295,7 @@ PrefabInstance:
       objectReference: {fileID: 815036497}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].lines.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[1].lines.Array.size
@@ -10331,15 +10331,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].lines.Array.data[0]
-      value: This is an automated message from the Ministry of Finance.
+      value: This is Officer Tan from the Singapore Police. We've found issues with
+        your recent bank transactions.
       objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].lines.Array.data[1]
-      value: We have detected irregularities in your recent tax filings.
+      value: These transactions are linked to money laundering. It's serious, and
+        we need your help.
       objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].lines.Array.data[2]
-      value: If you did not authorize these filings, please press 1.
+      value: To clear your name, you must assist with our investigation.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
+      propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].lines.Array.data[3]
+      value: We need you to transfer money to a secure account. This is to verify
+        your funds.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
+      propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].lines.Array.data[4]
+      value: This must be done immediately, or we may press charges. Your accounts
+        could be frozen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
+      propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].lines.Array.data[5]
+      value: Follow our instructions, and we can clear this up quickly.
       objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[1].lines.Array.data[0]
@@ -10453,7 +10469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].audioClips.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[1].audioClips.Array.size
@@ -10490,18 +10506,30 @@ PrefabInstance:
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].audioClips.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: d45988e1e40a9bb46a2d78a8e7cb44c5, type: 3}
+      objectReference: {fileID: 8300000, guid: 48141c019ee461e43b85d22c2d0c8327, type: 3}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].audioClips.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 4198ff8838e214e4f9eafeef4e2ac661, type: 3}
+      objectReference: {fileID: 8300000, guid: 633fe5e214e52db4fa5bf8a08e162e21, type: 3}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5894c2a9563387647960fd2e15bb36c3, type: 3}
+    - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
+      propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5476b771e38c0c04b8f66f7093ba8c4f, type: 3}
+    - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
+      propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].audioClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: acc61e4362e3f234a8c8cb8757fdce70, type: 3}
+    - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
+      propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].audioClips.Array.data[5]
       value: 
       objectReference: {fileID: 8300000, guid: a25947be2de0f254ba6f11ad5f8b1845, type: 3}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].lineDurations.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[1].audioClips.Array.data[0]
@@ -10629,15 +10657,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].lineDurations.Array.data[0]
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].lineDurations.Array.data[1]
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].lineDurations.Array.data[2]
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
+      propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].lineDurations.Array.data[3]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
+      propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].lineDurations.Array.data[4]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
+      propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].lineDurations.Array.data[5]
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[1].lineDurations.Array.data[0]
@@ -10794,7 +10834,7 @@ PrefabInstance:
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].objectsToActivate.Array.data[0]
       value: 
-      objectReference: {fileID: 1654583848}
+      objectReference: {fileID: 148418929}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[1].objectsToActivate.Array.data[0]
       value: 
@@ -10830,7 +10870,7 @@ PrefabInstance:
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[0].objectsToDeactivate.Array.data[0]
       value: 
-      objectReference: {fileID: 324086189}
+      objectReference: {fileID: 0}
     - target: {fileID: 8797488894413295651, guid: 7f87315b33955c542862d6f4dfe8ee49, type: 3}
       propertyPath: scenarios.Array.data[0].dialogueSegments.Array.data[1].objectsToDeactivate.Array.data[0]
       value: 
