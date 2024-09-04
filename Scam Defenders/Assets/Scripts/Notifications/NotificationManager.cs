@@ -10,6 +10,7 @@ public class NotificationManager : MonoBehaviour
     public Notification[] oldNotifications;   // Array for old notifications
     public Notification[] allNotifications;   // Array for all notifications
     public GameObject INVS;
+    public GameObject GOIS;
     public GameObject scamCall;
 
     private bool isNotificationActive = false;
@@ -150,7 +151,7 @@ public class NotificationManager : MonoBehaviour
             }
 
             // Check if the GOIS notification is being activated
-            if (currentNotifications[index].notification == scamCall)
+            if (currentNotifications[index].notification == scamCall || currentNotifications[index].notification == GOIS)
             {
                 yabberData.isGOISClicked = true;
                 Debug.Log("GOIS notification appeared, setting isGOISClicked to true.");

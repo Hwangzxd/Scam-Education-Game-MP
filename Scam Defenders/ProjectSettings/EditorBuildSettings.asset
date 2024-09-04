@@ -110,4 +110,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Geemail/GMWinLose2.unity
     guid: 4ed9e6bcb5a8d0947a7cd84cd9bfdf48
+  - enabled: 1
+    path: Assets/Scenes/YabberChat/INVS/YabberChatINVS1.unity
+    guid: 61200a8ecf177a742b523e11ccf820f4
+  - enabled: 1
+    path: Assets/Scenes/YabberChat/INVS/YabberChatINVS2.unity
+    guid: 4bdb5ee38acc86b4cbf3ae574bce17bc
   m_configObjects: {}

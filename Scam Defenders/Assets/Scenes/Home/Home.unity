@@ -5934,6 +5934,9 @@ MonoBehaviour:
   - notification: {fileID: 286336188}
     ping: {fileID: 900512354}
     blocker: {fileID: 1466485905}
+  - notification: {fileID: 1315090898}
+    ping: {fileID: 900512354}
+    blocker: {fileID: 1466485905}
   - notification: {fileID: 113932874}
     ping: {fileID: 900512354}
     blocker: {fileID: 1466485905}
@@ -5957,6 +5960,7 @@ MonoBehaviour:
     ping: {fileID: 900512354}
     blocker: {fileID: 1466485905}
   INVS: {fileID: 286336188}
+  GOIS: {fileID: 1315090898}
   scamCall: {fileID: 113932874}
 --- !u!4 &704646910
 Transform:
@@ -6242,6 +6246,13 @@ MonoBehaviour:
   - LoveScamChatNew1
   - LoveScamChatNew2
   - LoveScamChatNew3
+  yabberChatINVSScenes:
+  - YabberChatINVS
+  - YabberChatINVS1
+  - YabberChatINVS2
+  yabberChatGOISScenes:
+  - YabberChatGOIS1
+  - YabberChatGOIS2
 --- !u!1 &716159534
 GameObject:
   m_ObjectHideFlags: 0
@@ -11853,6 +11864,13 @@ MonoBehaviour:
   - LoveScamChatNew1
   - LoveScamChatNew2
   - LoveScamChatNew3
+  yabberChatINVSScenes:
+  - YabberChatINVS
+  - YabberChatINVS1
+  - YabberChatINVS2
+  yabberChatGOISScenes:
+  - YabberChatGOIS1
+  - YabberChatGOIS2
 --- !u!1 &1363354324
 GameObject:
   m_ObjectHideFlags: 0
