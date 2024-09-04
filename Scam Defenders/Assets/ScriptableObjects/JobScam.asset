@@ -16,13 +16,10 @@ MonoBehaviour:
   messages:
   - messageTexts:
     - "<color=green>John</color> \nWelcome to Easy Money \nOpportunities."
-    - "<color=green>John</color> \nEveryone here is making \ngood money with our
-      \nside-hustle.."
     - "<color=orange>Sarah</color>\nI\u2019m making $500 a week. \nThanks, John."
     - "<color=yellow>Alex</color>\nI\u2019ve already made $200. \nThis really helps."
     - "<color=green>John</color> \nWe\u2019re accepting a few more \npeople today."
     - "<color=green>John</color> \nSecure your spot with \na $50 deposit."
-    - "<color=green>John</color> \nYou\u2019ll start earning right away."
     responses:
     - responseTexts:
       - "What\u2019s the deposit for?"
@@ -75,20 +72,20 @@ MonoBehaviour:
     - "<color=green>John</color> \nYou\u2019ll make it back in no time."
     responses:
     - responseTexts:
-      - How quickly can I start earning?
+      - Okay, depositing now!
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
       winScreen5: 0
       winScreen6: 0
-      loseScreen1: 0
+      loseScreen1: 1
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
       loseScreen5: 0
       loseScreen6: 0
-      nextMessageIndex: 4
+      nextMessageIndex: 0
     - responseTexts:
       - This looks too good to be true... I'm leaving.
       winScreen1: 1
@@ -110,15 +107,14 @@ MonoBehaviour:
       those numbers."
     responses:
     - responseTexts:
-      - That sounds reasonable.
-      - How do I get started?
+      - That sounds reasonable. I'll deposit.
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
       winScreen5: 0
       winScreen6: 0
-      loseScreen1: 0
+      loseScreen1: 1
       loseScreen2: 0
       loseScreen3: 0
       loseScreen4: 0
@@ -127,8 +123,8 @@ MonoBehaviour:
       nextMessageIndex: 5
     - responseTexts:
       - "This feels off. I\u2019m not sure I can trust this, i'm leaving."
-      winScreen1: 0
-      winScreen2: 1
+      winScreen1: 1
+      winScreen2: 0
       winScreen3: 0
       winScreen4: 0
       winScreen5: 0
@@ -147,42 +143,7 @@ MonoBehaviour:
       It\u2019s legit."
     responses:
     - responseTexts:
-      - "That makes sense. \nWhat\u2019s the next step?"
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
-      loseScreen1: 0
-      loseScreen2: 0
-      loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
-      nextMessageIndex: 6
-    - responseTexts:
-      - Why is everyone so new? It feels suspicious, I'm leaving.
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 1
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
-      loseScreen1: 0
-      loseScreen2: 0
-      loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
-      nextMessageIndex: 0
-  - messageTexts:
-    - "<color=green>John</color>\nMost people start seeing money \nwithin a day or
-      two."
-    - "<color=green>John</color> \nIt\u2019s fast, easy, and reliable."
-    responses:
-    - responseTexts:
-      - "Sounds good. I\u2019ll think about it."
+      - That makes sense. I'll become a member.
       winScreen1: 0
       winScreen2: 0
       winScreen3: 0
@@ -195,63 +156,10 @@ MonoBehaviour:
       loseScreen4: 0
       loseScreen5: 0
       loseScreen6: 0
-      nextMessageIndex: 0
+      nextMessageIndex: 6
     - responseTexts:
-      - "One or two days? \nSorry, this is surely a scam."
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 0
-      winScreen4: 1
-      winScreen5: 0
-      winScreen6: 0
-      loseScreen1: 0
-      loseScreen2: 0
-      loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
-      nextMessageIndex: 0
-  - messageTexts:
-    - "<color=green>John</color> \nJust make the $50 deposit, and \nyou\u2019ll be
-      on your way to earning \nlike everyone else here."
-    responses:
-    - responseTexts:
-      - Okay, I'm depositing it now.
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
-      loseScreen1: 0
-      loseScreen2: 1
-      loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
-      nextMessageIndex: 0
-    - responseTexts:
-      - "A deposit? That seems suspicious. \nI don't trust you."
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 0
-      winScreen4: 1
-      winScreen5: 0
-      winScreen6: 0
-      loseScreen1: 0
-      loseScreen2: 0
-      loseScreen3: 0
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
-      nextMessageIndex: 0
-  - messageTexts:
-    - "<color=green>John</color>\nMake the $50 deposit, and you\u2019ll \nget access
-      to everything you \nneed to start earning."
-    responses:
-    - responseTexts:
-      - Okay! Depositing now.
-      winScreen1: 0
+      - Why is everyone so new? It feels suspicious, I'm leaving.
+      winScreen1: 1
       winScreen2: 0
       winScreen3: 0
       winScreen4: 0
@@ -259,22 +167,7 @@ MonoBehaviour:
       winScreen6: 0
       loseScreen1: 0
       loseScreen2: 0
-      loseScreen3: 1
-      loseScreen4: 0
-      loseScreen5: 0
-      loseScreen6: 0
-      nextMessageIndex: 0
-    - responseTexts:
-      - "A deposit? This seems \nsuspicious. I'm leaving."
-      winScreen1: 0
-      winScreen2: 0
-      winScreen3: 0
-      winScreen4: 0
-      winScreen5: 0
-      winScreen6: 0
-      loseScreen1: 0
-      loseScreen2: 0
-      loseScreen3: 1
+      loseScreen3: 0
       loseScreen4: 0
       loseScreen5: 0
       loseScreen6: 0

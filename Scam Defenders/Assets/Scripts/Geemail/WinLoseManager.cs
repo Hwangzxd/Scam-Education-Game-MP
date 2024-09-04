@@ -27,7 +27,7 @@ public class WinLoseManager : MonoBehaviour
                 winPopUp.SetActive(false);
                 Debug.Log("Lose pop-up activated."); // Debug log
             }
-            else if (score >= 2 && score <= 3)
+            else if (score >= 2)
             {
                 // Activate win pop-up and deactivate lose pop-up
                 winPopUp.SetActive(true);

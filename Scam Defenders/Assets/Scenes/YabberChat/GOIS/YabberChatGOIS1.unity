@@ -722,55 +722,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!1 &116320600
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 116320602}
-  - component: {fileID: 116320601}
-  m_Layer: 0
-  m_Name: TutorialManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &116320601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116320600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1cd6f6ee70bf5f4e9f4684cd977756b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guides:
-  - {fileID: 1502878342}
-  - {fileID: 1502878340}
-  shopeaseSkipBtn: {fileID: 0}
-  shopeaseScenes: []
---- !u!4 &116320602
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116320600}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &137997326
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,7 +756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.6777954, y: 475}
+  m_AnchoredPosition: {x: 0, y: 575}
   m_SizeDelta: {x: 833.8508, y: 329.3445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137997328
@@ -828,7 +779,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INCORRECT!
+  m_text: Incorrect!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -855,8 +806,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 135
-  m_fontSizeBase: 135
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2150,7 +2101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &402314083
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3604,8 +3555,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: 0}
-  m_SizeDelta: {x: 824.7664, y: 380.392}
+  m_AnchoredPosition: {x: 0, y: 80}
+  m_SizeDelta: {x: 915, y: 380.392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &865185378
 MonoBehaviour:
@@ -3627,8 +3578,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Utility companies don\u2019t pressure for immediate payments over the
-    phone. \n\n- Always verify their contact details directly."
+  m_text: "You recognised a legitimate SMS from government agencies. \u2018gov.sg\u2019
+    is the SenderID the government uses to send SMSes. The SMS will begin with the
+    full name of the agency/service that sent the message.\n\nURLs from government
+    agencies will always begin with \u2018go.gov.sg\u2019. Be cautious about clickable
+    links sent via SMS as they may lead to phishing sites that steal your personal
+    or banking details to make unauthorised transactions."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -3655,8 +3610,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3705,6 +3660,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865185376}
   m_CullTransparentMesh: 1
+--- !u!1 &866156447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 866156449}
+  - component: {fileID: 866156448}
+  m_Layer: 0
+  m_Name: TutorialManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &866156448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866156447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1cd6f6ee70bf5f4e9f4684cd977756b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guides:
+  - {fileID: 1502878342}
+  - {fileID: 1502878343}
+  shopeaseSkipBtn: {fileID: 1502878340}
+  shopeaseScenes:
+  - YabberChatGOIS
+  - YabberChatGOIS1
+  - YabberChatGOIS2
+  - YabberChatINVS
+  - YabberChatINVS1
+  - YabberChatINVS2
+--- !u!4 &866156449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866156447}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &867801611
 GameObject:
   m_ObjectHideFlags: 0
@@ -5185,8 +5195,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.919, y: 0}
-  m_SizeDelta: {x: 824.7664, y: 380.392}
+  m_AnchoredPosition: {x: 0, y: 90}
+  m_SizeDelta: {x: 885.67, y: 380.392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1158720793
 MonoBehaviour:
@@ -5208,8 +5218,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Utility companies don\u2019t pressure for immediate payments over the
-    phone. \n\n- Always verify their contact details directly."
+  m_text: "You reported a real SMS from the government. While it\u2019s important
+    to be cautious, \u2018gov.sg\u2019 is the only SenderID the government uses to
+    send SMSes. The SMS will begin with the full name of the agency/service that
+    sent the message.\n\r\nURLs from government agencies will always begin with \u2018go.gov.sg\u2019.
+    Be cautious about clickable links sent via SMS as they may lead to phishing sites
+    that steal your personal or banking details to make unauthorised transactions."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -5236,8 +5250,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7008,7 +7022,7 @@ PrefabInstance:
     - target: {fileID: 4961017187248399881, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 116320601}
+      objectReference: {fileID: 0}
     - target: {fileID: 4961017187248399881, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnableNextGuide
@@ -7100,10 +7114,18 @@ PrefabInstance:
     - target: {fileID: 6443747032735923928, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 116320601}
+      objectReference: {fileID: 0}
     - target: {fileID: 6443747032735923928, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnableNextGuide
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549514499341203464, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1502878344}
+    - target: {fileID: 6549514499341203464, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7112,7 +7134,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
 --- !u!1 &1502878340 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 5560218752580421091, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6612482399878192436, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
   m_PrefabInstance: {fileID: 1502878339}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &1502878341 stripped
@@ -7123,6 +7145,16 @@ RectTransform:
 --- !u!1 &1502878342 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8728793010874742847, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+  m_PrefabInstance: {fileID: 1502878339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1502878343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5560218752580421091, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
+  m_PrefabInstance: {fileID: 1502878339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1502878344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6205403135164070076, guid: d2b76664dee6ad54798e94f88f418a25, type: 3}
   m_PrefabInstance: {fileID: 1502878339}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1505717490
@@ -8596,7 +8628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1852649041
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8885,7 +8917,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.6777954, y: 475}
+  m_AnchoredPosition: {x: 0, y: 575}
   m_SizeDelta: {x: 833.8508, y: 329.3445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899346544
@@ -8908,7 +8940,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Well Done!
+  m_text: Well done!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
   m_sharedMaterial: {fileID: -7850641033117363694, guid: 9ace0b3ba7a38fd4294622c89af6608e, type: 2}
@@ -8935,8 +8967,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 135
-  m_fontSizeBase: 135
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10171,4 +10203,4 @@ SceneRoots:
   - {fileID: 10723812}
   - {fileID: 59163404}
   - {fileID: 1267125415}
-  - {fileID: 116320602}
+  - {fileID: 866156449}

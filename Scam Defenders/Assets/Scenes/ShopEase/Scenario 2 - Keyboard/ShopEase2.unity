@@ -13406,6 +13406,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1403391934}
     - target: {fileID: 9181321311694481218, guid: 0fcaf547d7d13ea4490bdba53bf0e617, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1654348200}
+    - target: {fileID: 9181321311694481218, guid: 0fcaf547d7d13ea4490bdba53bf0e617, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
@@ -13415,6 +13419,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9181321311694481218, guid: 0fcaf547d7d13ea4490bdba53bf0e617, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181321311694481218, guid: 0fcaf547d7d13ea4490bdba53bf0e617, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -21276,6 +21284,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2831684874916025225, guid: 2ddda54bc1112ef4fa7ddb0749612ec4, type: 3}
   m_PrefabInstance: {fileID: 1653452257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1654348200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8906076019814292456, guid: 0fcaf547d7d13ea4490bdba53bf0e617, type: 3}
+  m_PrefabInstance: {fileID: 1124831200}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1654875635
 GameObject:
