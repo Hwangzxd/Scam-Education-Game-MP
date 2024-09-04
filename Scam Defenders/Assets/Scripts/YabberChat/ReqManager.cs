@@ -48,17 +48,6 @@ public class ReqManager : MonoBehaviour
                 SceneManager.LoadScene("YabberChatGOIS");
                 Debug.Log("Loading Scene: YabberChatGOIS (case 0)");
                 break;
-            case 1:
-                SceneManager.LoadScene("YabberChatGOIS1");
-                Debug.Log("Loading Scene: YabberChatGOIS1 (case 1)");
-                break;
-            case 2:
-                SceneManager.LoadScene("YabberChatGOIS2");
-                Debug.Log("Loading Scene: YabberChatGOIS2 (case 2)");
-                break;
-            default:
-                Debug.LogError("Invalid scenario index");
-                break;
         }
     }
 
