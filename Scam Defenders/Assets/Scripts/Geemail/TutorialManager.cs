@@ -13,22 +13,40 @@ public class TutorialManager : MonoBehaviour
 
     void Start()
     {
-        chatManager.PauseChat();
+        // Safeguard to ensure chatManager is assigned
+        if (chatManager != null)
+        {
+            chatManager.PauseChat();
+        }
 
         Debug.Log("Start method called. isTutSeen: " + isTutSeen);
 
         string currentSceneName = SceneManager.GetActiveScene().name;
         Debug.Log("Current Scene: " + currentSceneName);
 
-        if (IsSceneInList(currentSceneName, shopeaseScenes))
+        // Proceed only if shopeaseScenes is not null
+        if (shopeaseScenes != null)
         {
-            HandleSkipButton(shopeaseSkipBtn);
+            if (IsSceneInList(currentSceneName, shopeaseScenes))
+            {
+                if (shopeaseSkipBtn != null)
+                {
+                    HandleSkipButton(shopeaseSkipBtn);
+                }
+            }
         }
 
-        for (int i = 0; i < guides.Length; i++)
+        // Proceed only if guides array is not null
+        if (guides != null)
         {
-            guides[i].SetActive(i == 0);
-            Debug.Log("Guide " + i + " active status: " + guides[i].activeSelf);
+            for (int i = 0; i < guides.Length; i++)
+            {
+                if (guides[i] != null)
+                {
+                    guides[i].SetActive(i == 0);
+                    Debug.Log("Guide " + i + " active status: " + guides[i].activeSelf);
+                }
+            }
         }
     }
 
