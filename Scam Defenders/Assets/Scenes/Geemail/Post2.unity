@@ -1450,6 +1450,7 @@ MonoBehaviour:
   - GeemailMG
   - Post2
   - JobScamGroup
+  chatManager: {fileID: 0}
 --- !u!4 &601495102
 Transform:
   m_ObjectHideFlags: 0
